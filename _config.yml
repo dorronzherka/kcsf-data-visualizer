@@ -1,3 +1,3 @@
 name: KCSF Visualizer
 baseurl: /
-basepath: "/"
+basepath: "/kcsf-data-visualizer"
