@@ -2,6 +2,67 @@
 layout: default
 language: english
 ---
-<div class="row" style="background-color: #E5E6E6; height: 400px;">
-    <h1>ENGLISH</h1>
+
+<script>
+    $(function () {
+        displayPieChart("pie-chart-container", "pie");
+        $("input[name='tabs']").change(function () {
+            // Do something interesting here
+            var checked_rb = $(this).val();
+            if (checked_rb == "pie-chart") {
+                displayPieChart("pie-chart-container", "pie");
+            } else if (checked_rb == "bar-chart"){
+                displayPieChart("bar-chart-container", "bar");
+            } else if (checked_rb == "column-chart"){
+                displayPieChart("column-chart-container", "column");
+            } else {
+                displayPieChart("line-chart-container", "line");
+            }
+        });
+    });
+</script>
+
+<div class="row" style="background-color: #E5E6E6; overflow: hidden;">
+    <div class="tabs">
+        <!-- Radio button and lable for #tab-content1 -->
+        <input type="radio" name="tabs" value="pie-chart" id="tab1" checked>
+        <label for="tab1" id="piechart-tab-label">
+            <i class="fa fa-pie-chart"></i><span></span>
+        </label>
+        <!-- Radio button and lable for #tab-content2 -->
+        <input type="radio" name="tabs" value="bar-chart" id="tab2">
+        <label for="tab2">
+            <i class="fa fa-bar-chart bar-chart"></i><span></span>
+        </label>
+        <!-- Radio button and lable for #tab-content3 -->
+        <input type="radio" name="tabs" value="column-chart" id="tab3">
+        <label for="tab3">
+            <i class="fa fa-bar-chart"></i><span></span>
+        </label>
+        <!-- Radio button and lable for #tab-content3 -->
+        <input type="radio" name="tabs" value="line-chart" id="tab4">
+        <label for="tab4">
+            <i class="fa fa-line-chart"></i><span></span>
+        </label>
+        <div id="tab-content1" class="tab-content" style="width: 100%;">
+            <div id="pie-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <h3><!-- Tab title here --></h3>
+            <p><!-- Tab content here --></p>
+        </div> <!-- #tab-content1 -->
+        <div id="tab-content2" class="tab-content">
+            <div id="bar-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <h3><!-- Tab title here --></h3>
+            <p><!-- Tab content here --></p>
+        </div> <!-- #tab-content2 -->
+        <div id="tab-content3" class="tab-content">
+            <div id="column-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <h3><!-- Tab title here --></h3>
+            <p><!-- Tab content here --></p>
+        </div> <!-- #tab-content3 -->
+        <div id="tab-content4" class="tab-content">
+            <div id="line-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <h3><!-- Tab title here --></h3>
+            <p><!-- Tab content here --></p>
+        </div> <!-- #tab-content3 -->
+    </div>
 </div>
