@@ -45,6 +45,7 @@ body {
 
 .select {
     float: right !important;
+    max-width: 397px;
 }
 
 @media (min-width: 768px) {

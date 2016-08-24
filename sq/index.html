@@ -4,22 +4,84 @@ language: albanian
 ---
 
 <script>
+    $.support.cors = true;
+    var url = {{ site.requesturl }} + "comparison";
     $(function () {
-        displayPieChart("pie-chart-container", "pie");
+        var main_inicator = $("#main-indicator-select").val();
+        var post_data = {
+            "q1_id": main_inicator,
+            "q2_id": ""
+        };
+        postRequest(url, post_data, "pie-chart", "pie-chart-container");
+        displayChart("pie-chart-container", "pie");
         $("input[name='tabs']").change(function () {
-            // Do something interesting here
+            $(".chart").empty();
+            var main_inicator = $("#main-indicator-select").val();
+            var disaggregate_by = $("#disaggregate-select").val();
             var checked_rb = $(this).val();
-            if (checked_rb == "pie-chart") {
-                displayPieChart("pie-chart-container", "pie");
-            } else if (checked_rb == "bar-chart"){
-                displayPieChart("bar-chart-container", "bar");
-            } else if (checked_rb == "column-chart"){
-                displayPieChart("column-chart-container", "column");
+            var chart_type_container = checked_rb + "-container";
+            var post_data = {
+                "q1_id": main_inicator,
+                "q2_id": ""
+            };
+            if (disaggregate_by != "0") {
+                post_data["q2_id"] = disaggregate_by;
+                postRequest(url, post_data, checked_rb, chart_type_container, "y");
             } else {
-                displayPieChart("line-chart-container", "line");
+                postRequest(url, post_data, checked_rb, chart_type_container);
+            }
+        });
+
+        $("#disaggregate-select").change(function(){
+            var disaggregate_by = $(this).val();
+            var chart_type = $('input[name=tabs]:checked').val();
+            var chart_type_container = chart_type + "-container";
+            var main_inicator = $("#main-indicator-select").val();
+            var post_data = {
+                "q1_id": main_inicator,
+                "q2_id": disaggregate_by
+            };
+            if (disaggregate_by != "0") {
+                postRequest(url, post_data, chart_type, chart_type_container, "y");
+            } else {
+                post_data['q2_id'] = "";
+                postRequest(url, post_data, chart_type, chart_type_container);
+            }
+        });
+
+        $("#main-indicator-select").change(function () {
+            var chart_type = $('input[name=tabs]:checked').val();
+            var chart_type_container = chart_type + "-container";
+            var main_inicator = $("#main-indicator-select").val();
+            var disaggregate_by = $("#disaggregate-select").val();
+            var post_data = {
+                "q1_id": main_inicator,
+                "q2_id": ""
+            };
+            if (disaggregate_by != "0") {
+                post_data["q2_id"] = disaggregate_by;
+                postRequest(url, post_data, chart_type, chart_type_container, "y");
+            } else {
+                postRequest(url, post_data, chart_type, chart_type_container);
             }
         });
     });
+
+    /* Making a post request to the back-end and displaying the chart with it's response. */
+    function postRequest(url_post, post_data, chart_type, chart_container, double_questions) {
+        $.ajax({
+            type: 'POST',
+            url: url_post,
+            dataType: 'json',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            crossDomain: true,
+            data: JSON.stringify(post_data)
+        }).done(function (data) {
+            displayChart(chart_container, chart_type, data, double_questions);
+        });
+    }
 </script>
 
 <div class="row" style="background-color: #E5E6E6; overflow: hidden;">
@@ -46,22 +108,26 @@ language: albanian
             <i class="fa fa-line-chart"></i><span></span>
         </label>
         <div id="tab-content1" class="tab-content" style="width: 100%;">
-            <div id="pie-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <div id="pie-chart-container" class="chart"
+                 style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
             <h3><!-- Tab title here --></h3>
             <p><!-- Tab content here --></p>
         </div> <!-- #tab-content1 -->
         <div id="tab-content2" class="tab-content">
-            <div id="bar-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <div id="bar-chart-container" class="chart"
+                 style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
             <h3><!-- Tab title here --></h3>
             <p><!-- Tab content here --></p>
         </div> <!-- #tab-content2 -->
         <div id="tab-content3" class="tab-content">
-            <div id="column-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <div id="column-chart-container" class="chart"
+                 style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
             <h3><!-- Tab title here --></h3>
             <p><!-- Tab content here --></p>
         </div> <!-- #tab-content3 -->
         <div id="tab-content4" class="tab-content">
-            <div id="line-chart-container" style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
+            <div id="line-chart-container" class="chart"
+                 style="min-width: 310px; max-width: 700px; height: 400px; margin: 0 auto"></div>
             <h3><!-- Tab title here --></h3>
             <p><!-- Tab content here --></p>
         </div> <!-- #tab-content3 -->
