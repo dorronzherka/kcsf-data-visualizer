@@ -39,6 +39,12 @@ function displayChart(container, chart_type, data, double_questions) {
         }
     }
 
+    Highcharts.setOptions({
+        lang: {
+            drillUpText: 'Back'
+        }
+    });
+
     $('#' + container).highcharts({
         chart: {
             type: chart_type,
