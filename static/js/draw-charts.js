@@ -23,7 +23,13 @@ function displayChart(container, chart_type, data, double_questions) {
         }
     }
 
+    var e = document.getElementById("main-indicator-select");
+    var title = e.options[e.selectedIndex].text;
+
     if (double_questions) {
+
+        var e2 = document.getElementById("disaggregate-select");
+        title = e2.options[e2.selectedIndex].text;
         for (var element in series_data){
             var drilldown_serie = {
                 "name": series_data[element]["name"],
@@ -45,6 +51,11 @@ function displayChart(container, chart_type, data, double_questions) {
         }
     });
 
+    var label_format = "{point.name}: {point.percentage:.1f}%";
+    if (chart_type != "pie"){
+        label_format = "{point.name}: {point.y}"
+    }
+
     $('#' + container).highcharts({
         chart: {
             type: chart_type,
@@ -53,23 +64,25 @@ function displayChart(container, chart_type, data, double_questions) {
             }
         },
         title: {
-            text: 'KCSF VISUALIZER'
+            text: title
         },
         plotOptions: {
             series: {
                 dataLabels: {
                     enabled: true,
-                    format: '{point.name}: {point.percentage:.1f}%'
+                    format: label_format
                 }
             }
         },
-
+        xAxis: {
+            type: 'category'
+        },
         tooltip: {
             headerFormat: '<span style="font-size:15px"></span>',
             pointFormat: '<span style="font-size: 13px; color:{point.color}">{point.name}</span>: <b style="font-size: 13px; font-weight: bolder;">{point.y} organizations</b><br/>'
         },
         series: [{
-            name: 'Brands',
+            name: 'Series',
             colorByPoint: true,
             data: series_data
             //data: [{
