@@ -1,4 +1,4 @@
 name: KCSF Visualizer
-requesturl: "'http://opendatakosovo.org/api/kcsf/'"
+requesturl: "'https://opendatakosovo.org/api/kcsf/'"
 baseurl: /
 basepath: "/kcsf-data-visualizer"
