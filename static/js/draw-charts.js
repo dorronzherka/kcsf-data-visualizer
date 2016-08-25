@@ -8,13 +8,15 @@ function displayChart(container, chart_type, data, double_questions) {
     for (var item in data) {
         var serie = {};
         if (double_questions) {
-            if (duplicates.indexOf(data[item]['type2']) == -1){
+            if (duplicates.indexOf(data[item]['type2']) == -1) {
                 serie = getSerieJson(data, item, "type2");
                 serie['drilldown'] = serie['name'];
                 duplicates.push(data[item]['type2']);
                 series_data.push(serie);
             } else {
-                var index = series_data.map(function(d) { return d['name']; }).indexOf(data[item]['type2']);
+                var index = series_data.map(function (d) {
+                    return d['name'];
+                }).indexOf(data[item]['type2']);
                 series_data[index]['y'] += data[item]['count'];
             }
         } else {
@@ -23,6 +25,7 @@ function displayChart(container, chart_type, data, double_questions) {
         }
     }
 
+
     var e = document.getElementById("main-indicator-select");
     var title = e.options[e.selectedIndex].text;
 
@@ -30,14 +33,14 @@ function displayChart(container, chart_type, data, double_questions) {
 
         var e2 = document.getElementById("disaggregate-select");
         title = e2.options[e2.selectedIndex].text;
-        for (var element in series_data){
+        for (var element in series_data) {
             var drilldown_serie = {
                 "name": series_data[element]["name"],
                 "id": series_data[element]["name"],
                 "data": []
             };
             for (var json in data) {
-                if (data[json]['type2'] == series_data[element]['name']){
+                if (data[json]['type2'] == series_data[element]['name']) {
                     drilldown_serie['data'].push([data[json]['type1'], data[json]['count']])
                 }
             }
@@ -45,15 +48,35 @@ function displayChart(container, chart_type, data, double_questions) {
         }
     }
 
+    sortResults(series_data, "y", false);
+
     Highcharts.setOptions({
         lang: {
             drillUpText: 'Back'
         }
     });
 
-    var label_format = "{point.name}: {point.percentage:.1f}%";
-    if (chart_type != "pie"){
-        label_format = "{point.name}: {point.y}"
+    var chart_plot_options = {
+        series: {
+            dataLabels: {
+                enabled: true,
+                formatter: function () {
+                    var name = this.point.name;
+                    var value = this.point.y;
+                    var formatter;
+                    if (chart_type == "pie") {
+                        var percentage = this.point.percentage.toString();
+                        formatter = name.length > 30 ? name.substring(0, 30) + '...:' + percentage.substring(0, 4) + "%" : name + ':' + percentage.substring(0, 4) + "%";
+                    } else {
+                        formatter = name.length > 30 ? name.substring(0, 30) + '...:' + value + "%" : name + ':' + value + "%"
+                    }
+                    return formatter;
+                }
+            }
+        }
+    };
+    if (window.screen.width < 768) {
+        chart_plot_options['series']['dataLabels']["enabled"] = false;
     }
 
     $('#' + container).highcharts({
@@ -66,17 +89,10 @@ function displayChart(container, chart_type, data, double_questions) {
         title: {
             text: title
         },
-        plotOptions: {
-            series: {
-                dataLabels: {
-                    enabled: true,
-                    format: label_format
-                }
-            }
-        },
         xAxis: {
             type: 'category'
         },
+        plotOptions: chart_plot_options,
         tooltip: {
             headerFormat: '<span style="font-size:15px"></span>',
             pointFormat: '<span style="font-size: 13px; color:{point.color}">{point.name}</span>: <b style="font-size: 13px; font-weight: bolder;">{point.y} organizations</b><br/>'
@@ -85,31 +101,6 @@ function displayChart(container, chart_type, data, double_questions) {
             name: 'Series',
             colorByPoint: true,
             data: series_data
-            //data: [{
-            //    name: 'Microsoft Internet Explorer',
-            //    y: 56.33,
-            //    drilldown: 'Microsoft Internet Explorer'
-            //}, {
-            //    name: 'Chrome',
-            //    y: 24.03,
-            //    drilldown: 'Chrome'
-            //}, {
-            //    name: 'Firefox',
-            //    y: 10.38,
-            //    drilldown: 'Firefox'
-            //}, {
-            //    name: 'Safari',
-            //    y: 4.77,
-            //    drilldown: 'Safari'
-            //}, {
-            //    name: 'Opera',
-            //    y: 0.91,
-            //    drilldown: 'Opera'
-            //}, {
-            //    name: 'Proprietary or Undetectable',
-            //    y: 0.2,
-            //    drilldown: null
-            //}]
         }],
         drilldown: {
             drillUpButton: {
@@ -129,4 +120,14 @@ function getSerieJson(data, item, type) {
         "name": name,
         "y": count
     };
+}
+
+function sortResults(json_array, prop, asc) {
+    return json_array.sort(function (a, b) {
+        if (asc) {
+            return (a[prop] > b[prop]) ? 1 : ((a[prop] < b[prop]) ? -1 : 0);
+        } else {
+            return (b[prop] > a[prop]) ? 1 : ((b[prop] < a[prop]) ? -1 : 0);
+        }
+    });
 }
