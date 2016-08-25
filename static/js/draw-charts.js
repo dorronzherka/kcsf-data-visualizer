@@ -79,8 +79,20 @@ function displayChart(container, chart_type, data, double_questions) {
         chart_plot_options['series']['dataLabels']["enabled"] = false;
     }
 
-    $('#' + container).highcharts({
+    var chart = $('#' + container).highcharts({
         chart: {
+            events: {
+                drilldown: function(){
+                    var e1 = document.getElementById("main-indicator-select");
+                    title = e1.options[e1.selectedIndex].text;
+                    this.setTitle({ text: title });
+                },
+                drillup: function(){
+                    var e2 = document.getElementById("disaggregate-select");
+                    title = e2.options[e2.selectedIndex].text;
+                    this.setTitle({ text: title });
+                }
+            },
             type: chart_type,
             style: {
                 fontFamily: 'Exo'
@@ -111,6 +123,7 @@ function displayChart(container, chart_type, data, double_questions) {
             series: drilldown_series
         }
     });
+    return chart;
 }
 
 function getSerieJson(data, item, type) {
