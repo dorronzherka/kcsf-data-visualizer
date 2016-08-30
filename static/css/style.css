@@ -1,5 +1,9 @@
----
----
+-
+-
+-
+-
+-
+-
 
 body {
     font-family: Exo, corbel, sans-serif;
@@ -55,13 +59,22 @@ body {
 }
 
 @media (min-width: 768px) {
-    #main-indicator-label {
-        margin-left: 14px;
+    #main-indicator-label-en {
+        margin-left: 10px;
+    }
+
+    #main-indicator-label-sq {
+        margin-left: -35px;
+    }
+
+    #main-indicator-label-sr {
+        margin-left: -22px;
     }
 }
 
 @media (max-width: 990px) {
-    #main-indicator-label {
+
+    #main-indicator-label-en, #main-indicator-label-sq, #main-indicator-label-sr {
         margin-top: 30px !important;
     }
 }

@@ -6,7 +6,13 @@
             </div>
             <div class="col-md-8 col-xs-12" style="text-align: center;">
                 <form class="form-inline main-indicator-form">
-                    <label id="main-indicator-label" for="main-indicator-select">Main Indicator: </label>
+                    {% if page.language == "english" %}
+                        <label id="main-indicator-label-en" for="main-indicator-select">Main Indicator: </label>
+                    {% elsif page.language == "serbian" %}
+                        <label id="main-indicator-label-sr" for="main-indicator-select">Glavni Pokazatelj: </label>
+                    {% else %}
+                        <label id="main-indicator-label-sq" for="main-indicator-select">Treguesi kryesorë: </label>
+                    {% endif %}
                     <div class="form-group">
                         <select id="main-indicator-select" class="form-control select">
                         </select><br>
@@ -16,10 +22,15 @@
             </div>
             <div class="col-md-8 col-xs-12" style="text-align: center;">
                 <form class="form-inline dissagregate-form">
-                    <label for="disaggregate-select">Disaggregate by: </label>
+                    {% if page.language == "english" %}
+                        <label for="disaggregate-select">Disaggregate by: </label>
+                    {% elsif page.language == "serbian" %}
+                        <label for="disaggregate-select">Podele prema: </label>
+                    {% else %}
+                        <label for="disaggregate-select">Ndarja sipas: </label>
+                    {% endif %}
                     <div class="form-group">
                         <select id="disaggregate-select" class="form-control select">
-
                             {% if page.language == "english" %}
                                 <option value="0">Disaggregate by</option>
                                 <option value="q2">Location (town/municipality)</option>

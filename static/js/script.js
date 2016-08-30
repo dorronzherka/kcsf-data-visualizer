@@ -3,17 +3,20 @@
 
 var url = {{ site.requesturl }} +"comparison";
 var language = window.language;
-
+var static_questions = ["q34", "q35", "q80", "q117", "q119"];
 function getQuestionsToPopulateSelectBoxes() {
     return {
         "q9": ["q2", "q7", "q11", "q15"],
         "q18": ["q9", "q2", "q7", "q11", "q15", "q14"],
         "q22": ["q9", "q2", "q7", "q11", "q15"],
+        "q34": [],
+        "q35": [],
         "q75": ["q9", "q2", "q7", "q11", "q15", "q36", "q37", "q37", "q124", "q129"],
         "q77": ["q9", "q2", "q7", "q11", "q15", "q36", "q37"],
-        "q80": ["q9", "q2", "q7", "q11", "q15", "q28"],
+        "q80": [],
         "q112": ["q9", "q2", "q7", "q11", "q15", "q113"],
-        "q119": ["q9", "q2", "q7", "q11", "q15"],
+        "q117": [],
+        "q119": [],
         "q120": ["q9", "q2", "q7", "q11", "q15"],
         "q122": ["q9", "q2", "q7", "q11", "q15"],
         "q124": ["q9", "q2", "q7", "q11", "q15", "q118"],
@@ -66,16 +69,20 @@ $(function () {
         var disaggregate_by = $("#disaggregate-select").val();
         var checked_rb = $(this).val();
         var chart_type_container = checked_rb + "-container";
-        var post_data = {
-            "q1_id": main_inicator,
-            "q2_id": "",
-            "lang": window.language
-        };
-        if (disaggregate_by != "0") {
-            post_data["q2_id"] = disaggregate_by;
-            postRequest(url, post_data, checked_rb, chart_type_container, "y");
+        if (static_questions.indexOf(main_inicator) != -1) {
+            displayStaticChart(chart_type_container, static_data[main_inicator], checked_rb);
         } else {
-            postRequest(url, post_data, checked_rb, chart_type_container);
+            var post_data = {
+                "q1_id": main_inicator,
+                "q2_id": "",
+                "lang": window.language
+            };
+            if (disaggregate_by != "0") {
+                post_data["q2_id"] = disaggregate_by;
+                postRequest(url, post_data, checked_rb, chart_type_container, "y");
+            } else {
+                postRequest(url, post_data, checked_rb, chart_type_container);
+            }
         }
     });
 
@@ -105,18 +112,27 @@ function mainIndicatorSelectBoxChange() {
         var chart_type = $('input[name=tabs]:checked').val();
         var chart_type_container = chart_type + "-container";
         var main_inicator = $("#main-indicator-select").val();
-        populateDisaggregateSelectBox(main_inicator);
-        var disaggregate_by = $("#disaggregate-select").val();
-        var post_data = {
-            "q1_id": main_inicator,
-            "q2_id": "",
-            "lang": window.language
-        };
-        if (disaggregate_by != "0") {
-            post_data["q2_id"] = disaggregate_by;
-            postRequest(url, post_data, chart_type, chart_type_container, "y");
+        if (static_questions.indexOf(main_inicator) != -1) {
+            $("#tab3").click();
+            $("#tab1").prop("disabled", true);
+            $("#disaggregate-select").prop("disabled", true);
+            displayStaticChart("column-chart-container", static_data[main_inicator], "column-chart");
         } else {
-            postRequest(url, post_data, chart_type, chart_type_container);
+            $("#tab1").prop("disabled", false);
+            $("#disaggregate-select").prop("disabled", false);
+            populateDisaggregateSelectBox(main_inicator);
+            var disaggregate_by = $("#disaggregate-select").val();
+            var post_data = {
+                "q1_id": main_inicator,
+                "q2_id": "",
+                "lang": window.language
+            };
+            if (disaggregate_by != "0") {
+                post_data["q2_id"] = disaggregate_by;
+                postRequest(url, post_data, chart_type, chart_type_container, "y");
+            } else {
+                postRequest(url, post_data, chart_type, chart_type_container);
+            }
         }
     });
 }
@@ -134,5 +150,77 @@ function postRequest(url_post, post_data, chart_type, chart_container, double_qu
         data: JSON.stringify(post_data)
     }).done(function (data) {
         displayChart(chart_container, chart_type, data, double_questions);
+    });
+}
+
+function displayStaticChart(chart_container, data, chart_type) {
+    chart_type = chart_type.replace("-chart", "");
+    $("#" + chart_container).empty();
+    var title = data['question'][window.language];
+    var categories = [];
+    var series = [];
+    for (var category in data['answer'][window.language]) {
+        categories.push(category);
+        for (var sub_category in data['answer'][window.language][category]) {
+            var serie_json = {
+                "name": "",
+                "data": []
+            };
+            var index = series.map(function (d) {
+                return d['name'];
+            }).indexOf(sub_category);
+            if (index == -1) {
+                serie_json['name'] = sub_category;
+                serie_json['data'].push(Number(data['answer'][window.language][category][sub_category]));
+                series.push(serie_json);
+            } else {
+                series[index]["data"].push(Number(data['answer'][window.language][category][sub_category]))
+            }
+        }
+    }
+
+    var chart_plot_options = {
+        pointPadding: 0.2,
+        borderWidth: 0,
+        dataLabels: {
+            enabled: true,
+            format: '{series.name}: <b>{y:,.1f}%</b>'
+        }
+    };
+
+    if (window.screen.width < 768) {
+        chart_plot_options['dataLabels']["enabled"] = false;
+    }
+
+    $('#' + chart_container).highcharts({
+        chart: {
+            type: chart_type.replace("-chart", "")
+        },
+        title: {
+            text: title
+        },
+        xAxis: {
+            categories: categories,
+            crosshair: true
+        },
+        plotOptions: {
+            column: chart_plot_options,
+            line: chart_plot_options,
+            bar: chart_plot_options
+        },
+        yAxis: {
+            title: {
+                text: '%'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:12px; text-align: center;"><b>{point.key}</b></span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;"> {series.name}: </td>' +
+                '<td style="padding-left: 5px;"><b style="font-weight: bolder;">{point.y:.1f}%</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        series: series
     });
 }
