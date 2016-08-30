@@ -4,23 +4,9 @@ language: english
 ---
 
 <script>
-    $(function () {
-        displayPieChart("pie-chart-container", "pie");
-        $("input[name='tabs']").change(function () {
-            // Do something interesting here
-            var checked_rb = $(this).val();
-            if (checked_rb == "pie-chart") {
-                displayPieChart("pie-chart-container", "pie");
-            } else if (checked_rb == "bar-chart"){
-                displayPieChart("bar-chart-container", "bar");
-            } else if (checked_rb == "column-chart"){
-                displayPieChart("column-chart-container", "column");
-            } else {
-                displayPieChart("line-chart-container", "line");
-            }
-        });
-    });
+    window.language = "en";
 </script>
+<script src="../static/js/script.js"></script>
 
 <div class="row" style="background-color: #E5E6E6; overflow: hidden;">
     <div class="tabs">

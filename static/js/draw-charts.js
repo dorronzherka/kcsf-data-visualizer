@@ -1,3 +1,10 @@
+// sorts items in drill down
+function Comparator(b, a) {
+    if (a[1] < b[1]) return -1;
+    if (a[1] > b[1]) return 1;
+    return 0;
+}
+
 function displayChart(container, chart_type, data, double_questions) {
     $("#" + container).empty();
     chart_type = chart_type.replace("-chart", "");
@@ -5,34 +12,36 @@ function displayChart(container, chart_type, data, double_questions) {
     var series_data = [];
     var drilldown_series = [];
     var duplicates = [];
+    var dataSum = 0;
+
+    // building the dataset for the chart.
     for (var item in data) {
         var serie = {};
         if (double_questions) {
-            if (duplicates.indexOf(data[item]['type2']) == -1) {
-                serie = getSerieJson(data, item, "type2");
+            dataSum += data[item]['count'];
+            if (duplicates.indexOf(data[item]['type1']) == -1) {
+                serie = getSerieJson(data, item, "type1");
                 serie['drilldown'] = serie['name'];
-                duplicates.push(data[item]['type2']);
+                duplicates.push(data[item]['type1']);
                 series_data.push(serie);
             } else {
                 var index = series_data.map(function (d) {
                     return d['name'];
-                }).indexOf(data[item]['type2']);
+                }).indexOf(data[item]['type1']);
                 series_data[index]['y'] += data[item]['count'];
             }
         } else {
             serie = getSerieJson(data, item, "type1");
+            dataSum += data[item]['count'];
             series_data.push(serie);
         }
     }
 
-
     var e = document.getElementById("main-indicator-select");
     var title = e.options[e.selectedIndex].text;
 
+    // building the drill down data for the chart.
     if (double_questions) {
-
-        var e2 = document.getElementById("disaggregate-select");
-        title = e2.options[e2.selectedIndex].text;
         for (var element in series_data) {
             var drilldown_serie = {
                 "name": series_data[element]["name"],
@@ -40,22 +49,28 @@ function displayChart(container, chart_type, data, double_questions) {
                 "data": []
             };
             for (var json in data) {
-                if (data[json]['type2'] == series_data[element]['name']) {
-                    drilldown_serie['data'].push([data[json]['type1'], data[json]['count']])
+                if (data[json]['type1'] == series_data[element]['name']) {
+                    drilldown_serie['data'].push([data[json]['type2'], data[json]['count']])
                 }
             }
             drilldown_series.push(drilldown_serie);
         }
+        for (var item in drilldown_series) {
+            drilldown_series[item]['data'].sort(Comparator);
+        }
     }
 
+    // sort data to display to the chart.
     sortResults(series_data, "y", false);
 
+    // modified the back button text on drill down.
     Highcharts.setOptions({
         lang: {
             drillUpText: 'Back'
         }
     });
 
+    //
     var chart_plot_options = {
         series: {
             dataLabels: {
@@ -66,15 +81,31 @@ function displayChart(container, chart_type, data, double_questions) {
                     var formatter;
                     if (chart_type == "pie") {
                         var percentage = this.point.percentage.toString();
-                        formatter = name.length > 30 ? name.substring(0, 30) + '...:' + percentage.substring(0, 4) + "%" : name + ':' + percentage.substring(0, 4) + "%";
+                        formatter = name.length > 30 ? name.substring(0, 30) + '...: ' + Highcharts.numberFormat(percentage) + '%' : name + ': ' + Highcharts.numberFormat(percentage) + "%";
                     } else {
-                        formatter = name.length > 30 ? name.substring(0, 30) + '...:' + value + "%" : name + ':' + value + "%"
+                        var pcnt = (value / dataSum) * 100;
+                        formatter = name.length > 30 ? name.substring(0, 30) + '...: ' + Highcharts.numberFormat(pcnt) + '%' : name + ': ' + Highcharts.numberFormat(pcnt) + '%';
                     }
                     return formatter;
                 }
             }
         }
     };
+
+    var tooltip_formatter = function () {
+        var name = this.point.name;
+        var value = this.point.y;
+        var formatter;
+        if (chart_type == "pie") {
+            var percentage = this.point.percentage.toString();
+            formatter = name + ': <b>' + Highcharts.numberFormat(percentage) + "%</b>";
+        } else {
+            var pcnt = (value / dataSum) * 100;
+            formatter = name + ': <b>' + Highcharts.numberFormat(pcnt) + '%</b>';
+        }
+        return formatter;
+    };
+
     if (window.screen.width < 768) {
         chart_plot_options['series']['dataLabels']["enabled"] = false;
     }
@@ -82,15 +113,15 @@ function displayChart(container, chart_type, data, double_questions) {
     var chart = $('#' + container).highcharts({
         chart: {
             events: {
-                drilldown: function(){
-                    var e1 = document.getElementById("main-indicator-select");
+                drilldown: function () {
+                    var e1 = document.getElementById("disaggregate-select");
                     title = e1.options[e1.selectedIndex].text;
-                    this.setTitle({ text: title });
+                    this.setTitle({text: title});
                 },
-                drillup: function(){
-                    var e2 = document.getElementById("disaggregate-select");
+                drillup: function () {
+                    var e2 = document.getElementById("main-indicator-select");
                     title = e2.options[e2.selectedIndex].text;
-                    this.setTitle({ text: title });
+                    this.setTitle({text: title});
                 }
             },
             type: chart_type,
@@ -106,8 +137,10 @@ function displayChart(container, chart_type, data, double_questions) {
         },
         plotOptions: chart_plot_options,
         tooltip: {
-            headerFormat: '<span style="font-size:15px"></span>',
-            pointFormat: '<span style="font-size: 13px; color:{point.color}">{point.name}</span>: <b style="font-size: 13px; font-weight: bolder;">{point.y} organizations</b><br/>'
+            style: {
+                fontSize: '10pt'
+            },
+            formatter: tooltip_formatter
         },
         series: [{
             name: 'Series',

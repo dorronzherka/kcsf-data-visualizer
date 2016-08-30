@@ -2,87 +2,10 @@
 layout: default
 language: albanian
 ---
-
 <script>
-    $.support.cors = true;
-    var url = {{ site.requesturl }} + "comparison";
-    $(function () {
-        var main_inicator = $("#main-indicator-select").val();
-        var post_data = {
-            "q1_id": main_inicator,
-            "q2_id": ""
-        };
-        postRequest(url, post_data, "pie-chart", "pie-chart-container");
-        displayChart("pie-chart-container", "pie");
-        $("input[name='tabs']").change(function () {
-            $(".chart").empty();
-            var main_inicator = $("#main-indicator-select").val();
-            var disaggregate_by = $("#disaggregate-select").val();
-            var checked_rb = $(this).val();
-            var chart_type_container = checked_rb + "-container";
-            var post_data = {
-                "q1_id": main_inicator,
-                "q2_id": ""
-            };
-            if (disaggregate_by != "0") {
-                post_data["q2_id"] = disaggregate_by;
-                postRequest(url, post_data, checked_rb, chart_type_container, "y");
-            } else {
-                postRequest(url, post_data, checked_rb, chart_type_container);
-            }
-        });
-
-        $("#disaggregate-select").change(function(){
-            var disaggregate_by = $(this).val();
-            var chart_type = $('input[name=tabs]:checked').val();
-            var chart_type_container = chart_type + "-container";
-            var main_inicator = $("#main-indicator-select").val();
-            var post_data = {
-                "q1_id": main_inicator,
-                "q2_id": disaggregate_by
-            };
-            if (disaggregate_by != "0") {
-                postRequest(url, post_data, chart_type, chart_type_container, "y");
-            } else {
-                post_data['q2_id'] = "";
-                postRequest(url, post_data, chart_type, chart_type_container);
-            }
-        });
-
-        $("#main-indicator-select").change(function () {
-            var chart_type = $('input[name=tabs]:checked').val();
-            var chart_type_container = chart_type + "-container";
-            var main_inicator = $("#main-indicator-select").val();
-            var disaggregate_by = $("#disaggregate-select").val();
-            var post_data = {
-                "q1_id": main_inicator,
-                "q2_id": ""
-            };
-            if (disaggregate_by != "0") {
-                post_data["q2_id"] = disaggregate_by;
-                postRequest(url, post_data, chart_type, chart_type_container, "y");
-            } else {
-                postRequest(url, post_data, chart_type, chart_type_container);
-            }
-        });
-    });
-
-    /* Making a post request to the back-end and displaying the chart with it's response. */
-    function postRequest(url_post, post_data, chart_type, chart_container, double_questions) {
-        $.ajax({
-            type: 'POST',
-            url: url_post,
-            dataType: 'json',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            crossDomain: true,
-            data: JSON.stringify(post_data)
-        }).done(function (data) {
-            displayChart(chart_container, chart_type, data, double_questions);
-        });
-    }
+    window.language = "sq";
 </script>
+<script src="../static/js/script.js"></script>
 
 <div class="row" style="background-color: #E5E6E6; overflow: hidden;">
     <!--<h1>SHQIP</h1>-->

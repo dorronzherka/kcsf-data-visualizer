@@ -9,9 +9,6 @@
                     <label id="main-indicator-label" for="main-indicator-select">Main Indicator: </label>
                     <div class="form-group">
                         <select id="main-indicator-select" class="form-control select">
-                            <option value="q9">Which level of governance is the main focus of the work of your organization?</option>
-                            <option value="q18">What is the highest governing body of your organization?</option>
-                            <option value="q23">Do you report regularly to the Tax Administration of Kosovo (TAK)?</option>
                         </select><br>
                     </div>
                 </form>
@@ -22,12 +19,26 @@
                     <label for="disaggregate-select">Disaggregate by: </label>
                     <div class="form-group">
                         <select id="disaggregate-select" class="form-control select">
-                            <option value="0">Disaggregate by</option>
-                            <option value="q2">Location (town/municipality)</option>
-                            <option value="q7">Which is your main area of activity?</option>
-                            <option value="q11">In which year was your organization established?</option>
-                            <option value="q15">Does your organization have a Public Beneficiary Status?</option>
-                            <option value="q28">How many external financial audits have you had during the year 2015?</option>
+
+                            {% if page.language == "english" %}
+                                <option value="0">Disaggregate by</option>
+                                <option value="q2">Location (town/municipality)</option>
+                                <option value="q7">Which is your main area of activity?</option>
+                                <option value="q11">In which year was your organization established?</option>
+                                <option value="q15">Does your organization have a Public Beneficiary Status?</option>
+                            {% elsif page.language == "serbian" %}
+                                <option value="0">Podele prema</option>
+                                <option value="q2">Mesto (grad/opština)</option>
+                                <option value="q7">Koje je vaše glavno polje delatnosti?</option>
+                                <option value="q11">U kojo se godini je osnovana vaša organizacija?</option>
+                                <option value="q15">Da li vaša organizacija ima status javnog korisnika?</option>
+                            {% else %}
+                                <option value="0">Ndarja sipas</option>
+                                <option value="q2">Lokacioni (qyteti/komuna)</option>
+                                <option value="q7">Cila është fusha juaj kryesore e veprimtarisë?</option>
+                                <option value="q11">Në cilin vit është themeluar organizata juaj?</option>
+                                <option value="q15">A ka organizata juaj Status për Përfitim Publik?</option>
+                            {% endif %}
                         </select><br><br/>
                     </div>
                 </form>
