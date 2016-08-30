@@ -194,7 +194,10 @@ function displayStaticChart(chart_container, data, chart_type) {
 
     $('#' + chart_container).highcharts({
         chart: {
-            type: chart_type.replace("-chart", "")
+            type: chart_type,
+            style: {
+                fontFamily: 'Exo'
+            }
         },
         title: {
             text: title
