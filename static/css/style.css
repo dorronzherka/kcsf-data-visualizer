@@ -1,9 +1,5 @@
--
--
--
--
--
--
+---
+---
 
 body {
     font-family: Exo, corbel, sans-serif;
@@ -60,15 +56,15 @@ body {
 
 @media (min-width: 768px) {
     #main-indicator-label-en {
-        margin-left: 10px;
+        margin-left: 11px;
     }
 
     #main-indicator-label-sq {
-        margin-left: -35px;
+        margin-left: -31px;
     }
 
     #main-indicator-label-sr {
-        margin-left: -22px;
+        margin-left: -21px;
     }
 }
 
