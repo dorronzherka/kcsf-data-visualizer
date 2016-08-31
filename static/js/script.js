@@ -329,28 +329,28 @@ function initTopicToggleButton(){
         left_margin_0 = "2.5%";
     }
 
-    $('#show').click(function(e){
+    $('#show').click(function(e) {
         e.preventDefault();
-    	var hidden = $('.hidden');
+        var hidden = $('.hidden');
         var class_name = $(this).attr("class");
-        if (class_name == "show"){
+        if (class_name == "show") {
             $(this).removeClass("show");
             $(this).addClass("hide");
             hidden.show('slide', {direction: 'left'}, 400);
-            $("#show h4").hide(400);
+            $("#show h4").hide('slide', {direction: 'left'}, 400);
             $(this).animate({
                 marginLeft: left_margin
             }, 400);
-            $("#show img").rotate({ endDeg:540, duration:0.4, persist:true });
+            $("#show img").rotate({endDeg: 540, duration: 0.4, persist: true});
         } else {
-            $("#show h4").show(400);
             $(this).removeClass("hide");
             $(this).addClass("show");
             hidden.hide('slide', {direction: 'left'}, 400);
+            $("#show h4").show('slide', {direction: 'left'}, 400);
             $("#show").animate({
                 marginLeft: left_margin_0
             }, 400);
-            $("#show img").rotate({ endDeg:360, duration:0.4});
+            $("#show img").rotate({endDeg: 360, duration: 0.4});
         }
     });
 }

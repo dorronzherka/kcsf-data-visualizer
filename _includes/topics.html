@@ -1,16 +1,30 @@
-<div id="show" class="show">
-    <img src="../static/images/arrow-forward.png"><h4>Topics</h4>
+<script>
+    $(function () {
+        $("#show h4").hide('slide', {direction: 'left'}, 600);
+        $("#show img").rotate({count: 3.5, duration: 0.4, persist: true});
+        if (window.language == "en") {
+            $("#show h4").text("Topics");
+        } else if (window.language == "sq") {
+            $("#show h4").text("Temat");
+        } else {
+            $("#show h4").text("Tema");
+        }
+    });
+</script>
+
+<div id="show" class="hide" style="margin-left: 265px;">
+    <img src="../static/images/arrow-forward.png"><h4 hidden></h4>
 </div>
 
-<div class="hidden" style="display: none;">
+<div class="hidden" style="display: block;">
     <div class="topic-div">
 
         {% if page.language == "english" %}
-            <h3>Topics</h3>
+        <h3>Topics</h3>
         {% elsif page.language == "serbian" %}
-            <h3>Tema</h3>
+        <h3>Tema</h3>
         {% else %}
-            <h3>Temat</h3>
+        <h3>Temat</h3>
         {% endif %}
         <ul class="topic-ul">
 
