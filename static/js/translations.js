@@ -259,14 +259,14 @@ var translation_data = {
         "sq": "Sipas mendimit tuaj, çfarë është imazhi i shoqërisë civile në publikun e gjerë në Kosovë?",
         "en": "What is your opinion on the civil society image in the general public of Kosovo?"
     },
-    "76.1": {
-        "sr": "",
-        "sq": "",
+    "76_1": {
+        "sr": "Revenues in 2015",
+        "sq": "Revenues in 2015",
         "en": "Revenues in 2015"
     },
-    "76.2": {
-        "sr": "",
-        "sq": "",
+    "76_2": {
+        "sr": "Expenses in 2015",
+        "sq": "Expenses in 2015",
         "en": "Expenses in 2015"
     },
     "ID": {
@@ -274,9 +274,9 @@ var translation_data = {
         "sq": "sq",
         "en": "en"
     },
-    "136.1": {
-        "sr": "",
-        "sq": "",
+    "136_1": {
+        "sr": "What is your estimation regarding the impact of your organization on this field? ",
+        "sq": "What is your estimation regarding the impact of your organization on this field? ",
         "en": "What is your estimation regarding the impact of your organization on this field? "
     }
 };

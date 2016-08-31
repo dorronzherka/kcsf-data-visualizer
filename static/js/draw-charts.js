@@ -5,7 +5,7 @@ function Comparator(b, a) {
     return 0;
 }
 
-function displayChart(container, chart_type, data, double_questions) {
+function drawChart(container, chart_type, data, double_questions) {
     $("#" + container).empty();
     chart_type = chart_type.replace("-chart", "");
 
@@ -135,6 +135,10 @@ function displayChart(container, chart_type, data, double_questions) {
         xAxis: {
             type: 'category'
         },
+        yAxis: {
+            min: 0,
+            minRange: 0.1
+        },
         plotOptions: chart_plot_options,
         tooltip: {
             style: {
@@ -156,6 +160,7 @@ function displayChart(container, chart_type, data, double_questions) {
             series: drilldown_series
         }
     });
+
     return chart;
 }
 

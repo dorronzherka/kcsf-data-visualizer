@@ -1,0 +1,20 @@
+<div id="show" class="show">
+    <img src="/static/images/arrow-forward.png"><h4>Topics</h4>
+</div>
+
+<div class="hidden" style="display: none;">
+    <div class="topic-div">
+
+        {% if page.language == "english" %}
+            <h3>Topics</h3>
+        {% elsif page.language == "serbian" %}
+            <h3>Tema</h3>
+        {% else %}
+            <h3>Temat</h3>
+        {% endif %}
+        <ul class="topic-ul">
+
+        </ul>
+    </div>
+</div>
+<div class="clear"></div>
