@@ -260,13 +260,13 @@ var translation_data = {
         "en": "What is your opinion on the civil society image in the general public of Kosovo?"
     },
     "76_1": {
-        "sr": "Revenues in 2015",
-        "sq": "Revenues in 2015",
+        "sr": "Prihodi u 2015 godini",
+        "sq": "Të ardhurat në vitin 2015",
         "en": "Revenues in 2015"
     },
     "76_2": {
-        "sr": "Expenses in 2015",
-        "sq": "Expenses in 2015",
+        "sr": "Rashodi u 2015 godini",
+        "sq": "Shpenzimet në vitin 2015",
         "en": "Expenses in 2015"
     },
     "ID": {
@@ -275,8 +275,38 @@ var translation_data = {
         "en": "en"
     },
     "136_1": {
-        "sr": "What is your estimation regarding the impact of your organization on this field? ",
-        "sq": "What is your estimation regarding the impact of your organization on this field? ",
-        "en": "What is your estimation regarding the impact of your organization on this field? "
+        "sr": "Kako ocenjujete uticaj vaše organizacije  u ovoj oblasti?",
+        "sq": "Si e vlerësoni ndikimin e organizatës suaj në këtë fushë?",
+        "en": "What is your estimation regarding the impact of your organization on this field?"
+    },
+    "217": {
+        "sq": "Llojet e OSHC-ve që janë përfituese të fondeve të donatorëve",
+        "en": "Type of CSOs that are beneficiaries of donor funds",
+        "sr": "Vrsta OCD koje su korisnici donatorskih sredstava"
+    },
+    "222": {
+        "sq": "Madhësia e fondeve krahasuar me vitin 2014",
+        "en": "Size of funds compared to 2014",
+        "sr": "Veličina sredstava u odnosu na 2014"
+    },
+    "226": {
+        "sq": "Përceptimi i Partnerëve Zhvillimorë rreth procedurave të aplikimit për fonde në krahasim me kapacitetet e OSHC-ve",
+        "en": "Perceptions of Development Partners on application procedures for funds in relation to the capacities of CSOs",
+        "sr": "Percepcija Razvojnih Partnera o procedurama prijavljivanja za sredstva u odnosu na kapacitete OCD"
+    },
+    "228": {
+        "sq": "Kriteret kryesore për përzgjedhjen e OSHC-ve për financim",
+        "en": "Main criteria for selecting CSOs for funding",
+        "sr": "Glavni kriterijumi za izbor OCD za finansiranje"
+    },
+    "307": {
+        "sq": "Besimi në shoqërinë civile në nivel personal",
+        "en": "",
+        "sr": ""
+    },
+    "318": {
+        "sq": "Vështirësitë kryesore që OSHC-të I hasin gjatë sigurimit të fondeve",
+        "en": "Main difficulties of CSOs faced in obtaining funds",
+        "sr": "Glavne poteškoće OCD koje se suočavaju u dobijanju sredstava"
     }
 };

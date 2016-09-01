@@ -8,53 +8,6 @@ language: albanian
 <script src="../static/js/script.js"></script>
 
 <div class="row" style="background-color: #E5E6E6; overflow: hidden;">
-    <!--<h1>SHQIP</h1>-->
-
     {% include topics.html language=page.language %}
-    <div class="tabs">
-        <!-- Radio button and lable for #tab-content1 -->
-        <input type="radio" name="tabs" value="pie-chart" id="tab1" checked>
-        <label for="tab1" id="piechart-tab-label">
-            <i class="fa fa-pie-chart"></i><span></span>
-        </label>
-        <!-- Radio button and lable for #tab-content2 -->
-        <input type="radio" name="tabs" value="bar-chart" id="tab2">
-        <label for="tab2">
-            <i class="fa fa-bar-chart bar-chart"></i><span></span>
-        </label>
-        <!-- Radio button and lable for #tab-content3 -->
-        <input type="radio" name="tabs" value="column-chart" id="tab3">
-        <label for="tab3">
-            <i class="fa fa-bar-chart"></i><span></span>
-        </label>
-        <!-- Radio button and lable for #tab-content3 -->
-        <input type="radio" name="tabs" value="line-chart" id="tab4">
-        <label for="tab4">
-            <i class="fa fa-line-chart"></i><span></span>
-        </label>
-        <div id="tab-content1" class="tab-content" style="width: 100%;">
-            <div id="pie-chart-container" class="chart"
-                 style="min-width: 250px; max-width: 700px; height: 400px; margin: 0 auto"></div>
-            <h3><!-- Tab title here --></h3>
-            <p><!-- Tab content here --></p>
-        </div> <!-- #tab-content1 -->
-        <div id="tab-content2" class="tab-content">
-            <div id="bar-chart-container" class="chart"
-                 style="min-width: 250px; max-width: 700px; height: 400px; margin: 0 auto"></div>
-            <h3><!-- Tab title here --></h3>
-            <p><!-- Tab content here --></p>
-        </div> <!-- #tab-content2 -->
-        <div id="tab-content3" class="tab-content">
-            <div id="column-chart-container" class="chart"
-                 style="min-width: 250px; max-width: 700px; height: 400px; margin: 0 auto"></div>
-            <h3><!-- Tab title here --></h3>
-            <p><!-- Tab content here --></p>
-        </div> <!-- #tab-content3 -->
-        <div id="tab-content4" class="tab-content">
-            <div id="line-chart-container" class="chart"
-                 style="min-width: 250px; max-width: 700px; height: 400px; margin: 0 auto"></div>
-            <h3><!-- Tab title here --></h3>
-            <p><!-- Tab content here --></p>
-        </div> <!-- #tab-content3 -->
-    </div>
+    {% include charts.html language=page.language %}
 </div>

@@ -1,62 +1,62 @@
 var topics = {
     "1": {
-        "en": "Struktura e shoqërisë civile",
+        "en": "Civil society structure",
         "sq": "Struktura e shoqërisë civile",
-        "sr": "Struktura e shoqërisë civile"
+        "sr": "Struktura civilnog drustva"
     },
     "2": {
-        "en": "Qeverisja e brendshme dhe menaxhimi",
+        "en": "Internal governance and management",
         "sq": "Qeverisja e brendshme dhe menaxhimi",
-        "sr": "Qeverisja e brendshme dhe menaxhimi"
+        "sr": "Unutrašnje upravljanje I menadžment"
     },
     "3": {
-        "en": "Burimet njerëzore dhe kapacitetet",
+        "en": "Human resources and capacities",
         "sq": "Burimet njerëzore dhe kapacitetet",
-        "sr": "Burimet njerëzore dhe kapacitetet"
+        "sr": "Ljudski resursi i kapaciteti"
     },
     "4": {
-        "en": "Vullnetarizmi dhe aktivizmi",
+        "en": "Voluntarism and activism",
         "sq": "Vullnetarizmi dhe aktivizmi",
-        "sr": "Vullnetarizmi dhe aktivizmi"
+        "sr": "Volonterizam i aktivizam"
     },
     "5": {
-        "en": "Rrjetëzimi",
+        "en": "Networking",
         "sq": "Rrjetëzimi",
-        "sr": "Rrjetëzimi"
+        "sr": "Umrežavanje"
     },
     "6": {
-        "en": "Financimi",
+        "en": "Funding",
         "sq": "Financimi",
-        "sr": "Financimi"
+        "sr": "Finansiranje"
     },
     "7": {
-        "en": "Marëdhëniet OSHC – Donatorë",
+        "en": "CSO-Donors relations",
         "sq": "Marëdhëniet OSHC – Donatorë",
-        "sr": "Marëdhëniet OSHC – Donatorë"
+        "sr": "OCD - Odnos donatora"
     },
     "8": {
-        "en": "Komunikimi me institucionet publike",
+        "en": "Communication with Public Institutions",
         "sq": "Komunikimi me institucionet publike",
-        "sr": "Komunikimi me institucionet publike"
+        "sr": "Komunikacija sa Javnim Institucijama"
     },
     "9": {
-        "en": "Pjesëmarrja në vendim marrje",
+        "en": "Participation in decision-making",
         "sq": "Pjesëmarrja në vendim marrje",
-        "sr": "Pjesëmarrja në vendim marrje"
+        "sr": "Sloboda civilnog društva"
     },
     "10": {
-        "en": "Liritë e shoqërisë civile",
+        "en": "Civil society freedoms",
         "sq": "Liritë e shoqërisë civile",
-        "sr": "Liritë e shoqërisë civile"
+        "sr": "Percepcija civilnog društva"
     },
     "11": {
-        "en": "Ndikimi i përceptuar",
+        "en": "Perceived impact",
         "sq": "Ndikimi i përceptuar",
-        "sr": "Ndikimi i përceptuar"
+        "sr": "Percepcija uticaja"
     },
     "12": {
-        "en": "Përceptimet mbi shoqërinë civile",
+        "en": "Perceptions on civil society",
         "sq": "Përceptimet mbi shoqërinë civile",
-        "sr": "Përceptimet mbi shoqërinë civile"
+        "sr": "Percepcija civilnog društva"
     }
 };

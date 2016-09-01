@@ -141,6 +141,7 @@ function drawChart(container, chart_type, data, double_questions) {
         },
         plotOptions: chart_plot_options,
         tooltip: {
+            backgroundColor: "rgba(255,255,255,1)",
             style: {
                 fontSize: '10pt'
             },
@@ -162,6 +163,42 @@ function drawChart(container, chart_type, data, double_questions) {
     });
 
     return chart;
+}
+
+function drawMultipleSeriesChart(chart_container, chart_type, title, categories, chart_plot_options, series) {
+    $('#' + chart_container).highcharts({
+        chart: {
+            type: chart_type,
+            style: {
+                fontFamily: 'Exo'
+            }
+        },
+        title: {
+            text: title
+        },
+        xAxis: {
+            categories: categories
+        },
+        plotOptions: {
+            column: chart_plot_options,
+            line: chart_plot_options,
+            bar: chart_plot_options
+        },
+        yAxis: {
+            min: 0,
+            minRange: 0.1
+        },
+        tooltip: {
+            backgroundColor: "rgba(255,255,255,1)",
+            headerFormat: '<span style="font-size:12px; text-align: center;"><b>{point.key}</b></span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0;"><b>{series.name}:</b></td>' +
+            '<td style="padding-left: 5px;"><b style="font-weight: bolder;">{point.y:.1f}%</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        series: series
+    });
 }
 
 function getSerieJson(data, item, type) {

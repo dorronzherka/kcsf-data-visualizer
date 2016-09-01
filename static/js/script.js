@@ -4,11 +4,11 @@
 var url = {{ site.requesturl }} +"comparison";
 $.support.cors = true;
 var language = window.language;
-var static_questions = ["q34", "q35", "q80", "q117", "q119"];
+var static_questions = ["q34", "q35", "q80", "q117", "q119", "q217", "q228"];
 var main_indicators = {
     "1": {
-        "q7": ["q2", "q9", "q11", "q15", "q14"],
-        "q9": ["q2", "q7", "q11", "q15"]
+        "q9": ["q2", "q7", "q11", "q15"],
+        "q7": ["q2", "q9", "q11", "q15", "q14"]
     },
     "2": {
         "q18": ["q9", "q2", "q7", "q11", "q15", "q14"],
@@ -41,7 +41,9 @@ var main_indicators = {
         "q84": ["q9", "q2", "q7", "q11", "q15"],
         "q88": ["q9", "q2", "q7", "q11", "q15"],
         "q104": ["q9", "q2", "q7", "q11", "q15"],
-        "q109": ["q9", "q2", "q7", "q11", "q15"]
+        "q109": ["q9", "q2", "q7", "q11", "q15"],
+        "q217": [],
+        "q228": []
     },
     "7": {
         "q112": ["q9", "q2", "q7", "q11", "q15", "q113"],
@@ -170,7 +172,13 @@ $(function () {
             }
         }
     });
+    disaggregateSelectBoxChange();
+    initTopicToggleButton();
+    initTopicSelection();
 
+});
+
+function disaggregateSelectBoxChange(){
     $("#disaggregate-select").change(function () {
         var disaggregate_by = $(this).val();
         var chart_type = $('input[name=tabs]:checked').val();
@@ -188,11 +196,7 @@ $(function () {
             postRequest(url, post_data, chart_type, chart_type_container);
         }
     });
-
-    initTopicToggleButton();
-    initTopicSelection();
-
-});
+}
 
 function mainIndicatorSelectBoxChange() {
     $("#main-indicator-select").off("change").on("change", function () {
@@ -216,79 +220,81 @@ function postRequest(url_post, post_data, chart_type, chart_container, double_qu
     });
 }
 
+function getJsonObjectDepth(parent) {
+    var hasNonLeafNodes = false;
+    var childCount = 0;
+
+    for (var child in parent) {
+        if (typeof parent[child] === 'object') {
+            // Parse this sub-category:
+            childCount += getJsonObjectDepth(parent[child]);
+            // Set the hasNonLeafNodes flag (used below):
+            hasNonLeafNodes = true;
+        }
+    }
+
+    if (hasNonLeafNodes) {
+        // Add 'num_children' element and return the recursive result:
+        parent.num_children = childCount;
+        return childCount;
+    } else {
+        // This is a leaf item, so return 1:
+        return 1;
+    }
+}
+
+
 function displayStaticChart(chart_container, data, chart_type) {
     chart_type = chart_type.replace("-chart", "");
+    var json_depth = getJsonObjectDepth(data);
     $("#" + chart_container).empty();
     var title = data['question'][window.language];
     var categories = [];
     var series = [];
-    for (var category in data['answer'][window.language]) {
-        categories.push(category);
-        for (var sub_category in data['answer'][window.language][category]) {
-            var serie_json = {
-                "name": "",
-                "data": []
+    if (json_depth > 4) {
+        for (var category in data['answer'][window.language]) {
+            categories.push(category);
+            for (var sub_category in data['answer'][window.language][category]) {
+                var serie_json = {
+                    "name": "",
+                    "data": []
+                };
+                var index = series.map(function (d) {
+                    return d['name'];
+                }).indexOf(sub_category);
+                if (index == -1) {
+                    serie_json['name'] = sub_category;
+                    serie_json['data'].push(Number(data['answer'][window.language][category][sub_category]));
+                    series.push(serie_json);
+                } else {
+                    series[index]["data"].push(Number(data['answer'][window.language][category][sub_category]))
+                }
+            }
+        }
+
+        var chart_plot_options = {
+            pointPadding: 0.2,
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{series.name}: <b>{y:,.1f}%</b>'
+            }
+        };
+
+        if (window.screen.width < 768) {
+            chart_plot_options['dataLabels']["enabled"] = false;
+        }
+        drawMultipleSeriesChart(chart_container, chart_type, title, categories, chart_plot_options, series);
+    } else {
+        for (var category in data['answer'][window.language]) {
+            var simple_serie = {
+                "type1": category,
+                "count": Number(data['answer'][window.language][category])
             };
-            var index = series.map(function (d) {
-                return d['name'];
-            }).indexOf(sub_category);
-            if (index == -1) {
-                serie_json['name'] = sub_category;
-                serie_json['data'].push(Number(data['answer'][window.language][category][sub_category]));
-                series.push(serie_json);
-            } else {
-                series[index]["data"].push(Number(data['answer'][window.language][category][sub_category]))
-            }
+            series.push(simple_serie);
         }
+        drawChart(chart_container, chart_type, series);
     }
-
-    var chart_plot_options = {
-        pointPadding: 0.2,
-        borderWidth: 0,
-        dataLabels: {
-            enabled: true,
-            format: '{series.name}: <b>{y:,.1f}%</b>'
-        }
-    };
-
-    if (window.screen.width < 768) {
-        chart_plot_options['dataLabels']["enabled"] = false;
-    }
-
-    $('#' + chart_container).highcharts({
-        chart: {
-            type: chart_type,
-            style: {
-                fontFamily: 'Exo'
-            }
-        },
-        title: {
-            text: title
-        },
-        xAxis: {
-            categories: categories,
-            crosshair: true
-        },
-        plotOptions: {
-            column: chart_plot_options,
-            line: chart_plot_options,
-            bar: chart_plot_options
-        },
-        yAxis: {
-            title: {
-                text: '%'
-            }
-        },
-        tooltip: {
-            headerFormat: '<span style="font-size:12px; text-align: center;"><b>{point.key}</b></span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0;"> {series.name}: </td>' +
-                '<td style="padding-left: 5px;"><b style="font-weight: bolder;">{point.y:.1f}%</b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
-        },
-        series: series
-    });
 }
 
 function getFirstIndicator(jsonObj){
