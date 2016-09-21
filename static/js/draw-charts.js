@@ -38,7 +38,9 @@ function drawChart(container, chart_type, data, double_questions) {
     }
 
     var e = document.getElementById("main-indicator-select");
-    var title = e.options[e.selectedIndex].text;
+    var question_id = e.options[e.selectedIndex].value;
+    var question_title = e.options[e.selectedIndex].text;
+    var title = getChartTitle(question_id.replace("q", ""), question_title);
 
     // building the drill down data for the chart.
     if (double_questions) {
@@ -115,12 +117,16 @@ function drawChart(container, chart_type, data, double_questions) {
             events: {
                 drilldown: function () {
                     var e1 = document.getElementById("disaggregate-select");
-                    title = e1.options[e1.selectedIndex].text;
+                    var question_id = e1.options[e1.selectedIndex].value;
+                    var question_title = e1.options[e1.selectedIndex].text;
+                    var title = getChartTitle(question_id.replace("q", ""), question_title);
                     this.setTitle({text: title});
                 },
                 drillup: function () {
                     var e2 = document.getElementById("main-indicator-select");
-                    title = e2.options[e2.selectedIndex].text;
+                    var question_id = e2.options[e2.selectedIndex].value;
+                    var question_title = e2.options[e2.selectedIndex].text;
+                    var title = getChartTitle(question_id.replace("q", ""), question_title);
                     this.setTitle({text: title});
                 }
             },
@@ -163,6 +169,29 @@ function drawChart(container, chart_type, data, double_questions) {
     });
 
     return chart;
+}
+
+function getChartTitle(question_id, chart_title) {
+    var cso_questions = ["76_1", "76_2", '136_1'];
+    if (cso_questions.indexOf(question_id) == -1) {
+        if (question_id.length == 3) {
+            if (question_id.charAt(0) == "1") {
+                return "<b>" + translation_data["CSO"][window.language] + "</b> - " + chart_title;
+            } else if (question_id.charAt(0) == "2") {
+                return "<b>" + translation_data["Development-Partners"][window.language] + "</b> - " + chart_title;
+            } else if (question_id.charAt(0) == "3") {
+                return "<b>" + translation_data["CSO-Network"][window.language] + "</b> - " + chart_title;
+            } else if (question_id.charAt(0) == "4") {
+                return "<b>" + translation_data["External"][window.language] + "</b> - " + chart_title;
+            }
+        } else if (question_id.length < 3) {
+            return "<b>" + translation_data["CSO"][window.language] + "</b> - " + chart_title;
+        } else {
+            return "<b>" + translation_data["UNDP"][window.language] + "</b> - " + chart_title;
+        }
+    } else {
+        return "<b>" + translation_data["CSO"][window.language] + "</b> - " + chart_title;
+    }
 }
 
 function drawMultipleSeriesChart(chart_container, chart_type, title, categories, chart_plot_options, series) {

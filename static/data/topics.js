@@ -1,5 +1,5 @@
 var topics = {
-    "1": {
+    "6": {
         "en": "Civil society structure",
         "sq": "Struktura e shoqërisë civile",
         "sr": "Struktura civilnog drustva"
@@ -24,7 +24,7 @@ var topics = {
         "sq": "Rrjetëzimi",
         "sr": "Umrežavanje"
     },
-    "6": {
+    "1": {
         "en": "Funding",
         "sq": "Financimi",
         "sr": "Finansiranje"

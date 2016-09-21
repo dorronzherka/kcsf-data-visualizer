@@ -79,9 +79,9 @@ var static_data = {
                     "I ulët": "32.0"
                 },
                 "Zbatimi/menaxhim operativ të projekteve": {
-                    "High": "68.0",
-                    "Medium": "26.0",
-                    "Low": "6.0"
+                    "I lartë": "68.0",
+                    "Mesatar": "26.0",
+                    "I ulët": "6.0"
                 },
                 "Menaxhim financiar të projekteve": {
                     "I lartë": "63.6",
@@ -407,6 +407,63 @@ var static_data = {
             }
         }
     },
+    "q222": {
+        "question": {
+            "en": translation_data['222']["en"],
+            "sq": translation_data['222']["sq"],
+            "sr": translation_data['222']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Larger": "23.5",
+                "Of the same size": "58.8",
+                "Smaller": "17.6"
+            },
+            "sq": {
+                "Më të mëdha": "23.5",
+                "Të së njëjtës madhësi": "58.8",
+                "Më të vogla": "17.6"
+            },
+            "sr": {
+                "Veći": "23.5",
+                "Isti iznos": "58.8",
+                "Manji": "17.6"
+            }
+        }
+    },
+    "q226": {
+        "question": {
+            "en": translation_data['226']["en"],
+            "sq": translation_data['226']["sq"],
+            "sr": translation_data['226']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Easy and can be met by the majority of CSOs": "25.0",
+                "Easy but can be met only by some CSOs": "25.0",
+                "Easy but can be met only by a very limited number of CSOs": "0.0",
+                "Somewhat difficult but can be met by the majority of CSOs": "31.3",
+                "Somewhat difficult and can be met only by some CSOs": "6.3",
+                "Somewhat difficult and can be met only by a very limited number of CSOs": "12.5"
+            },
+            "sq": {
+                "Easy and can be met by the majority of CSOs": "25.0",
+                "Easy but can be met only by some CSOs": "25.0",
+                "Easy but can be met only by a very limited number of CSOs": "0.0",
+                "Somewhat difficult but can be met by the majority of CSOs": "31.3",
+                "Somewhat difficult and can be met only by some CSOs": "6.3",
+                "Somewhat difficult and can be met only by a very limited number of CSOs": "12.5"
+            },
+            "sr": {
+                "Lake i većina OCD-a ih mogu ispuniti": "25.0",
+                "Lake ali samo nekoliko OCD-a ih mogu ispuniti": "25.0",
+                "Lake ali samo jedan mali broj OCD-a ih mogu ispuniti": "0.0",
+                "Do neke mere teške, ali većina OCD-a ih mogu ispuniti": "31.3",
+                "Do neke mere teške i mogu ih ispuniti samo nekoliko OCD-a": "6.3",
+                "Do neke mere teške i mogu ih ispuniti samo veoma mali broj OCD-a": "12.5"
+            }
+        }
+    },
     "q228": {
         "question": {
             "en": translation_data['228']["en"],
@@ -545,7 +602,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Previous experience of the CSO in the program area": {
+                "Prethodno iskustvo OCD-a u programskom polju": {
                     "1": "12.5",
                     "2": "25.0",
                     "3": "6.3",
@@ -554,7 +611,7 @@ var static_data = {
                     "6": "12.5",
                     "7": "6.3"
                 },
-                "Demonstrated previous experience of the CSOs in general": {
+                "Demonstrirano prethodno iskustvo OCD-a uopšte": {
                     "1": "0.0",
                     "2": "31.3",
                     "3": "25.0",
@@ -563,7 +620,7 @@ var static_data = {
                     "6": "12.5",
                     "7": "18.8"
                 },
-                "Positive experience of the CSOs with our organization": {
+                "Pozitivno iskustvo OCD-a sa našom organizacijom": {
                     "1": "25.0",
                     "2": "6.3",
                     "3": "12.5",
@@ -572,7 +629,7 @@ var static_data = {
                     "6": "18.8",
                     "7": "18.8"
                 },
-                "Professional capacities dedicated to the project/program": {
+                "Profesionalni kapaciteti posvećeni projektu/programu": {
                     "1": "6.3",
                     "2": "6.3",
                     "3": "6.3",
@@ -581,7 +638,7 @@ var static_data = {
                     "6": "18.8",
                     "7": "12.5"
                 },
-                "Quality of the proposed project/program": {
+                "Kvalitet predloženog projekta/programa": {
                     "1": "37.5",
                     "2": "0.0",
                     "3": "18.8",
@@ -590,7 +647,7 @@ var static_data = {
                     "6": "6.3",
                     "7": "6.3"
                 },
-                "Quality of the financial proposal, including cost-effectiveness of the proposed project/program": {
+                "Kvalitet finansijskog predloga, obuhvaćajući efektivnost troškova predloženog projekta/programa": {
                     "1": "0.0",
                     "2": "25.0",
                     "3": "18.8",
@@ -599,7 +656,7 @@ var static_data = {
                     "6": "25.0",
                     "7": "0.0"
                 },
-                "Urgency/relevance of the proposed project/program": {
+                "Urgentnost/svrsishodnost predloženog projekta/programa": {
                     "1": "18.8",
                     "2": "6.3",
                     "3": "12.5",
@@ -607,6 +664,444 @@ var static_data = {
                     "5": "12.5",
                     "6": "6.3",
                     "7": "37.5"
+                }
+            }
+        }
+    },
+    "q407": {
+        "question": {
+            "en": translation_data['407']["en"],
+            "sq": translation_data['407']["sq"],
+            "sr": translation_data['407']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Yes": "85.7",
+                "No": "14.3"
+            },
+            "sq": {
+                "Po": "85.7",
+                "Jo": "14.3"
+            },
+            "sr": {
+                "Da": "85.7",
+                "Ne": "14.3"
+            }
+        }
+    },
+    "5A7_5": {
+        "question": {
+            "en": translation_data['5A7_5']["en"],
+            "sq": translation_data['5A7_5']["sq"],
+            "sr": translation_data['5A7_5']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Gender": {
+                    "Fully agree": {
+                        "Men": "22.5",
+                        "Women": "16.7"
+                    },
+                    "Mainly agree": {
+                        "Men": "39.8",
+                        "Women": "35.5"
+                    },
+                    "Not so": {
+                        "Men": "18.8",
+                        "Women": "18.7"
+                    },
+                    "Not at all": {
+                        "Men": "3.9",
+                        "Women": "4.6"
+                    },
+                    "Don't know": {
+                        "Men": "14.2",
+                        "Women": "22.2"
+                    },
+                    "No answer": {
+                        "Men": "0.8",
+                        "Women": "2.3"
+                    }
+                },
+                "Ethnicity": {
+                    "Fully agree": {
+                        "Albanian": "19.8",
+                        "Serb": "23.3",
+                        "Other": "12.0"
+                    },
+                    "Mainly agree": {
+                        "Albanian": "38.0",
+                        "Serb": "42.4",
+                        "Other": "26.5"
+                    },
+                    "Not so": {
+                        "Albanian": "19.0",
+                        "Serb": "21.4",
+                        "Other": "11.0"
+                    },
+                    "Not at all": {
+                        "Albanian": "4.5",
+                        "Serb": "1.9",
+                        "Other": "1.5"
+                    },
+                    "Don't know": {
+                        "Albanian": "17.2",
+                        "Serb": "10.5",
+                        "Other": "49.0"
+                    },
+                    "No answer": {
+                        "Albanian": "1.7",
+                        "Serb": "0.5",
+                        "Other": "0.0"
+                    }
+                },
+                "Age": {
+                    "Fully agree": {
+                        "Age 18-25": "21.4",
+                        "Age 26-35": "18.4",
+                        "Age 36-45": "21.3",
+                        "Age 46-55": "22.3",
+                        "Age 56-65": "16.3",
+                        "Age 66+": "13.5"
+                    },
+                    "Mainly agree": {
+                        "Age 18-25": "33.4",
+                        "Age 26-35": "39.5",
+                        "Age 36-45": "39.5",
+                        "Age 46-55": "38.4",
+                        "Age 56-65": "39.4",
+                        "Age 66+": "32.9"
+                    },
+                    "Not so": {
+                        "Age 18-25": "22.2",
+                        "Age 26-35": "22.8",
+                        "Age 36-45": "17.5",
+                        "Age 46-55": "13.6",
+                        "Age 56-65": "16.8",
+                        "Age 66+": "18.5"
+                    },
+                    "Not at all": {
+                        "Age 18-25": "4.8",
+                        "Age 26-35": "4.6",
+                        "Age 36-45": "3.8",
+                        "Age 46-55": "4.3",
+                        "Age 56-65": "4.1",
+                        "Age 66+": "3.9"
+                    },
+                    "Don't know": {
+                        "Age 18-25": "18.1",
+                        "Age 26-35": "13.8",
+                        "Age 36-45": "16.2",
+                        "Age 46-55": "19.7",
+                        "Age 56-65": "20.2",
+                        "Age 66+": "28.9"
+                    },
+                    "No answer": {
+                        "Age 18-25": "0.1",
+                        "Age 26-35": "1.0",
+                        "Age 36-45": "1.8",
+                        "Age 46-55": "1.8",
+                        "Age 56-65": "3.3",
+                        "Age 66+": "2.4"
+                    }
+                },
+                "Membership": {
+                    "Fully agree": {
+                        "Member/volunteer in one or more CSOs": "25.10",
+                        "Not a member/volunteer in one or more CSOs": "19.30"
+                    },
+                    "Mainly agree": {
+                        "Member/volunteer in one or more CSOs": "30.70",
+                        "Not a member/volunteer in one or more CSOs": "38"
+                    },
+                    "Not so": {
+                        "Member/volunteer in one or more CSOs": "33.3",
+                        "Not a member/volunteer in one or more CSOs": "18.10"
+                    },
+                    "Not at all": {
+                        "Member/volunteer in one or more CSOs": "2.80",
+                        "Not a member/volunteer in one or more CSOs": "4.30"
+                    },
+                    "Don't know": {
+                        "Member/volunteer in one or more CSOs": "3.30",
+                        "Not a member/volunteer in one or more CSOs": "18.90"
+                    },
+                    "No answer": {
+                        "Member/volunteer in one or more CSOs": "4.80",
+                        "Not a member/volunteer in one or more CSOs": "1.40"
+                    }
+                }
+            },
+            "sq": {
+                "Gender": {
+                    "Fully agree": {
+                        "Men": "22.5",
+                        "Women": "16.7"
+                    },
+                    "Mainly agree": {
+                        "Men": "39.8",
+                        "Women": "35.5"
+                    },
+                    "Not so": {
+                        "Men": "18.8",
+                        "Women": "18.7"
+                    },
+                    "Not at all": {
+                        "Men": "3.9",
+                        "Women": "4.6"
+                    },
+                    "Don't know": {
+                        "Men": "14.2",
+                        "Women": "22.2"
+                    },
+                    "No answer": {
+                        "Men": "0.8",
+                        "Women": "2.3"
+                    }
+                },
+                "Ethnicity": {
+                    "Fully agree": {
+                        "Albanian": "19.8",
+                        "Serb": "23.3",
+                        "Other": "12.0"
+                    },
+                    "Mainly agree": {
+                        "Albanian": "38.0",
+                        "Serb": "42.4",
+                        "Other": "26.5"
+                    },
+                    "Not so": {
+                        "Albanian": "19.0",
+                        "Serb": "21.4",
+                        "Other": "11.0"
+                    },
+                    "Not at all": {
+                        "Albanian": "4.5",
+                        "Serb": "1.9",
+                        "Other": "1.5"
+                    },
+                    "Don't know": {
+                        "Albanian": "17.2",
+                        "Serb": "10.5",
+                        "Other": "49.0"
+                    },
+                    "No answer": {
+                        "Albanian": "1.7",
+                        "Serb": "0.5",
+                        "Other": "0.0"
+                    }
+                },
+                "Age": {
+                    "Fully agree": {
+                        "Age 18-25": "21.4",
+                        "Age 26-35": "18.4",
+                        "Age 36-45": "21.3",
+                        "Age 46-55": "22.3",
+                        "Age 56-65": "16.3",
+                        "Age 66+": "13.5"
+                    },
+                    "Mainly agree": {
+                        "Age 18-25": "33.4",
+                        "Age 26-35": "39.5",
+                        "Age 36-45": "39.5",
+                        "Age 46-55": "38.4",
+                        "Age 56-65": "39.4",
+                        "Age 66+": "32.9"
+                    },
+                    "Not so": {
+                        "Age 18-25": "22.2",
+                        "Age 26-35": "22.8",
+                        "Age 36-45": "17.5",
+                        "Age 46-55": "13.6",
+                        "Age 56-65": "16.8",
+                        "Age 66+": "18.5"
+                    },
+                    "Not at all": {
+                        "Age 18-25": "4.8",
+                        "Age 26-35": "4.6",
+                        "Age 36-45": "3.8",
+                        "Age 46-55": "4.3",
+                        "Age 56-65": "4.1",
+                        "Age 66+": "3.9"
+                    },
+                    "Don't know": {
+                        "Age 18-25": "18.1",
+                        "Age 26-35": "13.8",
+                        "Age 36-45": "16.2",
+                        "Age 46-55": "19.7",
+                        "Age 56-65": "20.2",
+                        "Age 66+": "28.9"
+                    },
+                    "No answer": {
+                        "Age 18-25": "0.1",
+                        "Age 26-35": "1.0",
+                        "Age 36-45": "1.8",
+                        "Age 46-55": "1.8",
+                        "Age 56-65": "3.3",
+                        "Age 66+": "2.4"
+                    }
+                },
+                "Membership": {
+                    "Fully agree": {
+                        "Member/volunteer in one or more CSOs": "25.10",
+                        "Not a member/volunteer in one or more CSOs": "19.30"
+                    },
+                    "Mainly agree": {
+                        "Member/volunteer in one or more CSOs": "30.70",
+                        "Not a member/volunteer in one or more CSOs": "38"
+                    },
+                    "Not so": {
+                        "Member/volunteer in one or more CSOs": "33.3",
+                        "Not a member/volunteer in one or more CSOs": "18.10"
+                    },
+                    "Not at all": {
+                        "Member/volunteer in one or more CSOs": "2.80",
+                        "Not a member/volunteer in one or more CSOs": "4.30"
+                    },
+                    "Don't know": {
+                        "Member/volunteer in one or more CSOs": "3.30",
+                        "Not a member/volunteer in one or more CSOs": "18.90"
+                    },
+                    "No answer": {
+                        "Member/volunteer in one or more CSOs": "4.80",
+                        "Not a member/volunteer in one or more CSOs": "1.40"
+                    }
+                }
+            },
+            "sr": {
+                "Gender": {
+                    "Fully agree": {
+                        "Men": "22.5",
+                        "Women": "16.7"
+                    },
+                    "Mainly agree": {
+                        "Men": "39.8",
+                        "Women": "35.5"
+                    },
+                    "Not so": {
+                        "Men": "18.8",
+                        "Women": "18.7"
+                    },
+                    "Not at all": {
+                        "Men": "3.9",
+                        "Women": "4.6"
+                    },
+                    "Don't know": {
+                        "Men": "14.2",
+                        "Women": "22.2"
+                    },
+                    "No answer": {
+                        "Men": "0.8",
+                        "Women": "2.3"
+                    }
+                },
+                "Ethnicity": {
+                    "Fully agree": {
+                        "Albanian": "19.8",
+                        "Serb": "23.3",
+                        "Other": "12.0"
+                    },
+                    "Mainly agree": {
+                        "Albanian": "38.0",
+                        "Serb": "42.4",
+                        "Other": "26.5"
+                    },
+                    "Not so": {
+                        "Albanian": "19.0",
+                        "Serb": "21.4",
+                        "Other": "11.0"
+                    },
+                    "Not at all": {
+                        "Albanian": "4.5",
+                        "Serb": "1.9",
+                        "Other": "1.5"
+                    },
+                    "Don't know": {
+                        "Albanian": "17.2",
+                        "Serb": "10.5",
+                        "Other": "49.0"
+                    },
+                    "No answer": {
+                        "Albanian": "1.7",
+                        "Serb": "0.5",
+                        "Other": "0.0"
+                    }
+                },
+                "Age": {
+                    "Fully agree": {
+                        "Age 18-25": "21.4",
+                        "Age 26-35": "18.4",
+                        "Age 36-45": "21.3",
+                        "Age 46-55": "22.3",
+                        "Age 56-65": "16.3",
+                        "Age 66+": "13.5"
+                    },
+                    "Mainly agree": {
+                        "Age 18-25": "33.4",
+                        "Age 26-35": "39.5",
+                        "Age 36-45": "39.5",
+                        "Age 46-55": "38.4",
+                        "Age 56-65": "39.4",
+                        "Age 66+": "32.9"
+                    },
+                    "Not so": {
+                        "Age 18-25": "22.2",
+                        "Age 26-35": "22.8",
+                        "Age 36-45": "17.5",
+                        "Age 46-55": "13.6",
+                        "Age 56-65": "16.8",
+                        "Age 66+": "18.5"
+                    },
+                    "Not at all": {
+                        "Age 18-25": "4.8",
+                        "Age 26-35": "4.6",
+                        "Age 36-45": "3.8",
+                        "Age 46-55": "4.3",
+                        "Age 56-65": "4.1",
+                        "Age 66+": "3.9"
+                    },
+                    "Don't know": {
+                        "Age 18-25": "18.1",
+                        "Age 26-35": "13.8",
+                        "Age 36-45": "16.2",
+                        "Age 46-55": "19.7",
+                        "Age 56-65": "20.2",
+                        "Age 66+": "28.9"
+                    },
+                    "No answer": {
+                        "Age 18-25": "0.1",
+                        "Age 26-35": "1.0",
+                        "Age 36-45": "1.8",
+                        "Age 46-55": "1.8",
+                        "Age 56-65": "3.3",
+                        "Age 66+": "2.4"
+                    }
+                },
+                "Membership": {
+                    "Fully agree": {
+                        "Member/volunteer in one or more CSOs": "25.10",
+                        "Not a member/volunteer in one or more CSOs": "19.30"
+                    },
+                    "Mainly agree": {
+                        "Member/volunteer in one or more CSOs": "30.70",
+                        "Not a member/volunteer in one or more CSOs": "38"
+                    },
+                    "Not so": {
+                        "Member/volunteer in one or more CSOs": "33.3",
+                        "Not a member/volunteer in one or more CSOs": "18.10"
+                    },
+                    "Not at all": {
+                        "Member/volunteer in one or more CSOs": "2.80",
+                        "Not a member/volunteer in one or more CSOs": "4.30"
+                    },
+                    "Don't know": {
+                        "Member/volunteer in one or more CSOs": "3.30",
+                        "Not a member/volunteer in one or more CSOs": "18.90"
+                    },
+                    "No answer": {
+                        "Member/volunteer in one or more CSOs": "4.80",
+                        "Not a member/volunteer in one or more CSOs": "1.40"
+                    }
                 }
             }
         }

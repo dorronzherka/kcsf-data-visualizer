@@ -1,4 +1,49 @@
 var translation_data = {
+    "Gender": {
+        "en": "Gender",
+        "sq": "Gjinia",
+        "sr": "Pol"
+    },
+    "Membership": {
+        "en": "Member or volunteer for one or more civil society organization",
+        "sq": "Member or volunteer for one or more civil society organization",
+        "sr": "Member or volunteer for one or more civil society organization"
+    },
+    "Ethnicity": {
+        "en": "Ethnicity",
+        "sq": "Etniciteti",
+        "sr": "Ethnicity"
+    },
+    "Age": {
+        "en": "Age",
+        "sq": "Mosha",
+        "sr": "Age"
+    },
+    "CSO": {
+        "en": "CSO Survey",
+        "sq": "Pyetësori me OSHC",
+        "sr": "OCD Anketa"
+    },
+    "CSO-Network": {
+        "en": "CSO Network Survey",
+        "sq": "Anketa e rrjeteve të OSHC-së",
+        "sr": "OCD Mreža Anketa"
+    },
+    "Development-Partners": {
+        "en": "Development Partners Survey",
+        "sq": "Pyetësori me partnerët zhvillimorë",
+        "sr": "Razvoj Partnerna Anketa"
+    },
+    "UNDP": {
+        "en": "UNDP Public Pulse",
+        "sq": "Pulsi Publik i UNDP",
+        "sr": "UNDP Public Javni Puls"
+    },
+    "External": {
+        "sr": "Eksterni Akteri Anketa",
+        "en": "External Stakeholders Survey",
+        "sq": "Pyetësori me hisedarë të jashtëm"
+    },
     "0": {
         "sr": "Podele prema",
         "sq": "Ndarja sipas",
@@ -297,16 +342,31 @@ var translation_data = {
     "228": {
         "sq": "Kriteret kryesore për përzgjedhjen e OSHC-ve për financim",
         "en": "Main criteria for selecting CSOs for funding",
-        "sr": "Glavni kriterijumi za izbor OCD za finansiranje"
-    },
-    "307": {
-        "sq": "Besimi në shoqërinë civile në nivel personal",
-        "en": "",
-        "sr": ""
+        "sr": "Koji su glavni kriterijumi za odabir OCD-a pri davanju fondova? (Molimo vas da ih stavite u redosledu po značaju od 1 do 7)"
     },
     "318": {
         "sq": "Vështirësitë kryesore që OSHC-të I hasin gjatë sigurimit të fondeve",
         "en": "Main difficulties of CSOs faced in obtaining funds",
         "sr": "Glavne poteškoće OCD koje se suočavaju u dobijanju sredstava"
+    },
+    "407": {
+        "en": "Personal trust in civil society",
+        "sq": "Besimi në shoqërinë civile në nivel personal",
+        "sr": "Da li vi lično verujete civilnom društvu?"
+    },
+    "5A7_5": {
+        "en": "Civil society in Kosovo serves as a truthful monitor of democratic developments in Kosovo?",
+        "sq": "Civil society in Kosovo serves as a truthful monitor of democratic developments in Kosovo?",
+        "sr": "Civilno društvo na Kosovu služi kao verodostojni monitor demokratskih razvoja na Kosovu?"
+    },
+    "5A68": {
+        "en": "In the last six month have you been anactive participant, participant but not active, or not a participant of each of the following?",
+        "sq": "In the last six month have you been anactive participant, participant but not active, or not a participant of each of the following?",
+        "sr": "U poslednjih šest meseci bili ste aktivni učesnik, učesnik ali ne aktivan ili niste bili učesnik u nekoj od dolenavedenih?"
+    },
+    "5C15": {
+        "en": "",
+        "sq": "",
+        "sr": ""
     }
 };

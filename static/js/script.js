@@ -4,9 +4,9 @@
 var url = {{ site.requesturl }} +"comparison";
 $.support.cors = true;
 var language = window.language;
-var static_questions = ["q34", "q35", "q80", "q117", "q119", "q217", "q228"];
+var static_questions = ["q34", "q35", "q80", "q117", "q119", "q217", "q222", "q226", "q228", "q407"];
 var main_indicators = {
-    "1": {
+    "6": {
         "q9": ["q2", "q7", "q11", "q15"],
         "q7": ["q2", "q9", "q11", "q15", "q14"]
     },
@@ -27,7 +27,7 @@ var main_indicators = {
         "q54": ["q9", "q2", "q7", "q11", "q15"],
         "q56": ["q9", "q2", "q7", "q11", "q15"]
     },
-    "6": {
+    "1": {
         "q72": ["q9", "q2", "q7", "q11", "q15"],
         "q73": ["q9", "q2", "q7", "q11", "q15"],
         "q74": ["q9", "q2", "q7", "q11", "q15"],
@@ -43,6 +43,8 @@ var main_indicators = {
         "q104": ["q9", "q2", "q7", "q11", "q15"],
         "q109": ["q9", "q2", "q7", "q11", "q15"],
         "q217": [],
+        "q222": [],
+        "q226": [],
         "q228": []
     },
     "7": {
@@ -69,7 +71,9 @@ var main_indicators = {
         "q136_1": ["q9", "q2", "q7", "q11", "q15"]
     },
     "12": {
-        "q138": ["q9", "q2", "q7", "q11", "q15"]
+        "q138": ["q9", "q2", "q7", "q11", "q15"],
+        "q407": [],
+        "5A7_5": ["Gender", "Age", "Ethnicity" ,"Membership"]
     }
 };
 
@@ -97,9 +101,11 @@ function populateMainIndicatorSelectBoxes(topic) {
     }
 }
 
-function populateDisaggregateSelectBox(indicator, topic) {
+function populateDisaggregateSelectBox(indicator, topic, is_undp_data) {
     $("#disaggregate-select").empty();
-    var option_html = "<option value='0'>" + translation_data[0][window.language] + "</option>";
+    if (is_undp_data != true) {
+        var option_html = "<option value='0'>" + translation_data[0][window.language] + "</option>";
+    }
     $("#disaggregate-select").append(option_html);
     for (var i = 0; i < main_indicators[topic][indicator].length; i++) {
         var q_id = main_indicators[topic][indicator][i];
@@ -123,23 +129,29 @@ function displayChart(){
             }, 350);
         }
         $("#disaggregate-select").parent().parent().hide(350);
-        displayStaticChart("column-chart-container", static_data[main_inicator], "column-chart");
+        displayStaticChart("column-chart-container", static_data[main_inicator], "column-chart", main_inicator.replace("q", ""));
     } else {
         $("#tab1").prop("disabled", false);
         $("#main-indicator-select").parent().parent().css("margin-top", "0px");
         $("#disaggregate-select").parent().parent().show(350);
-        populateDisaggregateSelectBox(main_inicator, active_topic);
-        var disaggregate_by = $("#disaggregate-select").val();
-        var post_data = {
-            "q1_id": main_inicator,
-            "q2_id": "",
-            "lang": window.language
-        };
-        if (disaggregate_by != "0") {
-            post_data["q2_id"] = disaggregate_by;
-            postRequest(url, post_data, chart_type, chart_type_container, "y");
+        if (main_inicator.charAt(0) == "5"){
+            $("#tab3").click();
+            populateDisaggregateSelectBox(main_inicator, active_topic, true);
+            displayStaticChart("column-chart-container", static_data[main_inicator], "column-chart", main_inicator.replace("q", ""), "Gender");
         } else {
-            postRequest(url, post_data, chart_type, chart_type_container);
+            populateDisaggregateSelectBox(main_inicator, active_topic);
+            var disaggregate_by = $("#disaggregate-select").val();
+            var post_data = {
+                "q1_id": main_inicator,
+                "q2_id": "",
+                "lang": window.language
+            };
+            if (disaggregate_by != "0") {
+                post_data["q2_id"] = disaggregate_by;
+                postRequest(url, post_data, chart_type, chart_type_container, "y");
+            } else {
+                postRequest(url, post_data, chart_type, chart_type_container);
+            }
         }
     }
 }
@@ -157,18 +169,25 @@ $(function () {
         var checked_rb = $(this).val();
         var chart_type_container = checked_rb + "-container";
         if (static_questions.indexOf(main_inicator) != -1) {
-            displayStaticChart(chart_type_container, static_data[main_inicator], checked_rb);
+            $("#tab1").prop("disabled", true);
+            displayStaticChart(chart_type_container, static_data[main_inicator], checked_rb, main_inicator.replace("q", ""));
         } else {
-            var post_data = {
-                "q1_id": main_inicator,
-                "q2_id": "",
-                "lang": window.language
-            };
-            if (disaggregate_by != "0") {
-                post_data["q2_id"] = disaggregate_by;
-                postRequest(url, post_data, checked_rb, chart_type_container, "y");
+            if (main_inicator.charAt(0) == "5"){
+                $("#tab1").prop("disabled", true);
+                displayStaticChart(chart_type_container, static_data[main_inicator], checked_rb, main_inicator.replace("q", ""), disaggregate_by);
             } else {
-                postRequest(url, post_data, checked_rb, chart_type_container);
+                $("#tab1").prop("disabled", false);
+                var post_data = {
+                    "q1_id": main_inicator,
+                    "q2_id": "",
+                    "lang": window.language
+                };
+                if (disaggregate_by != "0") {
+                    post_data["q2_id"] = disaggregate_by;
+                    postRequest(url, post_data, checked_rb, chart_type_container, "y");
+                } else {
+                    postRequest(url, post_data, checked_rb, chart_type_container);
+                }
             }
         }
     });
@@ -184,16 +203,20 @@ function disaggregateSelectBoxChange(){
         var chart_type = $('input[name=tabs]:checked').val();
         var chart_type_container = chart_type + "-container";
         var main_inicator = $("#main-indicator-select").val();
-        var post_data = {
-            "q1_id": main_inicator,
-            "q2_id": disaggregate_by,
-            "lang": window.language
-        };
-        if (disaggregate_by != "0") {
-            postRequest(url, post_data, chart_type, chart_type_container, "y");
+        if (main_inicator.charAt(0) == "5"){
+            displayStaticChart(chart_type_container, static_data[main_inicator], chart_type, main_inicator.replace("q", ""), disaggregate_by);
         } else {
-            post_data['q2_id'] = "";
-            postRequest(url, post_data, chart_type, chart_type_container);
+            var post_data = {
+                "q1_id": main_inicator,
+                "q2_id": disaggregate_by,
+                "lang": window.language
+            };
+            if (disaggregate_by != "0") {
+                postRequest(url, post_data, chart_type, chart_type_container, "y");
+            } else {
+                post_data['q2_id'] = "";
+                postRequest(url, post_data, chart_type, chart_type_container);
+            }
         }
     });
 }
@@ -243,48 +266,61 @@ function getJsonObjectDepth(parent) {
     }
 }
 
+function buildMultipleSeriesChartData(categories, title, data, series, chart_container, chart_type, static_q_diss_type){
+    var answers = data["answer"][window.language];
+    if (static_q_diss_type) {
+        answers = data["answer"][window.language][static_q_diss_type];
+    }
 
-function displayStaticChart(chart_container, data, chart_type) {
+    for (var category in answers) {
+        categories.push(category);
+        for (var sub_category in answers[category]) {
+            var serie_json = {
+                "name": "",
+                "data": []
+            };
+            var index = series.map(function (d) {
+                return d['name'];
+            }).indexOf(sub_category);
+            if (index == -1) {
+                serie_json['name'] = sub_category;
+                serie_json['data'].push(Number(answers[category][sub_category]));
+                series.push(serie_json);
+            } else {
+                series[index]["data"].push(Number(answers[category][sub_category]))
+            }
+        }
+    }
+
+    var chart_plot_options = {
+        pointPadding: 0.2,
+        borderWidth: 0,
+        dataLabels: {
+            enabled: true,
+            format: '{series.name}: <b>{y:,.1f}%</b>'
+        }
+    };
+
+    if (window.screen.width < 768) {
+        chart_plot_options['dataLabels']["enabled"] = false;
+    }
+    drawMultipleSeriesChart(chart_container, chart_type, title, categories, chart_plot_options, series);
+}
+
+function displayStaticChart(chart_container, data, chart_type, question_id, static_q_diss_type) {
     chart_type = chart_type.replace("-chart", "");
     var json_depth = getJsonObjectDepth(data);
     $("#" + chart_container).empty();
-    var title = data['question'][window.language];
+    var question_title = data['question'][window.language];
+    var title = getChartTitle(question_id, question_title);
     var categories = [];
     var series = [];
     if (json_depth > 4) {
-        for (var category in data['answer'][window.language]) {
-            categories.push(category);
-            for (var sub_category in data['answer'][window.language][category]) {
-                var serie_json = {
-                    "name": "",
-                    "data": []
-                };
-                var index = series.map(function (d) {
-                    return d['name'];
-                }).indexOf(sub_category);
-                if (index == -1) {
-                    serie_json['name'] = sub_category;
-                    serie_json['data'].push(Number(data['answer'][window.language][category][sub_category]));
-                    series.push(serie_json);
-                } else {
-                    series[index]["data"].push(Number(data['answer'][window.language][category][sub_category]))
-                }
-            }
+        if (question_id.length < 4) {
+            buildMultipleSeriesChartData(categories, title, data, series, chart_container, chart_type);
+        } else {
+            buildMultipleSeriesChartData(categories, title, data, series, chart_container, chart_type, static_q_diss_type);
         }
-
-        var chart_plot_options = {
-            pointPadding: 0.2,
-            borderWidth: 0,
-            dataLabels: {
-                enabled: true,
-                format: '{series.name}: <b>{y:,.1f}%</b>'
-            }
-        };
-
-        if (window.screen.width < 768) {
-            chart_plot_options['dataLabels']["enabled"] = false;
-        }
-        drawMultipleSeriesChart(chart_container, chart_type, title, categories, chart_plot_options, series);
     } else {
         for (var category in data['answer'][window.language]) {
             var simple_serie = {
