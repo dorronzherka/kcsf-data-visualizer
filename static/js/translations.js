@@ -354,19 +354,34 @@ var translation_data = {
         "sq": "Besimi në shoqërinë civile në nivel personal",
         "sr": "Da li vi lično verujete civilnom društvu?"
     },
-    "5A7_5": {
+    "5A_7": {
+        "sq": "Shoqëria civile në Kosovë shërben si një monitorues i besueshëm i zhvillimeve demokratike në Kosovë?",
         "en": "Civil society in Kosovo serves as a truthful monitor of democratic developments in Kosovo?",
-        "sq": "Civil society in Kosovo serves as a truthful monitor of democratic developments in Kosovo?",
         "sr": "Civilno društvo na Kosovu služi kao verodostojni monitor demokratskih razvoja na Kosovu?"
     },
     "5A68": {
+        "sq": "Në gjashtë muajt e fundit a keni qenë pjesëmarrës aktiv, pjesëmarrës por jo aktiv ose jopjesëmarrës në njërën në vazhdim?",
         "en": "In the last six month have you been anactive participant, participant but not active, or not a participant of each of the following?",
-        "sq": "In the last six month have you been anactive participant, participant but not active, or not a participant of each of the following?",
         "sr": "U poslednjih šest meseci bili ste aktivni učesnik, učesnik ali ne aktivan ili niste bili učesnik u nekoj od dolenavedenih?"
     },
     "5C15": {
-        "en": "",
-        "sq": "",
-        "sr": ""
+        "sq": "Në bazë të opinionit tuaj, nëse korrupsioni ekziston, në çfarë shkalle është i pranishëm në organizatat e shoqërisë civile?",
+        "en": "In your opinion, if corruption exists, to what extend it is prevalent in the civil society organizations?",
+        "sr": "Po vašem mišljenju, ako korupcija postoji, u kakvoj je meri prisutna kod organizacija civilnog društva? "
+    },
+    "5N1": {
+        "sq": "A mund të na tregoni nëse jeni anëtarë apo bëni punë vullnetare për një apo më shumë organizata të shoqërisë civile?",
+        "en": "Could you tell us whether you are a member or do any voluntary work for one or more civil society organizations?",
+        "sr": "Možete li nam reći da li ste član ili da li radite neki volunterski rad za jednu ili više organizacija civilnog društva?"
+    },
+    "5N3": {
+        "sq": "Përgjatë dy viteve të fundit, a keni:",
+        "en": "During the last two years, have you ever:",
+        "sr": "Tokom zadnjih dve godine, da li ste ikada:"
+    },
+    "5N4": {
+        "sq": "Në përgjithësi kur keni të bëni me njerëz të tjerë, a mendoni se…",
+        "en": "In general, when dealing with other people, do you think that …",
+        "sr": "Uopšte gledano, kada radite sa ljudima, da li mislite da …"
     }
 };

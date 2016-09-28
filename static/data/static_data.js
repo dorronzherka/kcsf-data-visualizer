@@ -970,65 +970,65 @@ var static_data = {
             },
             "sr": {
                 "Gender": {
-                    "Fully agree": {
-                        "Men": "22.5",
-                        "Women": "16.7"
+                    "Potpuno se slažem": {
+                        "Muškarci": "22.5",
+                        "Žene": "16.7"
                     },
-                    "Mainly agree": {
-                        "Men": "39.8",
-                        "Women": "35.5"
+                    "Uglavnom se slažem": {
+                        "Muškarci": "39.8",
+                        "Žene": "35.5"
                     },
-                    "Not so": {
-                        "Men": "18.8",
-                        "Women": "18.7"
+                    "Baš se i ne slažem ": {
+                        "Muškarci": "18.8",
+                        "Žene": "18.7"
                     },
-                    "Not at all": {
-                        "Men": "3.9",
-                        "Women": "4.6"
+                    "Nimalo": {
+                        "Muškarci": "3.9",
+                        "Žene": "4.6"
                     },
-                    "Don't know": {
-                        "Men": "14.2",
-                        "Women": "22.2"
+                    "Ne znam ": {
+                        "Muškarci": "14.2",
+                        "Žene": "22.2"
                     },
-                    "No answer": {
-                        "Men": "0.8",
-                        "Women": "2.3"
+                    "Nema odgovora": {
+                        "Muškarci": "0.8",
+                        "Žene": "2.3"
                     }
                 },
                 "Ethnicity": {
-                    "Fully agree": {
+                    "Potpuno se slažem": {
                         "Albanian": "19.8",
                         "Serb": "23.3",
                         "Other": "12.0"
                     },
-                    "Mainly agree": {
+                    "Uglavnom se slažem": {
                         "Albanian": "38.0",
                         "Serb": "42.4",
                         "Other": "26.5"
                     },
-                    "Not so": {
+                    "Baš se i ne slažem ": {
                         "Albanian": "19.0",
                         "Serb": "21.4",
                         "Other": "11.0"
                     },
-                    "Not at all": {
+                    "Nimalo": {
                         "Albanian": "4.5",
                         "Serb": "1.9",
                         "Other": "1.5"
                     },
-                    "Don't know": {
+                    "Ne znam": {
                         "Albanian": "17.2",
                         "Serb": "10.5",
                         "Other": "49.0"
                     },
-                    "No answer": {
+                    "Nema odgovora": {
                         "Albanian": "1.7",
                         "Serb": "0.5",
                         "Other": "0.0"
                     }
                 },
                 "Age": {
-                    "Fully agree": {
+                    "Potpuno se slažem": {
                         "Age 18-25": "21.4",
                         "Age 26-35": "18.4",
                         "Age 36-45": "21.3",
@@ -1036,7 +1036,7 @@ var static_data = {
                         "Age 56-65": "16.3",
                         "Age 66+": "13.5"
                     },
-                    "Mainly agree": {
+                    "Uglavnom se slažem": {
                         "Age 18-25": "33.4",
                         "Age 26-35": "39.5",
                         "Age 36-45": "39.5",
@@ -1044,7 +1044,7 @@ var static_data = {
                         "Age 56-65": "39.4",
                         "Age 66+": "32.9"
                     },
-                    "Not so": {
+                    "Baš se i ne slažem": {
                         "Age 18-25": "22.2",
                         "Age 26-35": "22.8",
                         "Age 36-45": "17.5",
@@ -1052,7 +1052,7 @@ var static_data = {
                         "Age 56-65": "16.8",
                         "Age 66+": "18.5"
                     },
-                    "Not at all": {
+                    "Nimalo": {
                         "Age 18-25": "4.8",
                         "Age 26-35": "4.6",
                         "Age 36-45": "3.8",
@@ -1060,7 +1060,7 @@ var static_data = {
                         "Age 56-65": "4.1",
                         "Age 66+": "3.9"
                     },
-                    "Don't know": {
+                    "Ne znam": {
                         "Age 18-25": "18.1",
                         "Age 26-35": "13.8",
                         "Age 36-45": "16.2",
@@ -1068,7 +1068,7 @@ var static_data = {
                         "Age 56-65": "20.2",
                         "Age 66+": "28.9"
                     },
-                    "No answer": {
+                    "Nema odgovora": {
                         "Age 18-25": "0.1",
                         "Age 26-35": "1.0",
                         "Age 36-45": "1.8",
@@ -1078,32 +1078,1085 @@ var static_data = {
                     }
                 },
                 "Membership": {
-                    "Fully agree": {
+                    "Potpuno se slažem": {
                         "Member/volunteer in one or more CSOs": "25.10",
                         "Not a member/volunteer in one or more CSOs": "19.30"
                     },
-                    "Mainly agree": {
+                    "Uglavnom se slažem": {
                         "Member/volunteer in one or more CSOs": "30.70",
                         "Not a member/volunteer in one or more CSOs": "38"
                     },
-                    "Not so": {
+                    "Baš se i ne slažem": {
                         "Member/volunteer in one or more CSOs": "33.3",
                         "Not a member/volunteer in one or more CSOs": "18.10"
                     },
-                    "Not at all": {
+                    "Nimalo": {
                         "Member/volunteer in one or more CSOs": "2.80",
                         "Not a member/volunteer in one or more CSOs": "4.30"
                     },
-                    "Don't know": {
+                    "Ne znam": {
                         "Member/volunteer in one or more CSOs": "3.30",
                         "Not a member/volunteer in one or more CSOs": "18.90"
                     },
-                    "No answer": {
+                    "Nema odgovora": {
                         "Member/volunteer in one or more CSOs": "4.80",
                         "Not a member/volunteer in one or more CSOs": "1.40"
                     }
                 }
             }
         }
+    },
+
+    "5C15": {
+        "question": {
+            "en": translation_data['5C15']["en"],
+            "sq": translation_data['5C15']["sq"],
+            "sr": translation_data['5C15']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Gender": {
+                    "It is not present at all": {
+                        "Men": "7.3",
+                        "Women": "4.1"
+                    },
+                    "Present in a small scale": {
+                        "Men": "19.9",
+                        "Women": "14.8"
+                    },
+                    "Present in a medium scale": {
+                        "Men": "23.2",
+                        "Women": "20.8"
+                    },
+                    "Present in a large scale": {
+                        "Men": "18.4",
+                        "Women": "17.6"
+                    },
+                    "Don't know": {
+                        "Men": "29.5",
+                        "Women": "40.6"
+                    },
+                    "No answer": {
+                        "Men": "1.7",
+                        "Women": "2.1"
+                    }
+                },
+                "Ethnicity": {
+                    "It is not present at all": {
+                        "Albanian": "5.9",
+                        "Serb": "4.8",
+                        "Other": "1.0"
+                    },
+                    "Present in a small scale": {
+                        "Albanian": "17.2",
+                        "Serb": "27.1",
+                        "Other": "11.50"
+                    },
+                    "Present in a medium scale": {
+                        "Albanian": "22.3",
+                        "Serb": "28.1",
+                        "Other": "8.0"
+                    },
+                    "Present in a large scale": {
+                        "Albanian": "18.0",
+                        "Serb": "27.1",
+                        "Other": "9.50"
+                    },
+                    "Don't know": {
+                        "Albanian": "34.6",
+                        "Serb": "12.9",
+                        "Other": "68.50"
+                    },
+                    "No answer": {
+                        "Albanian": "2.0",
+                        "Serb": "0.0",
+                        "Other": "1.50"
+                    }
+                },
+                "Age": {
+                    "It is not present at all": {
+                        "Age 18-25": "6.5",
+                        "Age 26-35": "4.6",
+                        "Age 36-45": "4.9",
+                        "Age 46-55": "7.3",
+                        "Age 56-65": "8.4",
+                        "Age 66+": "1.4"
+                    },
+                    "Present in a small scale": {
+                        "Age 18-25": "14.4",
+                        "Age 26-35": "18.6",
+                        "Age 36-45": "19.2",
+                        "Age 46-55": "17.6",
+                        "Age 56-65": "16.0",
+                        "Age 66+": "16.6"
+                    },
+                    "Present in a medium scale": {
+                        "Age 18-25": "23.2",
+                        "Age 26-35": "23.1",
+                        "Age 36-45": "18.6",
+                        "Age 46-55": "23.2",
+                        "Age 56-65": "22.5",
+                        "Age 66+": "22.5"
+                    },
+                    "Present in a large scale": {
+                        "Age 18-25": "20.6",
+                        "Age 26-35": "18.0",
+                        "Age 36-45": "19.6",
+                        "Age 46-55": "14.3",
+                        "Age 56-65": "16.9",
+                        "Age 66+": "17.4"
+                    },
+                    "Don't know": {
+                        "Age 18-25": "32.8",
+                        "Age 26-35": "33.2",
+                        "Age 36-45": "36.8",
+                        "Age 46-55": "34.5",
+                        "Age 56-65": "35.4",
+                        "Age 66+": "40.8"
+                    },
+                    "No answer": {
+                        "Age 18-25": "2.5",
+                        "Age 26-35": "2.5",
+                        "Age 36-45": "0.9",
+                        "Age 46-55": "3.1",
+                        "Age 56-65": "0.8",
+                        "Age 66+": "1.2"
+                    }
+                },
+                "Membership": {
+                    "It is not present at all": {
+                        "Member/volunteer in one or more CSOs": "10.9",
+                        "Not a member/volunteer in one or more CSOs": "5.4"
+                    },
+                    "Present in a small scale": {
+                        "Member/volunteer in one or more CSOs": "15.5",
+                        "Not a member/volunteer in one or more CSOs": "17.4"
+                    },
+                    "Present in a medium scale": {
+                        "Member/volunteer in one or more CSOs": "30.0",
+                        "Not a member/volunteer in one or more CSOs": "21.6"
+                    },
+                    "Present in a large scale": {
+                        "Member/volunteer in one or more CSOs": "10.6",
+                        "Not a member/volunteer in one or more CSOs": "18.3"
+                    },
+                    "Don't know": {
+                        "Member/volunteer in one or more CSOs": "33.0",
+                        "Not a member/volunteer in one or more CSOs": "35.2"
+                    },
+                    "No answer": {
+                        "Member/volunteer in one or more CSOs": "0.0",
+                        "Not a member/volunteer in one or more CSOs": "2.0"
+                    }
+                }
+            },
+            "sq": {
+                "Gjinia": {
+                    "Nuk është i pranishëm aspak": {
+                        "Burra": "7.3",
+                        "Gra": "4.1"
+                    },
+                    "I pranishëm në një shkallë të vogël": {
+                        "Burra": "19.9",
+                        "Gra": "14.8"
+                    },
+                    "I pranishëm në një shkallë mesatare": {
+                        "Burra": "23.2",
+                        "Gra": "20.8"
+                    },
+                    "Prezent në një shkallë të lartë": {
+                        "Burra": "18.4",
+                        "Gra": "17.6"
+                    },
+                    "Nuk e di": {
+                        "Burra": "29.5",
+                        "Gra": "40.6"
+                    },
+                    "Pa përgjigje": {
+                        "Burra": "1.7",
+                        "Gra": "2.1"
+                    }
+                },
+                "Përkatësia etnike": {
+                    "Nuk është prezent aspak": {
+                        "Shqiptar": "5.9",
+                        "Serb": "4.8",
+                        "Tjerë": "1.0"
+                    },
+                    "I pranishëm në një shkallë të vogël": {
+                        "Shqiptar": "17.2",
+                        "Serb": "27.1",
+                        "Tjerë": "11.50"
+                    },
+                    "I pranishëm në një shkallë mesatare": {
+                        "Shqiptar": "22.3",
+                        "Serb": "28.1",
+                        "Tjerë": "8.0"
+                    },
+                    "I pranishëm në një shkallë të lartë": {
+                        "Shqiptar": "18.0",
+                        "Serb": "27.1",
+                        "Tjerë": "9.50"
+                    },
+                    "Nuk e di": {
+                        "Shqiptar": "34.6",
+                        "Serb": "12.9",
+                        "Tjerë": "68.5"
+                    },
+                    "Pa përgjigje": {
+                        "Shqiptar": "2.0",
+                        "Serb": "0.0",
+                        "Tjerë": "1.50"
+                    }
+                },
+                "Mosha": {
+                    "Nuk është i pranishëm aspak": {
+                        "Mosha 18-25": "6.5",
+                        "Mosha 26-35": "4.6",
+                        "Mosha 36-45": "4.9",
+                        "Mosha 46-55": "7.3",
+                        "Mosha 56-65": "8.4",
+                        "Mosha 66+": "1.4"
+                    },
+                    "I pranishëm në një shkallë të vogël": {
+                        "Mosha 18-25": "14.4",
+                        "Mosha 26-35": "18.6",
+                        "Mosha 36-45": "19.2",
+                        "Mosha 46-55": "17.6",
+                        "Mosha 56-65": "16.0",
+                        "Mosha 66+": "16.6"
+                    },
+                    "I pranishëm në një shkallë mesatare": {
+                        "Mosha 18-25": "23.2",
+                        "Mosha 26-35": "23.1",
+                        "Mosha 36-45": "18.6",
+                        "Mosha 46-55": "23.2",
+                        "Mosha 56-65": "22.5",
+                        "Mosha 66+": "22.5"
+                    },
+                    "I pranishëm në një shkallë të lartë": {
+                        "Mosha 18-25": "20.6",
+                        "Mosha 26-35": "18.0",
+                        "Mosha 36-45": "19.6",
+                        "Mosha 46-55": "14.3",
+                        "Mosha 56-65": "16.9",
+                        "Mosha 66+": "17.4"
+                    },
+                    "Nuk e di": {
+                        "Mosha 18-25": "32.8",
+                        "Mosha 26-35": "33.2",
+                        "Mosha 36-45": "36.8",
+                        "Mosha 46-55": "34.5",
+                        "Mosha 56-65": "35.4",
+                        "Mosha 66+": "40.8"
+                    },
+                    "Pa përgjigje": {
+                        "Mosha 18-25": "2.5",
+                        "Mosha 26-35": "2.5",
+                        "Mosha 36-45": "0.9",
+                        "Mosha 46-55": "3.1",
+                        "Mosha 56-65": "0.8",
+                        "Mosha 66+": "1.2"
+                    }
+                },
+                "Anëtarësia": {
+                    "Nuk është i pranishëm aspak": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "10.9",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "5.4"
+                    },
+                    "I pranishëm në një shkallë të vogël": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "15.5",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "17.4"
+                    },
+                    "I pranishëm në një shkallë mesatare": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "30.0",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "21.6"
+                    },
+                    "I pranishëm në një shkallë të lartë": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "10.6",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "18.3"
+                    },
+                    "Nuk e di": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "33.0",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "35.2"
+                    },
+                    "Pa përgjigje": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "0.0",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "2.0"
+                    }
+                }
+            },
+            "sr": {
+                "Gender": {
+                    "Nije nimalo prisutna": {
+                        "Muškarci": "7.3",
+                        "Žene": "4.1"
+                    },
+                    "Prisutna u maloj meri": {
+                        "Muškarci": "19.9",
+                        "Žene ": "14.8"
+                    },
+                    "Prisutna u srednjoj meri": {
+                        "Muškarci": "23.2",
+                        "Žene": "20.8"
+                    },
+                    "Prisutna u velikoj meri": {
+                        "Muškarci": "18.4",
+                        "Žene": "17.6"
+                    },
+                    "Ne znam": {
+                        "Muškarci": "29.5",
+                        "Žene ": "40.6"
+                    },
+                    "Nema odgovora": {
+                        "Muškarci": "1.7",
+                        "Žene ": "2.1"
+                    }
+                },
+                "Ethnicity": {
+                    "Nije nimalo prisutna": {
+                        "Albanci": "5.9",
+                        "Srbi ": "4.8",
+                        "Kosovci ": "1.0"
+                    },
+                    "Prisutna u maloj meri": {
+                        "Albanci ": "17.2",
+                        "Srbi ": "27.1",
+                        "Kosovci ": "11.50"
+                    },
+                    "Prisutna u srednjoj meri": {
+                        "Albanci ": "22.3",
+                        "Srbi ": "28.1",
+                        "Kosovci er": "8.0"
+                    },
+                    "Prisutna u velikoj meri": {
+                        "Albanci ": "18.0",
+                        "Srbi ": "27.1",
+                        "Kosovci": "9.50"
+                    },
+                    "Ne znam": {
+                        "Albanci ": "34.6",
+                        "Srbi ": "12.9",
+                        "Kosovci ": "68.50"
+                    },
+                    "Nema odgovora": {
+                        "Albanci ": "2.0",
+                        "Srbi ": "0.0",
+                        "Kosovci ": "1.5"
+                    }
+                },
+                "Age": {
+                    "Nije nimalo prisutna": {
+                        "Godine 18-25": "6.5",
+                        "Godine 26-35": "4.6",
+                        "Godine 36-45": "4.9",
+                        "Godine 46-55": "7.3",
+                        "Godine 56-65": "8.4",
+                        "Godine 66+": "1.4"
+                    },
+                    "Prisutna u maloj meri": {
+                        "Godine 18-25": "14.4",
+                        "Godine 26-35": "18.6",
+                        "Godine 36-45": "19.2",
+                        "Godine 46-55": "17.6",
+                        "Godine 56-65": "16.0",
+                        "Godine 66+": "16.6"
+                    },
+                    "Prisutna u srednjoj meri": {
+                        "Godine 18-25": "23.2",
+                        "Godine 26-35": "23.1",
+                        "Godine 36-45": "18.6",
+                        "Godine 46-55": "23.2",
+                        "Godine 56-65": "22.5",
+                        "Godine 66+": "22.5"
+                    },
+                    "Prisutna u velikoj meri": {
+                        "Godine 18-25": "20.6",
+                        "Godine 26-35": "18.0",
+                        "Godine 36-45": "19.6",
+                        "Godine 46-55": "14.3",
+                        "Godine 56-65": "16.9",
+                        "Godine 66+": "17.4"
+                    },
+                    "Ne znam": {
+                        "Godine 18-25": "32.8",
+                        "Godine 26-35": "33.2",
+                        "Godine 36-45": "36.8",
+                        "Godine 46-55": "34.5",
+                        "Godine 56-65": "35.4",
+                        "Godine 66+": "40.8"
+                    },
+                    "Nema odgovora": {
+                        "Godine 18-25": "2.5",
+                        "Godine 26-35": "2.5",
+                        "Godine 36-45": "0.9",
+                        "Godine 46-55": "3.1",
+                        "Godine 56-65": "0.8",
+                        "Godine 66+": "1.2"
+                    }
+                },
+                "Membership": {
+                    "Nije nimalo prisutna": {
+                        "Član/volunter jedne ili više OCD-a": "10.9",
+                        "Nije član jedne ili više OCD-a": "5.4"
+                    },
+                    "Prisutna u maloj meri": {
+                        "Član/volunter jedne ili više OCD-a": "15.5",
+                        "Nije član jedne ili više OCD-a": "17.4"
+                    },
+                    "Prisutna u srednjoj meri": {
+                        "Član/volunter jedne ili više OCD-a": "30.0",
+                        "Nije član jedne ili više OCD-a": "21.6"
+                    },
+                    "Prisutna u velikoj meri": {
+                        "Član/volunter jedne ili više OCD-a": "10.6",
+                        "Nije član jedne ili više OCD-a": "18.3"
+                    },
+                    "Ne znam": {
+                        "Član/volunter jedne ili više OCD-a": "33.0",
+                        "Nije član jedne ili više OCD-a": "35.2"
+                    },
+                    "Nema odgovora": {
+                        "Član/volunter jedne ili više OCD-a": "0.0",
+                        "Nije član jedne ili više OCD-a": "2.0"
+                    }
+                }
+            }
+        }
+    },
+
+    "5N1": {
+        "question": {
+            "en": translation_data['5N1']["en"],
+            "sq": translation_data['5N1']["sq"],
+            "sr": translation_data['5N1']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Gender": {
+                    "I am a member of one or more civil society organization": {
+                        "Men": "4.0",
+                        "Women": "1.8"
+                    },
+                    "I do voluntary work for one or more civil society organization": {
+                        "Men": "5.2",
+                        "Women": "2.4"
+                    },
+                    "I am a member of a political party": {
+                        "Men": "16.0",
+                        "Women": "4.3"
+                    },
+                    "I do voluntary work for a political party": {
+                        "Men": "7.4",
+                        "Women": "3.2"
+                    }
+                },
+                "Ethnicity": {
+                    "I am a member of one or more civil society organization": {
+                        "Albanian": "2.7",
+                        "Serb": "5.8",
+                        "Other": "3.0"
+                    },
+                    "I do voluntary work for one or more civil society organization": {
+                        "Albanian": "3.6",
+                        "Serb": "10.1",
+                        "Other": "2.5"
+                    },
+                    "I am a member of a political party": {
+                        "Albanian": "9.9",
+                        "Serb": "15.7",
+                        "Other": "7.5"
+                    },
+                    "I do voluntary work for a political party": {
+                        "Albanian": "5.2",
+                        "Serb": "7.7",
+                        "Other": "4.0"
+                    }
+                },
+                "Age": {
+                    "I am a member of one or more civil society organization": {
+                        "Age 18-25": "2.90",
+                        "Age 26-35": "2.50",
+                        "Age 36-45": "2.0",
+                        "Age 46-55": "4.30",
+                        "Age 56-65": "2.0",
+                        "Age 66+": "0.0"
+                    },
+                    "I do voluntary work for one or more civil society organization": {
+                        "Age 18-25": "6.20",
+                        "Age 26-35": "4.80",
+                        "Age 36-45": "1.60",
+                        "Age 46-55": "4.70",
+                        "Age 56-65": "4.0",
+                        "Age 66+": "0.0"
+                    },
+                    "I am a member of a political party": {
+                        "Age 18-25": "10.60",
+                        "Age 26-35": "12.30",
+                        "Age 36-45": "8.10",
+                        "Age 46-55": "14.90",
+                        "Age 56-65": "12.0",
+                        "Age 66+": "1.70"
+                    },
+                    "I do voluntary work for a political party": {
+                        "Age 18-25": "4.80",
+                        "Age 26-35": "6.40",
+                        "Age 36-45": "3.40",
+                        "Age 46-55": "6.60",
+                        "Age 56-65": "5.50",
+                        "Age 66+": "0.20"
+                    }
+                }
+            },
+            "sq": {
+                "Gjinia": {
+                    "Jam anëtarë i një apo më shumë organizatave të shoqërisë civile": {
+                        "Burra": "4.0",
+                        "Gra": "1.8"
+                    },
+                    "Bëjë punë vullnetare për një ose më shumë organizata të shoqërisë civile": {
+                        "Burra": "5.2",
+                        "Gra": "2.4"
+                    },
+                    "Jam anëtarë i një partie politike": {
+                        "Burra": "16.0",
+                        "Gra": "4.3"
+                    },
+                    "Bëjë punë vullnetare për një parti politike": {
+                        "Burra": "7.4",
+                        "Gra": "3.2"
+                    }
+                },
+                "Përkatësia etnike": {
+                    "Jam anëtarë i një apo më shumë organizatave të shoqërisë civile": {
+                        "Shqiptar": "2.7",
+                        "Serb": "5.8",
+                        "Tjerë": "3.0"
+                    },
+                    "Bëjë punë vullnetare për një ose më shumë organizata të shoqërisë civile": {
+                        "Shqiptar": "3.6",
+                        "Serb": "10.1",
+                        "Tjerë": "2.5"
+                    },
+                    "Jam anëtarë i një partie politike": {
+                        "Shqiptar": "9.9",
+                        "Serb": "15.7",
+                        "Tjerë": "7.5"
+                    },
+                    "Bëjë punë vullnetare për një parti politike": {
+                        "Shqiptar": "5.2",
+                        "Serb": "7.7",
+                        "Tjerë": "4.0"
+                    }
+                },
+                "Mosha": {
+                    "Jam anëtarë i një apo më shumë organizatave të shoqërisë civile": {
+                        "Mosha 18-25": "2.90",
+                        "Mosha 26-35": "2.50",
+                        "Mosha 36-45": "2.00",
+                        "Mosha 46-55": "4.30",
+                        "Mosha 56-65": "2.0",
+                        "Mosha 66+": "0.0"
+                    },
+                    "Bëjë punë vullnetare për një ose më shumë organizata të shoqërisë civile": {
+                        "Mosha 18-25": "6.20",
+                        "Mosha 26-35": "4.80",
+                        "Mosha 36-45": "1.60",
+                        "Mosha 46-55": "4.70",
+                        "Mosha 56-65": "4.0",
+                        "Mosha 66+": "0.0"
+                    },
+                    "Jam anëtarë i një partie politike": {
+                        "Mosha 18-25": "10.60",
+                        "Mosha 26-35": "12.30",
+                        "Mosha 36-45": "8.10",
+                        "Mosha 46-55": "14.90",
+                        "Mosha 56-65": "12.0",
+                        "Mosha 66+": "1.70"
+                    },
+                    "Bëjë punë vullnetare për një parti politike": {
+                        "Mosha 18-25": "4.80",
+                        "Mosha 26-35": "6.40",
+                        "Mosha 36-45": "3.40",
+                        "Mosha 46-55": "6.60",
+                        "Mosha 56-65": "5.50",
+                        "Mosha 66+": "0.20"
+                    }
+                }
+            },
+            "sr": {
+                "Gender": {
+                    "Ja sam član jedne ili više organizacija civilnog društva ": {
+                        "Muškarci": "4.0",
+                        "Žene ": "1.8"
+                    },
+                    "Radim volunterski za jednu ili više organizacija civilnog društva": {
+                        "Muškarci": "5.2",
+                        "Žene ": "2.4"
+                    },
+                    "Ja sam član političke partije": {
+                        "Muškarci": "16.0",
+                        "Žene ": "4.3"
+                    },
+                    "Radim volunterski za političku partiju ": {
+                        "Muškarci": "7.4",
+                        "Žene": "3.2"
+                    }
+                },
+                "Ethnicity": {
+                    "Ja sam član jedne ili više organizacija civilnog društva ": {
+                        "Albanci": "2.7",
+                        "Srbi": "5.8",
+                        "Kosovci ": "3.0"
+                    },
+                    "Radim volunterski za jednu ili više organizacija civilnog društva": {
+                        "Albanci ": "3.6",
+                        "Srbi ": "10.1",
+                        "Kosovci ": "2.5"
+                    },
+                    "Ja sam član političke partije": {
+                        "Albanci": "9.9",
+                        "Srbi": "15.7",
+                        "Kosovci ": "7.5"
+                    },
+                    "Radim volunterski za političku partiju ": {
+                        "Albanci": "5.2",
+                        "Srbi ": "7.7",
+                        "Kosovci ": "4.0"
+                    }
+                },
+                "Age": {
+                    "Ja sam član jedne ili više organizacija civilnog društva ": {
+                        "Godina 18-25": "2.90",
+                        "Godina 26-35": "2.50",
+                        "Godina 36-45": "2.00",
+                        "Godina 46-55": "4.30",
+                        "Godina 56-65": "2.0",
+                        "Godina 66+": "0.0"
+                    },
+                    "Radim volunterski za jednu ili više organizacija civilnog društva": {
+                        "Godina 18-25": "6.20",
+                        "Godina 26-35": "4.80",
+                        "Godina 36-45": "1.60",
+                        "Godina 46-55": "4.70",
+                        "Godina 56-65": "4.0",
+                        "Godina 66+": "0.0"
+                    },
+                    "Ja sam član političke partije": {
+                        "Godina 18-25": "10.60",
+                        "Godina 26-35": "12.30",
+                        "Godina 36-45": "8.10",
+                        "Godina 46-55": "14.90",
+                        "Godina 56-65": "12.0",
+                        "Godina 66+": "1.70"
+                    },
+                    "Radim volunterski za političku partiju ": {
+                        "Godina 18-25": "4.80",
+                        "Godina 26-35": "6.40",
+                        "Godina 36-45": "3.40",
+                        "Godina 46-55": "6.60",
+                        "Godina 56-65": "5.50",
+                        "Godina 66+": "0.20"
+                    }
+                }
+            }
+        }
+    },
+
+    "5N3": {
+        "question": {
+            "en": translation_data['5N3']["en"],
+            "sq": translation_data['5N3']["sq"],
+            "sr": translation_data['5N3']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Gender": {
+                    "Benefited from a service offered from civil society": {
+                        "Men": "3.4",
+                        "Women": "3.4"
+                    },
+                    "Participated in a civil society activity": {
+                        "Men": "6.4",
+                        "Women": "3.2"
+                    },
+                    "Supported a cause (petition, protest) raised by civil society": {
+                        "Men": "26.3",
+                        "Women": "16.6"
+                    }
+                },
+                "Ethnicity": {
+                    "Benefited from a service offered from civil society": {
+                        "Albanian": "2.7",
+                        "Serb": "21.5",
+                        "Other": "1.0"
+                    },
+                    "Participated in a civil society activity": {
+                        "Albanian": "4.3",
+                        "Serb": "17.7",
+                        "Other": "1.5"
+                    },
+                    "Supported a cause (petition, protest) raised by civil society": {
+                        "Albanian": "21.7",
+                        "Serb": "27.4",
+                        "Other": "8.5"
+                    }
+                },
+                "Membership": {
+                    "Benefited from a service offered from civil society": {
+                        "Member/volunteer in one or more CSOs": "11.9",
+                        "Not a member/volunteer in one or more CSOs": "3.0"
+                    },
+                    "Participated in a civil society activity": {
+                        "Member/volunteer in one or more CSOs": "35.4",
+                        "Not a member/volunteer in one or more CSOs": "3.3"
+                    },
+                    "Supported a cause (petition, protest) raised by civil society": {
+                        "Member/volunteer in one or more CSOs": "50.2",
+                        "Not a member/volunteer in one or more CSOs": "21.6"
+                    }
+                },
+                "Age": {
+                    "Benefited from a service offered from civil society": {
+                        "Age 18-25": "7.7",
+                        "Age 26-35": "3.4",
+                        "Age 36-45": "3.5",
+                        "Age 46-55": "1.5",
+                        "Age 56-65": "1.9",
+                        "Age 66+": "2.5"
+                    },
+                    "Participated in a civil society activity": {
+                        "Age 18-25": "4.7",
+                        "Age 26-35": "4.1",
+                        "Age 36-45": "5.0",
+                        "Age 46-55": "4.4",
+                        "Age 56-65": "5.1",
+                        "Age 66+": "0.0"
+                    },
+                    "Supported a cause (petition, protest) raised by civil society": {
+                        "Age 18-25": "20.9",
+                        "Age 26-35": "18.6",
+                        "Age 36-45": "22.4",
+                        "Age 46-55": "17.3",
+                        "Age 56-65": "17.8",
+                        "Age 66+": "14.0"
+                    }
+                }
+            },
+            "sq": {
+                "Gjinia": {
+                    "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
+                        "Burra": "3.4",
+                        "Gra": "3.4"
+                    },
+                    "Marrë pjesë në një aktivitet të shoqërisë civile": {
+                        "Burra": "6.4",
+                        "Gra": "3.2"
+                    },
+                    "Mbështetur një kauzë (peticion, protest) ngritur nga shoqëria civile": {
+                        "Burra": "26.3",
+                        "Gra": "16.6"
+                    }
+                },
+                "Përkatësia etnike": {
+                    "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
+                        "Shqiptar": "2.7",
+                        "Serb": "21.5",
+                        "Tjerë": "1.0"
+                    },
+                    "Marrë pjesë në një aktivitet të shoqërisë civile": {
+                        "Shqiptar": "4.3",
+                        "Serb": "17.7",
+                        "Tjerë": "1.5"
+                    },
+                    "Mbështetur një kauzë (peticion, protest) ngritur nga shoqëria civile": {
+                        "Shqiptar": "21.7",
+                        "Serb": "27.4",
+                        "Tjerë": "8.5"
+                    }
+                },
+                "Anëtarësia": {
+                    "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "11.9",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "3.0"
+                    },
+                    "Marrë pjesë në një aktivitet të shoqërisë civile": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "35.4",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "3.3"
+                    },
+                    "Mbështetur një kauzë (peticion, protest) ngritur nga shoqëria civile": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "50.2",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "21.6"
+                    }
+                },
+                "Mosha": {
+                    "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
+                        "Mosha 18-25": "7.7",
+                        "Mosha 26-35": "3.4",
+                        "Mosha 36-45": "3.5",
+                        "Mosha 46-55": "1.5",
+                        "Mosha 56-65": "1.9",
+                        "Mosha 66+": "2.5"
+                    },
+                    "Marrë pjesë në një aktivitet të shoqërisë civile": {
+                        "Mosha 18-25": "4.7",
+                        "Mosha 26-35": "4.1",
+                        "Mosha 36-45": "5.0",
+                        "Mosha 46-55": "4.4",
+                        "Mosha 56-65": "5.1",
+                        "Mosha 66+": "0.0"
+                    },
+                    "Mbështetur një kauzë (peticion, protest) ngritur nga shoqëria civile": {
+                        "Mosha 18-25": "20.9",
+                        "Mosha 26-35": "18.6",
+                        "Mosha 36-45": "22.4",
+                        "Mosha 46-55": "17.3",
+                        "Mosha 56-65": "17.8",
+                        "Mosha 66+": "14.0"
+                    }
+                }
+            },
+            "sr": {
+                "Gender": {
+                    "Bili korisnik usluge pružene od civilnog društva": {
+                        "Muškarci": "3.4",
+                        "Žene ": "3.4"
+                    },
+                    "Učestvovali u aktivnosti civilnog društva": {
+                        "Muškarci": "6.4",
+                        "Žene ": "3.2"
+                    },
+                    "Podržali cilj (peticiju, protest) započet od civilnog društva": {
+                        "Muškarci": "26.3",
+                        "Žene ": "16.6"
+                    }
+                },
+                "Ethnicity": {
+                    "Bili korisnik usluge pružene od civilnog društva": {
+                        "Albanci ": "2.7",
+                        "Srbi ": "21.5",
+                        "Kosovci ": "1.0"
+                    },
+                    "Učestvovali u aktivnosti civilnog društva": {
+                        "Albanci ": "4.3",
+                        "Srbi ": "17.7",
+                        "Kosovci ": "1.5"
+                    },
+                    "Podržali cilj (peticiju, protest) započet od civilnog društva": {
+                        "Albanci ": "21.7",
+                        "Srbi ": "27.4",
+                        "Kosovci ": "8.5"
+                    }
+                },
+                "Membership": {
+                    "Bili korisnik usluge pružene od civilnog društva": {
+                        "Član/volunter jedne ili više OCD-a": "11.9",
+                        "Nije član/volunter jedne ili više OCD-a": "3.0"
+                    },
+                    "Učestvovali u aktivnosti civilnog društva": {
+                        "Član/volunter jedne ili više OCD-a": "35.4",
+                        "Nije član/volunter jedne ili više OCD-a": "3.3"
+                    },
+                    "Podržali cilj (peticiju, protest) započet od civilnog društva": {
+                        "Član/volunter jedne ili više OCD-a": "50.2",
+                        "Nije član/volunter jedne ili više OCD-a": "21.6"
+                    }
+                },
+                "Age": {
+                    "Bili korisnik usluge pružene od civilnog društva": {
+                        "Godine 18-25": "7.7",
+                        "Godine 26-35": "3.4",
+                        "Godine 36-45": "3.5",
+                        "Godine 46-55": "1.5",
+                        "Godine 56-65": "1.9",
+                        "Godine 66+": "2.5"
+                    },
+                    "Učestvovali u aktivnosti civilnog društva": {
+                        "Godine 18-25": "4.7",
+                        "Godine 26-35": "4.1",
+                        "Godine 36-45": "5.0",
+                        "Godine 46-55": "4.4",
+                        "Godine 56-65": "5.1",
+                        "Godine 66+": "0.0"
+                    },
+                    "Podržali cilj (peticiju, protest) započet od civilnog društva": {
+                        "Godine 18-25": "20.9",
+                        "Godine 26-35": "18.6",
+                        "Godine 36-45": "22.4",
+                        "Godine 46-55": "17.3",
+                        "Godine 56-65": "17.8",
+                        "Godine 66+": "14.0"
+                    }
+                }
+            }
+        }
+    },
+
+    "5N4": {
+        "question": {
+            "en": translation_data['5N4']["en"],
+            "sq": translation_data['5N4']["sq"],
+            "sr": translation_data['5N4']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Gender": {
+                    "Most people can be trusted, or that": {
+                        "Men": "10.2",
+                        "Women": "15.0"
+                    },
+                    "You need to be very careful when dealing with people": {
+                        "Men": "89.8",
+                        "Women": "85.0"
+                    }
+                },
+                "Ethnicity": {
+                    "Most people can be trusted, or that": {
+                        "Albanian": "13.1",
+                        "Serb": "10.7",
+                        "Other": "4.1"
+                    },
+                    "You need to be very careful when dealing with people": {
+                        "Albanian": "86.9",
+                        "Serb": "89.3",
+                        "Other": "68.9"
+                    }
+                },
+                "Membership": {
+                    "Most people can be trusted, or that": {
+                        "Member/volunteer in one or more CSOs": "15.7",
+                        "Not a member/volunteer in one or more CSOs": "12.5"
+                    },
+                    "You need to be very careful when dealing with people": {
+                        "Member/volunteer in one or more CSOs": "84.3",
+                        "Not a member/volunteer in one or more CSOs": "87.5"
+                    }
+                },
+                "Age": {
+                    "Most people can be trusted, or that": {
+                        "Age 18-25": "11.5",
+                        "Age 26-35": "11.5",
+                        "Age 36-45": "11.8",
+                        "Age 46-55": "10.7",
+                        "Age 56-65": "15.60",
+                        "Age 66+": "19.4"
+                    },
+                    "You need to be very careful when dealing with people": {
+                        "Age 18-25": "88.5",
+                        "Age 26-35": "88.5",
+                        "Age 36-45": "88.2",
+                        "Age 46-55": "89.30",
+                        "Age 56-65": "84.40",
+                        "Age 66+": "80.60"
+                    }
+                }
+            },
+            "sq": {
+                "Gender": {
+                    "Shumica e njerëzve mund të besohen, apo": {
+                        "Burra": "10.2",
+                        "Gra": "15.0"
+                    },
+                    "Duhet të jeni shumë i kujdesshëm kur keni të bëni me njerëzit": {
+                        "Burra": "89.8",
+                        "Gra": "85.0"
+                    }
+                },
+                "Përkatësia etnike": {
+                    "Shumica e njerëzve mund të besohen, apo": {
+                        "Shqiptar": "13.1",
+                        "Serb": "10.7",
+                        "Tjerë": "4.1"
+                    },
+                    "Duhet të jeni shumë i kujdesshëm kur keni të bëni me njerëzit": {
+                        "Shqiptar": "86.9",
+                        "Serb": "89.3",
+                        "Tjerë": "68.9"
+                    }
+                },
+                "Anëtarësia": {
+                    "Shumica e njerëzve mund të besohen, apo": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "15.7",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "12.5"
+                    },
+                    "Duhet të jeni shumë i kujdesshëm kur keni të bëni me njerëzit": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "84.3",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "87.5"
+                    }
+                },
+                "Age": {
+                    "Shumica e njerëzve mund të besohen, apo": {
+                        "Mosha 18-25": "11.5",
+                        "Mosha 26-35": "11.5",
+                        "Mosha 36-45": "11.8",
+                        "Mosha 46-55": "10.70",
+                        "Mosha 56-65": "15.60",
+                        "Mosha 66+": "19.40"
+                    },
+                    "Duhet të jeni shumë i kujdesshëm kur keni të bëni me njerëzit": {
+                        "Mosha 18-25": "88.5",
+                        "Mosha 26-35": "88.5",
+                        "Mosha 36-45": "88.2",
+                        "Mosha 46-55": "89.30",
+                        "Mosha 56-65": "84.40",
+                        "Mosha 66+": "80.60"
+                    }
+                }
+            },
+            "sr": {
+                "Gender": {
+                    "Većini ljudi se može verovati, ili da": {
+                        "Muškarci ": "10.2",
+                        "Žene": "15.0"
+                    },
+                    "Trebate biti veoma oprezni kada radite sa ljudima": {
+                        "Muškarci ": "89.8",
+                        "Žene": "85.0"
+                    }
+                },
+                "Përkatësia etnike": {
+                    "Većini ljudi se može verovati, ili da": {
+                        "Albanci": "13.1",
+                        "Srbi": "10.7",
+                        "Kosovci": "4.1"
+                    },
+                    "Trebate biti veoma oprezni kada radite sa ljudima": {
+                        "Albanci": "86.9",
+                        "Srbi": "89.3",
+                        "Kosovci": "68.9"
+                    }
+                },
+                "Anëtarësia": {
+                    "Većini ljudi se može verovati, ili da": {
+                        "Član/volunter jedne ili više OCD-a": "15.7",
+                        "Nije član/volunter jedne ili više OCD-a": "12.5"
+                    },
+                    "Trebate biti veoma oprezni kada radite sa ljudima": {
+                        "Član/volunter jedne ili više OCD-a": "84.3",
+                        "Nije član/volunter jedne ili više OCD-a": "87.5"
+                    }
+                },
+                "Age": {
+                    "Većini ljudi se može verovati, ili da": {
+                        "Godine 18-25": "11.5",
+                        "Godine 26-35": "11.5",
+                        "Godine 36-45": "11.8",
+                        "Godine 46-55": "10.70",
+                        "Godine 56-65": "15.60",
+                        "Godine 66+": "19.40"
+                    },
+                    "Trebate biti veoma oprezni kada radite sa ljudima": {
+                        "Godine 18-25": "88.5",
+                        "Godine 26-35": "88.5",
+                        "Godine 36-45": "88.2",
+                        "Godine 46-55": "89.30",
+                        "Godine 56-65": "84.40",
+                        "Godine 66+": "80.60"
+                    }
+                }
+            }
+        }
     }
+
+
 };
