@@ -833,106 +833,106 @@ var static_data = {
                 }
             },
             "sq": {
-                "Gender": {
-                    "Fully agree": {
-                        "Men": "22.5",
-                        "Women": "16.7"
+                "Gjinia": {
+                    "Pajtohem plotësisht": {
+                        "Burra": "22.5",
+                        "Gra": "16.7"
                     },
-                    "Mainly agree": {
-                        "Men": "39.8",
-                        "Women": "35.5"
+                    "Pajtohem kryesisht": {
+                        "Burra": "39.8",
+                        "Gra": "35.5"
                     },
-                    "Not so": {
-                        "Men": "18.8",
-                        "Women": "18.7"
+                    "Jo edhe aq": {
+                        "Burra": "18.8",
+                        "Gra": "18.7"
                     },
-                    "Not at all": {
-                        "Men": "3.9",
-                        "Women": "4.6"
+                    "Jo aspak": {
+                        "Burra": "3.9",
+                        "Gra": "4.6"
                     },
-                    "Don't know": {
-                        "Men": "14.2",
-                        "Women": "22.2"
+                    "Nuk e di": {
+                        "Burra": "14.2",
+                        "Gra": "22.2"
                     },
-                    "No answer": {
-                        "Men": "0.8",
-                        "Women": "2.3"
+                    "Pa përgjigje": {
+                        "Burra": "0.8",
+                        "Gra": "2.3"
                     }
                 },
-                "Ethnicity": {
-                    "Fully agree": {
-                        "Albanian": "19.8",
+                "Përkatësia etnike": {
+                    "Pajtohem plotësisht": {
+                        "Shqiptar": "19.8",
                         "Serb": "23.3",
-                        "Other": "12.0"
+                        "Tjerë": "12.0"
                     },
-                    "Mainly agree": {
-                        "Albanian": "38.0",
+                    "Pajtohem kryesisht": {
+                        "Shqiptar": "38.0",
                         "Serb": "42.4",
-                        "Other": "26.5"
+                        "Tjerë": "26.5"
                     },
-                    "Not so": {
-                        "Albanian": "19.0",
+                    "Jo edhe aq": {
+                        "Shqiptar": "19.0",
                         "Serb": "21.4",
-                        "Other": "11.0"
+                        "Tjerë": "11.0"
                     },
-                    "Not at all": {
-                        "Albanian": "4.5",
+                    "Jo aspak": {
+                        "Shqiptar": "4.5",
                         "Serb": "1.9",
-                        "Other": "1.5"
+                        "Tjerë": "1.5"
                     },
-                    "Don't know": {
-                        "Albanian": "17.2",
+                    "Nuk e di": {
+                        "Shqiptar": "17.2",
                         "Serb": "10.5",
-                        "Other": "49.0"
+                        "Tjerë": "49.0"
                     },
-                    "No answer": {
-                        "Albanian": "1.7",
+                    "Pa pergjigje": {
+                        "Shqiptar": "1.7",
                         "Serb": "0.5",
-                        "Other": "0.0"
+                        "Tjerë": "0.0"
                     }
                 },
-                "Age": {
-                    "Fully agree": {
-                        "Age 18-25": "21.4",
-                        "Age 26-35": "18.4",
-                        "Age 36-45": "21.3",
-                        "Age 46-55": "22.3",
-                        "Age 56-65": "16.3",
-                        "Age 66+": "13.5"
+                "Mosha": {
+                    "Pajtohem plotësisht": {
+                        "Mosha 18-25": "21.4",
+                        "Mosha 26-35": "18.4",
+                        "Mosha 36-45": "21.3",
+                        "Mosha 46-55": "22.3",
+                        "Mosha 56-65": "16.3",
+                        "Mosha 66+": "13.5"
                     },
-                    "Mainly agree": {
-                        "Age 18-25": "33.4",
-                        "Age 26-35": "39.5",
-                        "Age 36-45": "39.5",
-                        "Age 46-55": "38.4",
-                        "Age 56-65": "39.4",
-                        "Age 66+": "32.9"
+                    "Pajtohem kryesisht": {
+                        "Mosha 18-25": "33.4",
+                        "Mosha 26-35": "39.5",
+                        "Mosha 36-45": "39.5",
+                        "Mosha 46-55": "38.4",
+                        "Mosha 56-65": "39.4",
+                        "Mosha 66+": "32.9"
                     },
-                    "Not so": {
-                        "Age 18-25": "22.2",
-                        "Age 26-35": "22.8",
-                        "Age 36-45": "17.5",
-                        "Age 46-55": "13.6",
-                        "Age 56-65": "16.8",
-                        "Age 66+": "18.5"
+                    "Jo edhe aq": {
+                        "Mosha 18-25": "22.2",
+                        "Mosha 26-35": "22.8",
+                        "Mosha 36-45": "17.5",
+                        "Mosha 46-55": "13.6",
+                        "Mosha 56-65": "16.8",
+                        "Mosha 66+": "18.5"
                     },
-                    "Not at all": {
-                        "Age 18-25": "4.8",
-                        "Age 26-35": "4.6",
-                        "Age 36-45": "3.8",
-                        "Age 46-55": "4.3",
-                        "Age 56-65": "4.1",
-                        "Age 66+": "3.9"
+                    "Jo aspak": {
+                        "Mosha 18-25": "4.8",
+                        "Mosha 26-35": "4.6",
+                        "Mosha 36-45": "3.8",
+                        "Mosha 46-55": "4.3",
+                        "Mosha 56-65": "4.1",
+                        "Mosha 66+": "3.9"
                     },
-                    "Don't know": {
-                        "Age 18-25": "18.1",
-                        "Age 26-35": "13.8",
-                        "Age 36-45": "16.2",
-                        "Age 46-55": "19.7",
-                        "Age 56-65": "20.2",
-                        "Age 66+": "28.9"
+                    "Nuk e di": {
+                        "Mosha 18-25": "18.1",
+                        "Mosha 26-35": "13.8",
+                        "Mosha 36-45": "16.2",
+                        "Mosha 46-55": "19.7",
+                        "Mosha 56-65": "20.2",
+                        "Mosha 66+": "28.9"
                     },
-                    "No answer": {
+                    "Pa pergjigje": {
                         "Age 18-25": "0.1",
                         "Age 26-35": "1.0",
                         "Age 36-45": "1.8",
@@ -941,35 +941,35 @@ var static_data = {
                         "Age 66+": "2.4"
                     }
                 },
-                "Membership": {
-                    "Fully agree": {
-                        "Member/volunteer in one or more CSOs": "25.10",
-                        "Not a member/volunteer in one or more CSOs": "19.30"
+                "Anëtarësia": {
+                    "Pajtohem plotësisht": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "25.10",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "19.30"
                     },
-                    "Mainly agree": {
-                        "Member/volunteer in one or more CSOs": "30.70",
-                        "Not a member/volunteer in one or more CSOs": "38"
+                    "Pajtohem kryesisht": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "30.70",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "38"
                     },
-                    "Not so": {
-                        "Member/volunteer in one or more CSOs": "33.3",
-                        "Not a member/volunteer in one or more CSOs": "18.10"
+                    "Jo edhe aq": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "33.3",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "18.10"
                     },
-                    "Not at all": {
-                        "Member/volunteer in one or more CSOs": "2.80",
-                        "Not a member/volunteer in one or more CSOs": "4.30"
+                    "Jo aspak": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "2.80",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "4.30"
                     },
-                    "Don't know": {
-                        "Member/volunteer in one or more CSOs": "3.30",
-                        "Not a member/volunteer in one or more CSOs": "18.90"
+                    "Nuk e di": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "3.30",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "18.90"
                     },
-                    "No answer": {
-                        "Member/volunteer in one or more CSOs": "4.80",
-                        "Not a member/volunteer in one or more CSOs": "1.40"
+                    "Pa pergjigje": {
+                        "Anëtarë/vullnetarë në një apo më shumë OShC": "4.80",
+                        "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "1.40"
                     }
                 }
             },
             "sr": {
-                "Gender": {
+                "Ravnopravnost": {
                     "Potpuno se slažem": {
                         "Muškarci": "22.5",
                         "Žene": "16.7"
@@ -995,112 +995,112 @@ var static_data = {
                         "Žene": "2.3"
                     }
                 },
-                "Ethnicity": {
+                "Etnička pripadnost": {
                     "Potpuno se slažem": {
-                        "Albanian": "19.8",
-                        "Serb": "23.3",
-                        "Other": "12.0"
+                        "Kosovski albanci  ": "19.8",
+                        "Srbi": "23.3",
+                        "Ostali kosovci": "12.0"
                     },
                     "Uglavnom se slažem": {
-                        "Albanian": "38.0",
-                        "Serb": "42.4",
-                        "Other": "26.5"
+                        "Kosovski albanci ": "38.0",
+                        "Kosovski srbi ": "42.4",
+                        "Ostali kosovci": "26.5"
                     },
                     "Baš se i ne slažem ": {
-                        "Albanian": "19.0",
-                        "Serb": "21.4",
-                        "Other": "11.0"
+                        "Kosovski albanci ": "19.0",
+                        "Kosovski srbi ": "21.4",
+                        "Ostali kosovci": "11.0"
                     },
                     "Nimalo": {
-                        "Albanian": "4.5",
-                        "Serb": "1.9",
-                        "Other": "1.5"
+                        "Kosovski albanci ": "4.5",
+                        "Kosovski srbi ": "1.9",
+                        "Ostali kosovci": "1.5"
                     },
                     "Ne znam": {
-                        "Albanian": "17.2",
-                        "Serb": "10.5",
-                        "Other": "49.0"
+                        "Kosovski albanci ": "17.2",
+                        "Kosovski srbi ": "10.5",
+                        "Ostali kosovci": "49.0"
                     },
                     "Nema odgovora": {
-                        "Albanian": "1.7",
-                        "Serb": "0.5",
-                        "Other": "0.0"
+                        "Kosovski albanci": "1.7",
+                        "Kosovski srbi ": "0.5",
+                        "Ostali kosovci": "0.0"
                     }
                 },
-                "Age": {
+                "Starost": {
                     "Potpuno se slažem": {
-                        "Age 18-25": "21.4",
-                        "Age 26-35": "18.4",
-                        "Age 36-45": "21.3",
-                        "Age 46-55": "22.3",
-                        "Age 56-65": "16.3",
-                        "Age 66+": "13.5"
+                        "Godine 18-25": "21.4",
+                        "Godine 26-35": "18.4",
+                        "Godine 36-45": "21.3",
+                        "Godine 46-55": "22.3",
+                        "Godine 56-65": "16.3",
+                        "Godine 66+": "13.5"
                     },
                     "Uglavnom se slažem": {
-                        "Age 18-25": "33.4",
-                        "Age 26-35": "39.5",
-                        "Age 36-45": "39.5",
-                        "Age 46-55": "38.4",
-                        "Age 56-65": "39.4",
-                        "Age 66+": "32.9"
+                        "Godine 18-25": "33.4",
+                        "Godine 26-35": "39.5",
+                        "Godine 36-45": "39.5",
+                        "Godine 46-55": "38.4",
+                        "Godine 56-65": "39.4",
+                        "Godine 66+": "32.9"
                     },
                     "Baš se i ne slažem": {
-                        "Age 18-25": "22.2",
-                        "Age 26-35": "22.8",
-                        "Age 36-45": "17.5",
-                        "Age 46-55": "13.6",
-                        "Age 56-65": "16.8",
-                        "Age 66+": "18.5"
+                        "Godine 18-25": "22.2",
+                        "Godine 26-35": "22.8",
+                        "Godine 36-45": "17.5",
+                        "Godine 46-55": "13.6",
+                        "Godine 56-65": "16.8",
+                        "Godine 66+": "18.5"
                     },
                     "Nimalo": {
-                        "Age 18-25": "4.8",
-                        "Age 26-35": "4.6",
-                        "Age 36-45": "3.8",
-                        "Age 46-55": "4.3",
-                        "Age 56-65": "4.1",
-                        "Age 66+": "3.9"
+                        "Godine 18-25": "4.8",
+                        "Godine 26-35": "4.6",
+                        "Godine 36-45": "3.8",
+                        "Godine 46-55": "4.3",
+                        "Godine 56-65": "4.1",
+                        "Godine 66+": "3.9"
                     },
                     "Ne znam": {
-                        "Age 18-25": "18.1",
-                        "Age 26-35": "13.8",
-                        "Age 36-45": "16.2",
-                        "Age 46-55": "19.7",
-                        "Age 56-65": "20.2",
-                        "Age 66+": "28.9"
+                        "Godine 18-25": "18.1",
+                        "Godine 26-35": "13.8",
+                        "Godine 36-45": "16.2",
+                        "Godine 46-55": "19.7",
+                        "Godine 56-65": "20.2",
+                        "Godine 66+": "28.9"
                     },
                     "Nema odgovora": {
-                        "Age 18-25": "0.1",
-                        "Age 26-35": "1.0",
-                        "Age 36-45": "1.8",
-                        "Age 46-55": "1.8",
-                        "Age 56-65": "3.3",
-                        "Age 66+": "2.4"
+                        "Godine 18-25": "0.1",
+                        "Godine 26-35": "1.0",
+                        "Godine 36-45": "1.8",
+                        "Godine 46-55": "1.8",
+                        "Godine 56-65": "3.3",
+                        "Godine 66+": "2.4"
                     }
                 },
-                "Membership": {
+                "Članstvo": {
                     "Potpuno se slažem": {
-                        "Member/volunteer in one or more CSOs": "25.10",
-                        "Not a member/volunteer in one or more CSOs": "19.30"
+                        "Član/volunter jedne ili više OCD-a": "25.10",
+                        "Nije član/volunter jedne ili više OCD-a": "19.30"
                     },
                     "Uglavnom se slažem": {
-                        "Member/volunteer in one or more CSOs": "30.70",
-                        "Not a member/volunteer in one or more CSOs": "38"
+                        "Član/volunter jedne ili više OCD-a": "30.70",
+                        "Nije član/volunter jedne ili više OCD-a": "38"
                     },
                     "Baš se i ne slažem": {
-                        "Member/volunteer in one or more CSOs": "33.3",
-                        "Not a member/volunteer in one or more CSOs": "18.10"
+                        "Član/volunter jedne ili više OCD-a": "33.3",
+                        "Nije član/volunter jedne ili više OCD-a": "18.10"
                     },
                     "Nimalo": {
-                        "Member/volunteer in one or more CSOs": "2.80",
-                        "Not a member/volunteer in one or more CSOs": "4.30"
+                        "Član/volunter jedne ili više OCD-a": "2.80",
+                        "Nije član/volunter jedne ili više OCD-a": "4.30"
                     },
                     "Ne znam": {
-                        "Member/volunteer in one or more CSOs": "3.30",
-                        "Not a member/volunteer in one or more CSOs": "18.90"
+                        "Član/volunter jedne ili više OCD-a": "3.30",
+                        "Nije član/volunter jedne ili više OCD-a": "18.90"
                     },
                     "Nema odgovora": {
-                        "Member/volunteer in one or more CSOs": "4.80",
-                        "Not a member/volunteer in one or more CSOs": "1.40"
+                        "Član/volunter jedne ili više OCD-a": "4.80",
+                        "Nije član/volunter jedne ili više OCD-a": "1.40"
                     }
                 }
             }
@@ -1387,7 +1387,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Gender": {
+                "Ravnopravnost": {
                     "Nije nimalo prisutna": {
                         "Muškarci": "7.3",
                         "Žene": "4.1"
@@ -1413,39 +1413,39 @@ var static_data = {
                         "Žene ": "2.1"
                     }
                 },
-                "Ethnicity": {
+                "Etnička pripadnost": {
                     "Nije nimalo prisutna": {
-                        "Albanci": "5.9",
-                        "Srbi ": "4.8",
-                        "Kosovci ": "1.0"
+                        "Kosovski albanci ": "5.9",
+                        "Kosovski srbi": "4.8",
+                        "Ostali kosovci": "1.0"
                     },
                     "Prisutna u maloj meri": {
-                        "Albanci ": "17.2",
-                        "Srbi ": "27.1",
-                        "Kosovci ": "11.50"
+                        "Kosovski albanci  ": "17.2",
+                        "Kosovski srbi": "27.1",
+                        "Ostali kosovci": "11.50"
                     },
                     "Prisutna u srednjoj meri": {
-                        "Albanci ": "22.3",
-                        "Srbi ": "28.1",
-                        "Kosovci er": "8.0"
+                        "Kosovski albanci  ": "22.3",
+                        "Kosovski srbi": "28.1",
+                        "Ostali kosovci": "8.0"
                     },
                     "Prisutna u velikoj meri": {
-                        "Albanci ": "18.0",
-                        "Srbi ": "27.1",
-                        "Kosovci": "9.50"
+                        "Kosovski albanci  ": "18.0",
+                        "Kosovski srbi": "27.1",
+                        "Ostali kosovci": "9.50"
                     },
                     "Ne znam": {
-                        "Albanci ": "34.6",
-                        "Srbi ": "12.9",
-                        "Kosovci ": "68.50"
+                        "Kosovski albanci  ": "34.6",
+                        "Kosovski srbi": "12.9",
+                        "Ostali kosovci": "68.50"
                     },
                     "Nema odgovora": {
-                        "Albanci ": "2.0",
-                        "Srbi ": "0.0",
-                        "Kosovci ": "1.5"
+                        "Kosovski albanci  ": "2.0",
+                        "Kosovski srbi": "0.0",
+                        "Ostali kosovci": "1.5"
                     }
                 },
-                "Age": {
+                "Starost": {
                     "Nije nimalo prisutna": {
                         "Godine 18-25": "6.5",
                         "Godine 26-35": "4.6",
@@ -1495,7 +1495,7 @@ var static_data = {
                         "Godine 66+": "1.2"
                     }
                 },
-                "Membership": {
+                "Članstvo": {
                     "Nije nimalo prisutna": {
                         "Član/volunter jedne ili više OCD-a": "10.9",
                         "Nije član jedne ili više OCD-a": "5.4"
@@ -1685,7 +1685,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Gender": {
+                "Ravnopravnost": {
                     "Ja sam član jedne ili više organizacija civilnog društva ": {
                         "Muškarci": "4.0",
                         "Žene ": "1.8"
@@ -1703,29 +1703,29 @@ var static_data = {
                         "Žene": "3.2"
                     }
                 },
-                "Ethnicity": {
+                "Etnička pripadnost": {
                     "Ja sam član jedne ili više organizacija civilnog društva ": {
-                        "Albanci": "2.7",
-                        "Srbi": "5.8",
-                        "Kosovci ": "3.0"
+                        "Kosovski albanci ": "2.7",
+                        "Kosovski srbi": "5.8",
+                        "Ostali kosovci": "3.0"
                     },
                     "Radim volunterski za jednu ili više organizacija civilnog društva": {
-                        "Albanci ": "3.6",
-                        "Srbi ": "10.1",
-                        "Kosovci ": "2.5"
+                        "Kosovski albanci  ": "3.6",
+                        "Kosovski srbi": "10.1",
+                        "Ostali kosovci": "2.5"
                     },
                     "Ja sam član političke partije": {
-                        "Albanci": "9.9",
-                        "Srbi": "15.7",
-                        "Kosovci ": "7.5"
+                        "Kosovski albanci ": "9.9",
+                        "Kosovski srbi": "15.7",
+                        "Ostali kosovci": "7.5"
                     },
                     "Radim volunterski za političku partiju ": {
-                        "Albanci": "5.2",
-                        "Srbi ": "7.7",
-                        "Kosovci ": "4.0"
+                        "Kosovski albanci ": "5.2",
+                        "Kosovski srbi": "7.7",
+                        "Ostali kosovci": "4.0"
                     }
                 },
-                "Age": {
+                "Starost": {
                     "Ja sam član jedne ili više organizacija civilnog društva ": {
                         "Godina 18-25": "2.90",
                         "Godina 26-35": "2.50",
@@ -1917,7 +1917,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Gender": {
+                "Ravnopravnost": {
                     "Bili korisnik usluge pružene od civilnog društva": {
                         "Muškarci": "3.4",
                         "Žene ": "3.4"
@@ -1931,24 +1931,24 @@ var static_data = {
                         "Žene ": "16.6"
                     }
                 },
-                "Ethnicity": {
+                "Etnička pripadnost": {
                     "Bili korisnik usluge pružene od civilnog društva": {
                         "Albanci ": "2.7",
-                        "Srbi ": "21.5",
-                        "Kosovci ": "1.0"
+                        "Kosovski srbi": "21.5",
+                        "Ostali kosovci": "1.0"
                     },
                     "Učestvovali u aktivnosti civilnog društva": {
                         "Albanci ": "4.3",
-                        "Srbi ": "17.7",
-                        "Kosovci ": "1.5"
+                        "Kosovski srbi": "17.7",
+                        "Ostali kosovci": "1.5"
                     },
                     "Podržali cilj (peticiju, protest) započet od civilnog društva": {
                         "Albanci ": "21.7",
-                        "Srbi ": "27.4",
-                        "Kosovci ": "8.5"
+                        "Kosovski srbi": "27.4",
+                        "Ostali kosovci": "8.5"
                     }
                 },
-                "Membership": {
+                "Članstvo": {
                     "Bili korisnik usluge pružene od civilnog društva": {
                         "Član/volunter jedne ili više OCD-a": "11.9",
                         "Nije član/volunter jedne ili više OCD-a": "3.0"
@@ -1962,7 +1962,7 @@ var static_data = {
                         "Nije član/volunter jedne ili više OCD-a": "21.6"
                     }
                 },
-                "Age": {
+                "Starost": {
                     "Bili korisnik usluge pružene od civilnog društva": {
                         "Godine 18-25": "7.7",
                         "Godine 26-35": "3.4",
@@ -2052,7 +2052,7 @@ var static_data = {
                 }
             },
             "sq": {
-                "Gender": {
+                "Gjinia": {
                     "Shumica e njerëzve mund të besohen, apo": {
                         "Burra": "10.2",
                         "Gra": "15.0"
@@ -2084,7 +2084,7 @@ var static_data = {
                         "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "87.5"
                     }
                 },
-                "Age": {
+                "Mosha": {
                     "Shumica e njerëzve mund të besohen, apo": {
                         "Mosha 18-25": "11.5",
                         "Mosha 26-35": "11.5",
@@ -2104,7 +2104,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Gender": {
+                "Ravnopravnost": {
                     "Većini ljudi se može verovati, ili da": {
                         "Muškarci ": "10.2",
                         "Žene": "15.0"
@@ -2114,19 +2114,19 @@ var static_data = {
                         "Žene": "85.0"
                     }
                 },
-                "Përkatësia etnike": {
+                "Etnička pripadnost": {
                     "Većini ljudi se može verovati, ili da": {
-                        "Albanci": "13.1",
-                        "Srbi": "10.7",
-                        "Kosovci": "4.1"
+                        "Kosovski albanci ": "13.1",
+                        "Kosovski srbi": "10.7",
+                        "Ostali kosovci": "4.1"
                     },
                     "Trebate biti veoma oprezni kada radite sa ljudima": {
-                        "Albanci": "86.9",
-                        "Srbi": "89.3",
-                        "Kosovci": "68.9"
+                        "Kosovski albanci ": "86.9",
+                        "Kosovski srbi": "89.3",
+                        "Ostali kosovci": "68.9"
                     }
                 },
-                "Anëtarësia": {
+                "Članstvo": {
                     "Većini ljudi se može verovati, ili da": {
                         "Član/volunter jedne ili više OCD-a": "15.7",
                         "Nije član/volunter jedne ili više OCD-a": "12.5"
@@ -2136,7 +2136,7 @@ var static_data = {
                         "Nije član/volunter jedne ili više OCD-a": "87.5"
                     }
                 },
-                "Age": {
+                "Starost": {
                     "Većini ljudi se može verovati, ili da": {
                         "Godine 18-25": "11.5",
                         "Godine 26-35": "11.5",
