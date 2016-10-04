@@ -4,7 +4,26 @@
 var url = {{ site.requesturl }} +"comparison";
 $.support.cors = true;
 var language = window.language;
+
+// json to name the comparison buttons by survey ID
+var static_compare_buttons = {
+    "2": translation_data["Development-Partners"][window.language],
+    "3": translation_data["CSO-Network"][window.language],
+    "4": translation_data["External"][window.language]
+};
+
+// questions which have another questions from another surveys that can be compared.
+var comparison_questions = {
+    "q35": ["313", "229"],
+    "q77": ["220"],
+    "q112": ["207", "208"],
+    "q138": ["414", "235"]
+};
+
+// questions with static data.
 var static_questions = ["q34", "q35", "q80", "q117", "q119", "q217", "q222", "q226", "q228", "q407"];
+
+// structure of topics and the questions within the topics with their dis-aggregate by questions
 var main_indicators = {
     "6": {
         "q9": ["q2", "q7", "q11", "q15"],
@@ -20,7 +39,9 @@ var main_indicators = {
         "q35": []
     },
     "4": {
-        "q48": ["q9", "q2", "q7", "q11", "q15"]
+        "q48": ["q9", "q2", "q7", "q11", "q15"],
+        "5N1": ["Gender", "Age", "Ethnicity"],
+        "5N3": ["Gender", "Age", "Ethnicity" ,"Membership"]
     },
     "5": {
         "q51": ["q9", "q2", "q7", "q11", "q15"],
@@ -73,10 +94,13 @@ var main_indicators = {
     "12": {
         "q138": ["q9", "q2", "q7", "q11", "q15"],
         "q407": [],
-        "5A7_5": ["Gender", "Age", "Ethnicity" ,"Membership"]
+        "5A7_5": ["Gender", "Age", "Ethnicity" ,"Membership"],
+        "5N4": ["Gender", "Age", "Ethnicity" ,"Membership"],
+        "5C15": ["Gender", "Age", "Ethnicity" ,"Membership"]
     }
 };
 
+// adds all of the topics in the left side div of topics.
 function addTopicList(){
     for (var topic in main_indicators){
         var topic_name = topics[topic][window.language];
@@ -91,6 +115,7 @@ function addTopicList(){
     }
 }
 
+// populates main indicator select box based on the topic they belong.
 function populateMainIndicatorSelectBoxes(topic) {
     $("#main-indicator-select").empty();
     for (var indicator in main_indicators[topic]) {
@@ -101,6 +126,7 @@ function populateMainIndicatorSelectBoxes(topic) {
     }
 }
 
+// populates the dis-aggregate select box based on the main indicator and topic.
 function populateDisaggregateSelectBox(indicator, topic, is_undp_data) {
     $("#disaggregate-select").empty();
     if (is_undp_data != true) {
@@ -115,12 +141,49 @@ function populateDisaggregateSelectBox(indicator, topic, is_undp_data) {
     }
 }
 
+// if question in main indicator can be compared to another survey questions than display a button to compare
+function addButtonsToCompareCharts(chart_type_container, chart_type, main_indicator) {
+    if (main_indicator in comparison_questions){
+        $(".compare-buttons-div").empty();
+        $(".compare-buttons-div").append("<h6>"+translation_data["Comparison"][window.language]+"</h6>");
+        for (var item in comparison_questions[main_indicator]){
+            var q_id = comparison_questions[main_indicator][item];
+            var button_html = "<button id='"+ q_id +"' class='btn btn-default btn-compare'>"+static_compare_buttons[q_id.charAt(0)]+"</button><br>";
+            $(".compare-buttons-div").append(button_html);
+        }
+        $(".compare-buttons-div").show(350);
+    } else {
+        $(".compare-buttons-div").hide(350);
+        $(".comparison-container").remove();
+        $(".chart").css({
+            "width": "",
+            "float": "none"
+        });
+        if (static_questions.indexOf(main_indicator) != -1) {
+            displayStaticChart(chart_type_container, static_data[main_indicator], chart_type, main_indicator.replace("q", ""));
+        }
+    }
+}
+
+// json for posting the attributes to retrieve data from the MongoDB.
+function getPostData(main_indicator, disaggregate_by) {
+    return {
+        "q1_id": main_indicator,
+        "q2_id": disaggregate_by,
+        "lang": window.language
+    }
+}
+
+// displays chart based on the attributes given.
 function displayChart(){
     var active_topic = $(".topic-ul").find(".active").val();
-    var main_inicator = $("#main-indicator-select").val();
+    var main_indicator = $("#main-indicator-select").val();
     var chart_type = $('input[name=tabs]:checked').val();
     var chart_type_container = chart_type + "-container";
-    if (static_questions.indexOf(main_inicator) != -1) {
+
+    addButtonsToCompareCharts(chart_type_container, chart_type, main_indicator);
+
+    if (static_questions.indexOf(main_indicator) != -1) {
         $("#tab3").click();
         $("#tab1").prop("disabled", true);
         if (window.screen.width > 768) {
@@ -129,23 +192,19 @@ function displayChart(){
             }, 350);
         }
         $("#disaggregate-select").parent().parent().hide(350);
-        displayStaticChart("column-chart-container", static_data[main_inicator], "column-chart", main_inicator.replace("q", ""));
+        displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""));
     } else {
         $("#tab1").prop("disabled", false);
         $("#main-indicator-select").parent().parent().css("margin-top", "0px");
         $("#disaggregate-select").parent().parent().show(350);
-        if (main_inicator.charAt(0) == "5"){
+        if (main_indicator.charAt(0) == "5"){
             $("#tab3").click();
-            populateDisaggregateSelectBox(main_inicator, active_topic, true);
-            displayStaticChart("column-chart-container", static_data[main_inicator], "column-chart", main_inicator.replace("q", ""), "Gender");
+            populateDisaggregateSelectBox(main_indicator, active_topic, true);
+            displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""), translation_data["Gender"][window.language]);
         } else {
-            populateDisaggregateSelectBox(main_inicator, active_topic);
+            populateDisaggregateSelectBox(main_indicator, active_topic);
             var disaggregate_by = $("#disaggregate-select").val();
-            var post_data = {
-                "q1_id": main_inicator,
-                "q2_id": "",
-                "lang": window.language
-            };
+            var post_data = getPostData(main_indicator, "");
             if (disaggregate_by != "0") {
                 post_data["q2_id"] = disaggregate_by;
                 postRequest(url, post_data, chart_type, chart_type_container, "y");
@@ -161,27 +220,37 @@ $(function () {
     populateMainIndicatorSelectBoxes("1");
     displayChart();
     mainIndicatorSelectBoxChange();
+    initChartRadioButtonsClick();
+    disaggregateSelectBoxChange();
+    initComparisonChartButtonClick();
+    initTopicToggleButton();
+    initTopicSelection();
 
+});
+
+// initializes the chart radio button click in the document.ready.
+function initChartRadioButtonsClick(){
     $("input[name='tabs']").change(function () {
         $(".chart").empty();
-        var main_inicator = $("#main-indicator-select").val();
+        var main_indicator = $("#main-indicator-select").val();
         var disaggregate_by = $("#disaggregate-select").val();
         var checked_rb = $(this).val();
         var chart_type_container = checked_rb + "-container";
-        if (static_questions.indexOf(main_inicator) != -1) {
+        if (static_questions.indexOf(main_indicator) != -1) {
             $("#tab1").prop("disabled", true);
-            displayStaticChart(chart_type_container, static_data[main_inicator], checked_rb, main_inicator.replace("q", ""));
+            $(".chart").css({
+                "width": "",
+                "float": "none"
+            });
+            displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_inicator.replace("q", ""));
         } else {
-            if (main_inicator.charAt(0) == "5"){
+            if (main_indicator.charAt(0) == "5"){
                 $("#tab1").prop("disabled", true);
-                displayStaticChart(chart_type_container, static_data[main_inicator], checked_rb, main_inicator.replace("q", ""), disaggregate_by);
+                var disaggregate_by_lang = $("#disaggregate-select option:selected" ).text();
+                displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""), disaggregate_by_lang);
             } else {
                 $("#tab1").prop("disabled", false);
-                var post_data = {
-                    "q1_id": main_inicator,
-                    "q2_id": "",
-                    "lang": window.language
-                };
+                var post_data = getPostData(main_indicator, "");
                 if (disaggregate_by != "0") {
                     post_data["q2_id"] = disaggregate_by;
                     postRequest(url, post_data, checked_rb, chart_type_container, "y");
@@ -191,26 +260,61 @@ $(function () {
             }
         }
     });
-    disaggregateSelectBoxChange();
-    initTopicToggleButton();
-    initTopicSelection();
+}
 
-});
+// initializes the charts comparison button click.
+function initComparisonChartButtonClick(){
+    $(document).on("click", '.btn-compare',function() {
+        $(".comparison-container").remove();
+        var main_indicator = $("#main-indicator-select").val();
+        var chart_type = $('input[name=tabs]:checked').val();
+        var q_id = $(this).attr("id");
+        var disaggregate_by = $("#disaggregate-select").val();
+        var chart_type_container = chart_type + "-container";
+        var parent_div = $("#" + chart_type_container).parent();
 
+        var comparison_chart_container_div = "<div class='comparison-container'></div>";
+        parent_div.append(comparison_chart_container_div);
+        var line_html = "<div style='float: left; height: 450px; width: 1px; margin-left: 20px; border-left: 1px dotted black'></div>";
+        var chart_width = "100%";
+        if (window.screen.width > 768) {
+            chart_width = "47%";
+            $(".comparison-container").append(line_html);
+        } else $(".comparison-container").append("<br><hr style='height: 1px; width: 100%; background-color: black'><br>");
+        var chart_div = "<div id='comparison-chart-container' class='comparison-chart' style='min-width: 250px; max-width: 700px; width: "+chart_width+"; height: 450px; float: left;'></div>";
+        $(".comparison-container").append(chart_div);
+        $("#" + chart_type_container).css({
+            "width": chart_width,
+            "float": "left"
+        });
+        if (static_questions.indexOf(main_indicator) == -1) {
+            var post_data = getPostData(main_indicator, "");
+            if (disaggregate_by != "0") {
+                post_data["q2_id"] = disaggregate_by;
+                postRequest(url, post_data, chart_type, chart_type_container, "y");
+            } else {
+                postRequest(url, post_data, chart_type, chart_type_container);
+            }
+        } else {
+            displayStaticChart(chart_type_container, static_data[main_indicator], chart_type, main_indicator.replace("q", ""));
+        }
+
+        displayStaticChart("comparison-chart-container", static_data[q_id], chart_type, q_id.replace("q", ""), {static_question:q_id});
+    });
+}
+
+// displays chart on dis-aggregate by select box change
 function disaggregateSelectBoxChange(){
     $("#disaggregate-select").change(function () {
         var disaggregate_by = $(this).val();
         var chart_type = $('input[name=tabs]:checked').val();
         var chart_type_container = chart_type + "-container";
-        var main_inicator = $("#main-indicator-select").val();
-        if (main_inicator.charAt(0) == "5"){
-            displayStaticChart(chart_type_container, static_data[main_inicator], chart_type, main_inicator.replace("q", ""), disaggregate_by);
+        var main_indicator = $("#main-indicator-select").val();
+        if (main_indicator.charAt(0) == "5"){
+            var disaggregate_by_lang = $("#disaggregate-select option:selected" ).text();
+            displayStaticChart(chart_type_container, static_data[main_indicator], chart_type, main_indicator.replace("q", ""), disaggregate_by_lang);
         } else {
-            var post_data = {
-                "q1_id": main_inicator,
-                "q2_id": disaggregate_by,
-                "lang": window.language
-            };
+            var post_data = getPostData(main_indicator, disaggregate_by);
             if (disaggregate_by != "0") {
                 postRequest(url, post_data, chart_type, chart_type_container, "y");
             } else {
@@ -221,6 +325,7 @@ function disaggregateSelectBoxChange(){
     });
 }
 
+// displays the chart on main indicator select box change.
 function mainIndicatorSelectBoxChange() {
     $("#main-indicator-select").off("change").on("change", function () {
         displayChart();
@@ -243,6 +348,7 @@ function postRequest(url_post, post_data, chart_type, chart_container, double_qu
     });
 }
 
+// returns the json depth to check if it's multiple series chart or single series chart.
 function getJsonObjectDepth(parent) {
     var hasNonLeafNodes = false;
     var childCount = 0;
@@ -266,6 +372,7 @@ function getJsonObjectDepth(parent) {
     }
 }
 
+// builds multiple series chart data for displaying in the chart.
 function buildMultipleSeriesChartData(categories, title, data, series, chart_container, chart_type, static_q_diss_type){
     var answers = data["answer"][window.language];
     if (static_q_diss_type) {
@@ -307,7 +414,8 @@ function buildMultipleSeriesChartData(categories, title, data, series, chart_con
     drawMultipleSeriesChart(chart_container, chart_type, title, categories, chart_plot_options, series);
 }
 
-function displayStaticChart(chart_container, data, chart_type, question_id, static_q_diss_type) {
+// displays static chart based on the attributes given/
+var displayStaticChart = parameterfy(function(chart_container, data, chart_type, question_id, static_q_diss_type, static_question) {
     chart_type = chart_type.replace("-chart", "");
     var json_depth = getJsonObjectDepth(data);
     $("#" + chart_container).empty();
@@ -316,7 +424,7 @@ function displayStaticChart(chart_container, data, chart_type, question_id, stat
     var categories = [];
     var series = [];
     if (json_depth > 4) {
-        if (question_id.length < 4) {
+        if (question_id.charAt(0) != "5") {
             buildMultipleSeriesChartData(categories, title, data, series, chart_container, chart_type);
         } else {
             buildMultipleSeriesChartData(categories, title, data, series, chart_container, chart_type, static_q_diss_type);
@@ -329,9 +437,9 @@ function displayStaticChart(chart_container, data, chart_type, question_id, stat
             };
             series.push(simple_serie);
         }
-        drawChart(chart_container, chart_type, series);
+        drawChart(chart_container, chart_type, series, {static_question:static_question});
     }
-}
+});
 
 function getFirstIndicator(jsonObj){
     var firstProp;
@@ -356,6 +464,11 @@ function initTopicSelection(){
         });
         $("#show").click();
         var main_indicator = getFirstIndicator(main_indicators[topic]);
+        $(".comparison-container").remove();
+        $(".chart").css({
+            "width": "",
+            "float": "none"
+        });
         populateMainIndicatorSelectBoxes(topic);
         populateDisaggregateSelectBox(main_indicator, topic);
         mainIndicatorSelectBoxChange();

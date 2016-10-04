@@ -54,7 +54,20 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-2 col-xs-12" style="text-align: center;"></div>
+            <div class="col-md-2 col-xs-12 right-comparision-buttons" style="text-align: center; margin-top: -65px;">
+                <div class="compare-buttons-div" style="display: none;">
+                    {% if page.language == "english" %}
+                        <h6>Compare to:</h6>
+                        <button class="btn btn-default btn-compare cso-network-compare">CSO Network Survey</button><br>
+                    {% elsif page.language == "serbian" %}
+                        <h6>U poređenju sa:</h6>
+                        <button class="btn btn-default btn-compare cso-network-compare">Mreža OCD</button><br>
+                    {% else %}
+                        <h6>Krahasoni me:</h6>
+                        <button class="btn btn-default btn-compare cso-network-compare">Anketa e rrjeteve te OSHC-së</button><br>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </div>
 </div>

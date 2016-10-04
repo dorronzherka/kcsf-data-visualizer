@@ -4,20 +4,30 @@ var translation_data = {
         "sq": "Gjinia",
         "sr": "Pol"
     },
+    "Back": {
+        "en": "Back",
+        "sq": "Prapa",
+        "sr": "nazad"
+    },
+    "Comparison": {
+        "sq": "Krahasoni me:",
+        "en": "Compare to:",
+        "sr": "U poređenju sa:"
+    },
     "Membership": {
         "en": "Member or volunteer for one or more civil society organization",
-        "sq": "Member or volunteer for one or more civil society organization",
-        "sr": "Member or volunteer for one or more civil society organization"
+        "sq": "Anëtar ose vullnetar për një ose më shumë organizatave të shoqërisë civile",
+        "sr": "Član ili volonter za jednu ili više organizacija civilnog društva"
     },
     "Ethnicity": {
         "en": "Ethnicity",
         "sq": "Etniciteti",
-        "sr": "Ethnicity"
+        "sr": "Etnička pripadnost"
     },
     "Age": {
         "en": "Age",
         "sq": "Mosha",
-        "sr": "Age"
+        "sr": "Starost"
     },
     "CSO": {
         "en": "CSO Survey",
@@ -36,7 +46,7 @@ var translation_data = {
     },
     "UNDP": {
         "en": "UNDP Public Pulse",
-        "sq": "Pulsi Publik i UNDP",
+        "sq": "Pulsi Publik i UNDP-së",
         "sr": "UNDP Public Javni Puls"
     },
     "External": {
@@ -324,10 +334,25 @@ var translation_data = {
         "sq": "Si e vlerësoni ndikimin e organizatës suaj në këtë fushë?",
         "en": "What is your estimation regarding the impact of your organization on this field?"
     },
+    "207": {
+        "sq": "Zakonisht a i ftoni OShC-të të jenë pjesëmarrëse gjatë procesit të programimit të fondeve tuaja?",
+        "en": "Do you normally invite CSOs to participate in the process of programming of your funds?",
+        "sr": "Da li obično pozivate OCD-e da učestvuju u procesu programiranja vaših fondova?"
+    },
+    "208": {
+        "sq": "Nëse po, cilat OShC i ftoni për konsultime në lidhje me programin tuaj të fondeve?",
+        "en": "If yes, who from the CSOs did you invite for consultations about program funds?",
+        "sr": "Ako da, koje OCD-e pozivate na konsultacije o programskim fondovima?"
+    },
     "217": {
         "sq": "Llojet e OSHC-ve që janë përfituese të fondeve të donatorëve",
         "en": "Type of CSOs that are beneficiaries of donor funds",
         "sr": "Vrsta OCD koje su korisnici donatorskih sredstava"
+    },
+    "220": {
+        "sq": "Çfarë lloji të përkrahjes financiare ju keni dhënë OShC-ve gjatë 2015?",
+        "en": "What type of financial support did you provide to CSOs during 2015?",
+        "sr": "Koji vid finansijske podrške ste dali OCD-ima tokom 2015.godine?"
     },
     "222": {
         "sq": "Madhësia e fondeve krahasuar me vitin 2014",
@@ -342,19 +367,39 @@ var translation_data = {
     "228": {
         "sq": "Kriteret kryesore për përzgjedhjen e OSHC-ve për financim",
         "en": "Main criteria for selecting CSOs for funding",
-        "sr": "Koji su glavni kriterijumi za odabir OCD-a pri davanju fondova? (Molimo vas da ih stavite u redosledu po značaju od 1 do 7)"
+        "sr": "Koji su glavni kriterijumi za odabir OCD-a pri davanju fondova?"
+    },
+    "229": {
+        "sq": "Si i vlerësoni kapacitetet e OSHC-ve në Kosovë për:",
+        "en": "How do you evaluate the capacities of CSOs in Kosovo for the following?",
+        "sr": "Kako ocenjujeje kapacitete OCD-a na Kosovu u sledećim poljima?"
+    },
+    "235": {
+        "sq": "Sipas mendimit tuaj në përgjithësi ambienti social, politik dhe ekonomik në Kosovë:",
+        "en": "In your opinion, the general social, political and economical environment in Kosovo:",
+        "sr": "Po vašem mišljenju, opšta društvena, politička i privredna sredina na Kosovu:"
     },
     "318": {
         "sq": "Vështirësitë kryesore që OSHC-të I hasin gjatë sigurimit të fondeve",
         "en": "Main difficulties of CSOs faced in obtaining funds",
         "sr": "Glavne poteškoće OCD koje se suočavaju u dobijanju sredstava"
     },
+    "313": {
+        "sq": "Si e vlerësoni kapacitetin e anëtareve tuaj për më poshtë?",
+        "en": "How do you evaluate the capacity of your members for the following?",
+        "sr": "Kako biste ocenili kapacitete vaših članova za sledeće?"
+    },
     "407": {
         "en": "Personal trust in civil society",
         "sq": "Besimi në shoqërinë civile në nivel personal",
         "sr": "Da li vi lično verujete civilnom društvu?"
     },
-    "5A_7": {
+    "414": {
+        "en": "In your opinion, the general social, political and economical environment in Kosovo:",
+        "sq": "Sipas mendimit tuaj, ambienti I pergjithshem politik, ekonomik dhe shoqeror ne Kosove:",
+        "sr": "Po vašem mišljenju, kakav je opšti politički, privredni i društveni ambijent na Kosovu:"
+    },
+    "5A7_5": {
         "sq": "Shoqëria civile në Kosovë shërben si një monitorues i besueshëm i zhvillimeve demokratike në Kosovë?",
         "en": "Civil society in Kosovo serves as a truthful monitor of democratic developments in Kosovo?",
         "sr": "Civilno društvo na Kosovu služi kao verodostojni monitor demokratskih razvoja na Kosovu?"

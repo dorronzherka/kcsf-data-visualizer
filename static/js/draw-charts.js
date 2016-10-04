@@ -5,7 +5,32 @@ function Comparator(b, a) {
     return 0;
 }
 
-function drawChart(container, chart_type, data, double_questions) {
+
+var parameterfy = (function () {
+    var pattern = /function[^(]*\(([^)]*)\)/;
+
+    return function (func) {
+        // fails horribly for parameterless functions ;)
+        var args = func.toString().match(pattern)[1].split(/,\s*/);
+
+        return function () {
+            var named_params = arguments[arguments.length - 1];
+            if (typeof named_params === 'object') {
+                var params = [].slice.call(arguments, 0, -1);
+                if (params.length < args.length) {
+                    for (var i = params.length, l = args.length; i < l; i++) {
+                        params.push(named_params[args[i]]);
+                    }
+                    return func.apply(this, params);
+                }
+            }
+            return func.apply(null, arguments);
+        };
+    };
+}());
+
+
+var drawChart = parameterfy(function (container, chart_type, data, double_questions, static_question) {
     $("#" + container).empty();
     chart_type = chart_type.replace("-chart", "");
 
@@ -37,10 +62,15 @@ function drawChart(container, chart_type, data, double_questions) {
         }
     }
 
-    var e = document.getElementById("main-indicator-select");
-    var question_id = e.options[e.selectedIndex].value;
-    var question_title = e.options[e.selectedIndex].text;
-    var title = getChartTitle(question_id.replace("q", ""), question_title);
+    var title = "";
+    if (static_question != undefined) {
+        title = getChartTitle(static_question.replace("q", ""), translation_data[static_question][window.language]);
+    } else {
+        var e = document.getElementById("main-indicator-select");
+        var question_id = e.options[e.selectedIndex].value;
+        var question_title = e.options[e.selectedIndex].text;
+        title = getChartTitle(question_id.replace("q", ""), question_title);
+    }
 
     // building the drill down data for the chart.
     if (double_questions) {
@@ -68,7 +98,7 @@ function drawChart(container, chart_type, data, double_questions) {
     // modified the back button text on drill down.
     Highcharts.setOptions({
         lang: {
-            drillUpText: 'Back'
+            drillUpText: translation_data['Back'][window.language]
         }
     });
 
@@ -169,7 +199,7 @@ function drawChart(container, chart_type, data, double_questions) {
     });
 
     return chart;
-}
+});
 
 function getChartTitle(question_id, chart_title) {
     var cso_questions = ["76_1", "76_2", '136_1'];
@@ -183,6 +213,8 @@ function getChartTitle(question_id, chart_title) {
                 return "<b>" + translation_data["CSO-Network"][window.language] + "</b> - " + chart_title;
             } else if (question_id.charAt(0) == "4") {
                 return "<b>" + translation_data["External"][window.language] + "</b> - " + chart_title;
+            } else if (question_id.charAt(0) == "5") {
+                return "<b>" + translation_data["UNDP"][window.language] + "</b> - " + chart_title;
             }
         } else if (question_id.length < 3) {
             return "<b>" + translation_data["CSO"][window.language] + "</b> - " + chart_title;

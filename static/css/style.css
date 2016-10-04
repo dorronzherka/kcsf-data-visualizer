@@ -140,6 +140,15 @@ body {
     text-decoration: underline;
 }
 
+.btn-compare {
+    width: 180px;
+    font-size: 11px;
+    height: 30px;
+    margin-top: 2px;
+    background-color: #3498db;
+    border: 1px solid #0f608c;
+    color: #fff;
+}
 
 @media (max-width: 768px) {
     .select {
@@ -180,6 +189,13 @@ body {
 }
 
 @media (max-width: 990px) {
+    .right-comparision-buttons {
+        margin-top: 0 !important;
+    }
+
+    .btn-compare {
+        width: 100%;
+    }
 
     #main-indicator-label-en, #main-indicator-label-sq, #main-indicator-label-sr {
         margin-top: 30px !important;

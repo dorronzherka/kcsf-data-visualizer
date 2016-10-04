@@ -859,7 +859,7 @@ var static_data = {
                         "Gra": "2.3"
                     }
                 },
-                "Përkatësia etnike": {
+                "Etniciteti": {
                     "Pajtohem plotësisht": {
                         "Shqiptar": "19.8",
                         "Serb": "23.3",
@@ -933,15 +933,15 @@ var static_data = {
                         "Mosha 66+": "28.9"
                     },
                     "Pa pergjigje": {
-                        "Age 18-25": "0.1",
-                        "Age 26-35": "1.0",
-                        "Age 36-45": "1.8",
-                        "Age 46-55": "1.8",
-                        "Age 56-65": "3.3",
-                        "Age 66+": "2.4"
+                        "Mosha 18-25": "0.1",
+                        "Mosha 26-35": "1.0",
+                        "Mosha 36-45": "1.8",
+                        "Mosha 46-55": "1.8",
+                        "Mosha 56-65": "3.3",
+                        "Mosha 66+": "2.4"
                     }
                 },
-                "Anëtarësia": {
+                "Anëtar ose vullnetar për një ose më shumë organizatave të shoqërisë civile": {
                     "Pajtohem plotësisht": {
                         "Anëtarë/vullnetarë në një apo më shumë OShC": "25.10",
                         "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "19.30"
@@ -969,7 +969,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Ravnopravnost": {
+                "Pol": {
                     "Potpuno se slažem": {
                         "Muškarci": "22.5",
                         "Žene": "16.7"
@@ -1077,7 +1077,7 @@ var static_data = {
                         "Godine 66+": "2.4"
                     }
                 },
-                "Članstvo": {
+                "Član ili volonter za jednu ili više organizacija civilnog društva": {
                     "Potpuno se slažem": {
                         "Član/volunter jedne ili više OCD-a": "25.10",
                         "Nije član/volunter jedne ili više OCD-a": "19.30"
@@ -1277,7 +1277,7 @@ var static_data = {
                         "Gra": "2.1"
                     }
                 },
-                "Përkatësia etnike": {
+                "Etniciteti": {
                     "Nuk është prezent aspak": {
                         "Shqiptar": "5.9",
                         "Serb": "4.8",
@@ -1359,7 +1359,7 @@ var static_data = {
                         "Mosha 66+": "1.2"
                     }
                 },
-                "Anëtarësia": {
+                "Anëtar ose vullnetar për një ose më shumë organizatave të shoqërisë civile": {
                     "Nuk është i pranishëm aspak": {
                         "Anëtarë/vullnetarë në një apo më shumë OShC": "10.9",
                         "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "5.4"
@@ -1387,7 +1387,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Ravnopravnost": {
+                "Pol": {
                     "Nije nimalo prisutna": {
                         "Muškarci": "7.3",
                         "Žene": "4.1"
@@ -1495,7 +1495,7 @@ var static_data = {
                         "Godine 66+": "1.2"
                     }
                 },
-                "Članstvo": {
+                "Član ili volonter za jednu ili više organizacija civilnog društva": {
                     "Nije nimalo prisutna": {
                         "Član/volunter jedne ili više OCD-a": "10.9",
                         "Nije član jedne ili više OCD-a": "5.4"
@@ -1627,7 +1627,7 @@ var static_data = {
                         "Gra": "3.2"
                     }
                 },
-                "Përkatësia etnike": {
+                "Etniciteti": {
                     "Jam anëtarë i një apo më shumë organizatave të shoqërisë civile": {
                         "Shqiptar": "2.7",
                         "Serb": "5.8",
@@ -1685,7 +1685,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Ravnopravnost": {
+                "Pol": {
                     "Ja sam član jedne ili više organizacija civilnog društva ": {
                         "Muškarci": "4.0",
                         "Žene ": "1.8"
@@ -1858,7 +1858,7 @@ var static_data = {
                         "Gra": "16.6"
                     }
                 },
-                "Përkatësia etnike": {
+                "Etniciteti": {
                     "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
                         "Shqiptar": "2.7",
                         "Serb": "21.5",
@@ -1875,7 +1875,7 @@ var static_data = {
                         "Tjerë": "8.5"
                     }
                 },
-                "Anëtarësia": {
+                "Anëtar ose vullnetar për një ose më shumë organizatave të shoqërisë civile": {
                     "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
                         "Anëtarë/vullnetarë në një apo më shumë OShC": "11.9",
                         "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "3.0"
@@ -1917,7 +1917,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Ravnopravnost": {
+                "Pol": {
                     "Bili korisnik usluge pružene od civilnog društva": {
                         "Muškarci": "3.4",
                         "Žene ": "3.4"
@@ -1948,7 +1948,7 @@ var static_data = {
                         "Ostali kosovci": "8.5"
                     }
                 },
-                "Članstvo": {
+                "Član ili volonter za jednu ili više organizacija civilnog društva": {
                     "Bili korisnik usluge pružene od civilnog društva": {
                         "Član/volunter jedne ili više OCD-a": "11.9",
                         "Nije član/volunter jedne ili više OCD-a": "3.0"
@@ -2053,7 +2053,7 @@ var static_data = {
             },
             "sq": {
                 "Gjinia": {
-                    "Shumica e njerëzve mund të besohen, apo": {
+                    "Shumica e njerëzve mund të besohen": {
                         "Burra": "10.2",
                         "Gra": "15.0"
                     },
@@ -2062,8 +2062,8 @@ var static_data = {
                         "Gra": "85.0"
                     }
                 },
-                "Përkatësia etnike": {
-                    "Shumica e njerëzve mund të besohen, apo": {
+                "Etniciteti": {
+                    "Shumica e njerëzve mund të besohen": {
                         "Shqiptar": "13.1",
                         "Serb": "10.7",
                         "Tjerë": "4.1"
@@ -2074,8 +2074,8 @@ var static_data = {
                         "Tjerë": "68.9"
                     }
                 },
-                "Anëtarësia": {
-                    "Shumica e njerëzve mund të besohen, apo": {
+                "Anëtar ose vullnetar për një ose më shumë organizatave të shoqërisë civile": {
+                    "Shumica e njerëzve mund të besohen": {
                         "Anëtarë/vullnetarë në një apo më shumë OShC": "15.7",
                         "Jo anëtarë apo vullnetarë në një apo më shumë OShC": "12.5"
                     },
@@ -2085,7 +2085,7 @@ var static_data = {
                     }
                 },
                 "Mosha": {
-                    "Shumica e njerëzve mund të besohen, apo": {
+                    "Shumica e njerëzve mund të besohen": {
                         "Mosha 18-25": "11.5",
                         "Mosha 26-35": "11.5",
                         "Mosha 36-45": "11.8",
@@ -2104,7 +2104,7 @@ var static_data = {
                 }
             },
             "sr": {
-                "Ravnopravnost": {
+                "Pol": {
                     "Većini ljudi se može verovati, ili da": {
                         "Muškarci ": "10.2",
                         "Žene": "15.0"
@@ -2126,7 +2126,7 @@ var static_data = {
                         "Ostali kosovci": "68.9"
                     }
                 },
-                "Članstvo": {
+                "Član ili volonter za jednu ili više organizacija civilnog društva": {
                     "Većini ljudi se može verovati, ili da": {
                         "Član/volunter jedne ili više OCD-a": "15.7",
                         "Nije član/volunter jedne ili više OCD-a": "12.5"
@@ -2156,7 +2156,329 @@ var static_data = {
                 }
             }
         }
+    },
+    "313": {
+        "question": {
+            "en": translation_data['313']["en"],
+            "sq": translation_data['313']["sq"],
+            "sr": translation_data['313']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Writing project-proposals": {
+                    "High": "0.0",
+                    "Medium": "60.0",
+                    "Low": "40.0"
+                },
+                "Finding donors/funds": {
+                    "High": "0.0",
+                    "Medium": "40.0",
+                    "Low": "60.0"
+                },
+                "Implementation of projects": {
+                    "High": "20.0",
+                    "Medium": "60.0",
+                    "Low": "20.0"
+                },
+                "Financial management of projects": {
+                    "High": "0.0",
+                    "Medium": "100.0",
+                    "Low": "0.0"
+                }
+            },
+            "sq": {
+                "Shkrim të projekt- propozimeve": {
+                    "I lartë": "0.0",
+                    "Mesatar": "60.0",
+                    "I ulët": "40.0"
+                },
+                "Gjetje të donatorëve/fondeve": {
+                    "I lartë": "0.0",
+                    "Mesatar": "40.0",
+                    "I ulët": "60.0"
+                },
+                "Zbatimi/menaxhim operativ të projekteve": {
+                    "I lartë": "20.0",
+                    "Mesatar": "60.0",
+                    "I ulët": "20.0"
+                },
+                "Menaxhim financiar të projekteve": {
+                    "I lartë": "0.0",
+                    "Mesatar": "100.0",
+                    "I ulët": "0.0"
+                }
+            },
+            "sr": {
+                "Pisanje predloga projekta": {
+                    "Visok": "0.0",
+                    "Prosečan": "60.0",
+                    "Nizak": "40.0"
+                },
+                "Pronalaženje donatora/finansiranja": {
+                    "Visok": "0.0",
+                    "Prosečan": "40.0",
+                    "Nizak": "60.0"
+                },
+                "Implementacija/upravljanje projektima": {
+                    "Visok": "20.0",
+                    "Prosečan": "60.0",
+                    "Nizak": "20.0"
+                },
+                "Finansijsko upravljanje projektima": {
+                    "Visok": "0.0",
+                    "Prosečan": "100.0",
+                    "Nizak": "0.0"
+                }
+            }
+        }
+    },
+    "229": {
+        "question": {
+            "en": translation_data['229']["en"],
+            "sq": translation_data['229']["sq"],
+            "sr": translation_data['229']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Strategic planning": {
+                    "High": "18.8",
+                    "Medium": "43.8",
+                    "Low": "37.5"
+                },
+                "Writing project-proposals": {
+                    "High": "12.5",
+                    "Medium": "68.8",
+                    "Low": "18.8"
+                },
+                "Applying for funds": {
+                    "High": "12.5",
+                    "Medium": "75.0",
+                    "Low": "12.5"
+                },
+                "Implementation/operational management of projects": {
+                    "High": "37.5",
+                    "Medium": "50.0",
+                    "Low": "12.5"
+                },
+                "Financial management of projects": {
+                    "High": "31.3",
+                    "Medium": "56.3",
+                    "Low": "12.5"
+                },
+                "Reporting on implementation of project activities": {
+                    "High": "18.8",
+                    "Medium": "68.8",
+                    "Low": "12.5"
+                },
+                "Knowledge/expertise in the thematic fields of the CSO": {
+                    "High": "56.3",
+                    "Medium": "37.5",
+                    "Low": "6.3"
+                }
+            },
+            "sq": {
+                "Planifikim strategjik": {
+                    "E lartë": "18.8",
+                    "E Mesme": "43.8",
+                    "E ulët": "37.5"
+                },
+                "Shkruarjen e projekt propozimeve": {
+                    "E lartë": "12.5",
+                    "E Mesme": "68.8",
+                    "E ulët": "18.8"
+                },
+                "Aplikimi për fonde": {
+                    "E lartë": "12.5",
+                    "E Mesme": "75.0",
+                    "E ulët": "12.5"
+                },
+                "Implementim / menaxhim operacional të projekteve": {
+                    "E lartë": "37.5",
+                    "E Mesme": "50.0",
+                    "E ulët": "12.5"
+                },
+                "Menaxhim financiar të projekteve": {
+                    "E lartë": "31.3",
+                    "E Mesme": "56.3",
+                    "E ulët": "12.5"
+                },
+                "Raportim për zbatimin e aktiviteteve të projektit": {
+                    "E lartë": "18.8",
+                    "E Mesme": "68.8",
+                    "E ulët": "12.5"
+                },
+                " Ekspertiz në fushat tematike të OShC-ve": {
+                    "E lartë": "56.3",
+                    "E Mesme": "37.5",
+                    "E ulët": "6.3"
+                }
+            },
+            "sr": {
+                "Strateško planiranje": {
+                    "Visok": "18.8",
+                    "Srednji": "43.8",
+                    "Nizak": "37.5"
+                },
+                "Pisanje predloga projekata": {
+                    "Visok": "12.5",
+                    "Srednji": "68.8",
+                    "Nizak": "18.8"
+                },
+                "Apliciranje za fondove": {
+                    "Visok": "12.5",
+                    "Srednji": "75.0",
+                    "Nizak": "12.5"
+                },
+                "Primena/operacionalno upravljanje projektima": {
+                    "Visok": "37.5",
+                    "Srednji": "50.0",
+                    "Nizak": "12.5"
+                },
+                "Finansijsko upravljanje projektima": {
+                    "Visok": "31.3",
+                    "Srednji": "56.3",
+                    "Nizak": "12.5"
+                },
+                "Izveštavanje o primeni aktivnosti projekata": {
+                    "Visok": "18.8",
+                    "Srednji": "68.8",
+                    "Nizak": "12.5"
+                },
+                "Znanje/ekspertiza u tematskim poljima OCD-a": {
+                    "Visok": "56.3",
+                    "Srednji": "37.5",
+                    "Nizak": "6.3"
+                }
+            }
+        }
+    },
+    "220": {
+        "question": {
+            "en": translation_data['220']["en"],
+            "sq": translation_data['220']["sq"],
+            "sr": translation_data['220']["sr"]
+        },
+        "answer": {
+            "sq": {
+                "Grante për prjekte afatshkurtra (deri në 12 muaj)": "66.7",
+                "Grante për projekte afatmesme (deri në 24 muaj)": "27.8",
+                "Grante për projekte afatgjata (më gjatë se 24 muaj)": "38.9",
+                "Financimi bazë/institucional (jo i lidhur me projekte)": "22.2",
+                "Kontrata të shërbimit dhe tendere": "16.7",
+                "Asistencë teknike": "22.2",
+                "Tjetër": "5.6"
+            },
+            "sr": {
+                "Kratkoročni grantovi projekata (do 12 meseci)": "66.7",
+                "Srednjeročni grantovi projekata (do 24 meseci)": "27.8",
+                "Dugoročni grantovi projekata (više od 24 meseci)": "38.9",
+                "Institucionalno/bazično finansiranje (nije vezano za projekte)": "22.2",
+                "Ugovori i tenderi za usluge": "16.7",
+                "Tehnička pomoć": "22.2",
+                "Ostalo": "5.6"
+            },
+            "en": {
+                "Short-term project grants (up to 12 months)": "66.7",
+                "Mid-term project grants (up to 24 months)": "27.8",
+                "Long-term project grants (more than 24 months)": "38.9",
+                "Institutional/core funding (not tied to projects)": "22.2",
+                "Service contracts and tenders": "16.7",
+                "Technical assistance": "22.2",
+                "Other": "5.6"
+            }
+        }
+    },
+    "207": {
+        "question": {
+            "en": translation_data['207']["en"],
+            "sq": translation_data['207']["sq"],
+            "sr": translation_data['207']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Yes, we do this every time a new program/scheme is designed or revised": "23.8",
+                "Yes, but we do this occasionally": "33.3",
+                "No, we do not invite CSOs to participate in the process of programming of our funds": "42.9"
+            },
+            "sq": {
+                "Po, ne e bëjmë këtë çdo herë që një skemë apo program i ri dizajnohet apo rishikohet": "23.8",
+                "Po, herë pas here": "33.3",
+                "Jo, ne nuk i ftojmë OShC-të të marrin pjesë në procesin e programimit të fondeve tona": "42.9"
+            },
+            "sr": {
+                "Da, to radimo svaki put kada se neki novi program ili šema sastavlja ili pregledava": "23.8",
+                "Da, ali to radimo samo povremeno": "33.3",
+                "Ne, mi ne pozivamo OCD-e da učestvuju u procesu programiranja naših fondova": "42.9"
+            }
+        }
+    },
+    "208": {
+        "question": {
+            "en": translation_data['208']["en"],
+            "sq": translation_data['208']["sq"],
+            "sr": translation_data['208']["sr"]
+        },
+        "answer": {
+            "en": {
+                "A limited number of CSOs we usually cooperate with": "84.6",
+                "Open call to all relevant CSOs, regardless of our previous cooperation with them": "15.4"
+            },
+            "sq": {
+                "Një numër të vogël të OShC-ve me të cilat zakonisht ne bashkëpunojmë": "84.6",
+                "Thirrje të hapur për të gjitha OShC-të relevante, pa marrë parasysh se a kemi bashkëpunuar më parë": "15.4"
+            },
+            "sr": {
+                "Broj OCD-a sa kojimo obično sarađujemo je ograničen": "84.6",
+                "Šaljemo javni poziv svim relevantnim OCD-ima nezavisno od naše prethodne saradnje sa njima": "15.4"
+            }
+        }
+    },
+    "414": {
+        "question": {
+            "en": translation_data['414']["en"],
+            "sq": translation_data['414']["sq"],
+            "sr": translation_data['414']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Inhibits the development of civil society": "26.4",
+                "Does not inhibit not stimulate the development of civil society": "58.5",
+                "Stimulates the development of civil society": "17.0"
+            },
+            "sq": {
+                "E pengon zhvillimin e shoqerise civile": "26.4",
+                "As nuk e ndihmon as nuk e pengon zhvillimin e shoqerise civile": "58.5",
+                "E ndihmon zhvillimin e shoqerise civile": "17.0"
+            },
+            "sr": {
+                "Sprečava razvoj civilnog društva": "26.4",
+                "Niti pomaže niti sprečava razvoj civilnog društva": "58.5",
+                "Pomaže razvoj civilnog društva": "17.0"
+            }
+        }
+    },
+    "235": {
+        "question": {
+            "en": translation_data['235']["en"],
+            "sq": translation_data['235']["sq"],
+            "sr": translation_data['235']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Inhibits the development of civil society": "13.3",
+                "Does not inhibit nor stimulate the development of civil society": "80.0",
+                "Stimulates the development of civil society": "6.7"
+            },
+            "sq": {
+                "E pengon zhvillimin e shoqerise civile": "13.3",
+                "As nuk e ndihmon as nuk e pengon zhvillimin e shoqerise civile": "80.0",
+                "E ndihmon zhvillimin e shoqerise civile": "6.7"
+            },
+            "sr": {
+                "Sprečava razvoj civilnog društva": "13.3",
+                "Niti pomaže niti sprečava razvoj civilnog društva": "80.0",
+                "Pomaže razvoj civilnog društva": "6.7"
+            }
+        }
     }
-
-
 };
