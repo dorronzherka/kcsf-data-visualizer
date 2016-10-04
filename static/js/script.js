@@ -242,7 +242,7 @@ function initChartRadioButtonsClick(){
                 "width": "",
                 "float": "none"
             });
-            displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_inicator.replace("q", ""));
+            displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""));
         } else {
             if (main_indicator.charAt(0) == "5"){
                 $("#tab1").prop("disabled", true);
