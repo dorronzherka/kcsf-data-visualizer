@@ -232,16 +232,17 @@ $(function () {
 function initChartRadioButtonsClick(){
     $("input[name='tabs']").change(function () {
         $(".chart").empty();
+        $(".comparison-container").remove();
         var main_indicator = $("#main-indicator-select").val();
         var disaggregate_by = $("#disaggregate-select").val();
         var checked_rb = $(this).val();
         var chart_type_container = checked_rb + "-container";
+        $(".chart").css({
+            "max-width": "800px",
+            "float": "none"
+        });
         if (static_questions.indexOf(main_indicator) != -1) {
             $("#tab1").prop("disabled", true);
-            $(".chart").css({
-                "width": "",
-                "float": "none"
-            });
             displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""));
         } else {
             if (main_indicator.charAt(0) == "5"){
