@@ -172,6 +172,9 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
             type: 'category'
         },
         yAxis: {
+            labels: {
+                enabled: false
+            },
             min: 0,
             minRange: 0.1
         },
@@ -197,7 +200,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
             series: drilldown_series
         }
     });
-
+    $(".highcharts-yaxis").remove();
     return chart;
 });
 
@@ -206,23 +209,23 @@ function getChartTitle(question_id, chart_title) {
     if (cso_questions.indexOf(question_id) == -1) {
         if (question_id.length == 3) {
             if (question_id.charAt(0) == "1") {
-                return "<b>" + translation_data["CSO"][window.language] + "</b> - " + chart_title;
+                return chart_title + " - <i>" + translation_data["CSO"][window.language] + "</i>";
             } else if (question_id.charAt(0) == "2") {
-                return "<b>" + translation_data["Development-Partners"][window.language] + "</b> - " + chart_title;
+                return chart_title + " - <i>" + translation_data["Development-Partners"][window.language] + "</i>" ;
             } else if (question_id.charAt(0) == "3") {
-                return "<b>" + translation_data["CSO-Network"][window.language] + "</b> - " + chart_title;
+                return chart_title + " - <i>" + translation_data["CSO-Network"][window.language] + "</i>";
             } else if (question_id.charAt(0) == "4") {
-                return "<b>" + translation_data["External"][window.language] + "</b> - " + chart_title;
+                return chart_title + " - <i>" + translation_data["External"][window.language] + "</i>";
             } else if (question_id.charAt(0) == "5") {
-                return "<b>" + translation_data["UNDP"][window.language] + "</b> - " + chart_title;
+                return chart_title + " - <i>" + translation_data["UNDP"][window.language] + "</i>";
             }
         } else if (question_id.length < 3) {
-            return "<b>" + translation_data["CSO"][window.language] + "</b> - " + chart_title;
+            return chart_title + " - <i>" + translation_data["CSO"][window.language] + "</i>";
         } else {
-            return "<b>" + translation_data["UNDP"][window.language] + "</b> - " + chart_title;
+            return chart_title + " - <i>" + translation_data["UNDP"][window.language] + "</i>";
         }
     } else {
-        return "<b>" + translation_data["CSO"][window.language] + "</b> - " + chart_title;
+        return chart_title + " - <i>" + translation_data["CSO"][window.language] + "</i>";
     }
 }
 
@@ -260,6 +263,7 @@ function drawMultipleSeriesChart(chart_container, chart_type, title, categories,
         },
         series: series
     });
+    $(".highcharts-yaxis").remove();
 }
 
 function getSerieJson(data, item, type) {

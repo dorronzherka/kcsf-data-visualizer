@@ -150,6 +150,38 @@ body {
     color: #fff;
 }
 
+
+.share-btn {
+    display: inline-block;
+    border-radius: 60px;
+    font-size: 15px;
+    color: #ffffff;
+    border: 2px solid #fff;
+    padding: 0.5em;
+    width: 2.7em;
+    opacity: 0.9;
+    margin-left: 2px;
+    outline: none;
+    text-align: center;
+}
+.share-btn:hover {
+    color: #363636;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+.share-btn:active {
+  position: relative;
+  top: 2px;
+  box-shadow: none;
+  color: #e2e2e2;
+  outline: none;
+}
+
+.footer {
+  background: #3498db !important;
+  background: linear-gradient(#3498db, #0f608c) !important;
+}
+
 @media (max-width: 768px) {
     .select {
         width: 100% !important;
