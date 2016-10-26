@@ -167,7 +167,7 @@ body {
 .share-btn:hover {
     color: #363636;
     background-color: #fff;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
 }
 .share-btn:active {
   position: relative;

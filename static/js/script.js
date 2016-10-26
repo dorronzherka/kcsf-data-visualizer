@@ -225,7 +225,6 @@ $(function () {
     initComparisonChartButtonClick();
     initTopicToggleButton();
     initTopicSelection();
-
 });
 
 // initializes the chart radio button click in the document.ready.

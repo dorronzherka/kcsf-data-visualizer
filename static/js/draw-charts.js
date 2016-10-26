@@ -5,7 +5,6 @@ function Comparator(b, a) {
     return 0;
 }
 
-
 var parameterfy = (function () {
     var pattern = /function[^(]*\(([^)]*)\)/;
 
@@ -94,7 +93,6 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
 
     // sort data to display to the chart.
     sortResults(series_data, "y", false);
-
     // modified the back button text on drill down.
     Highcharts.setOptions({
         lang: {
@@ -201,6 +199,10 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
         }
     });
     $(".highcharts-yaxis").remove();
+    var buttons = Highcharts.getOptions().exporting.buttons.contextButton.menuItems;
+    if (buttons[buttons.length - 1]['textKey'] == "viewData") {
+        buttons.pop(buttons.length - 1);
+    }
     return chart;
 });
 
