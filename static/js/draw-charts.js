@@ -5,6 +5,7 @@ function Comparator(b, a) {
     return 0;
 }
 
+// call function's parameters by name. e.g. { parameter1: value }
 var parameterfy = (function () {
     var pattern = /function[^(]*\(([^)]*)\)/;
 
@@ -28,7 +29,7 @@ var parameterfy = (function () {
     };
 }());
 
-
+// draws chart in div with all of the parameters added.
 var drawChart = parameterfy(function (container, chart_type, data, double_questions, static_question) {
     $("#" + container).empty();
     chart_type = chart_type.replace("-chart", "");
@@ -62,11 +63,11 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
     }
 
     var title = "";
+    var e = document.getElementById("main-indicator-select");
+    var question_id = e.options[e.selectedIndex].value;
     if (static_question != undefined) {
         title = getChartTitle(static_question.replace("q", ""), translation_data[static_question][window.language]);
     } else {
-        var e = document.getElementById("main-indicator-select");
-        var question_id = e.options[e.selectedIndex].value;
         var question_title = e.options[e.selectedIndex].text;
         title = getChartTitle(question_id.replace("q", ""), question_title);
     }
@@ -113,7 +114,18 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
                         var percentage = this.point.percentage.toString();
                         formatter = name.length > 30 ? name.substring(0, 30) + '...: ' + Highcharts.numberFormat(percentage) + '%' : name + ': ' + Highcharts.numberFormat(percentage) + "%";
                     } else {
-                        var pcnt = (value / dataSum) * 100;
+                        var pcnt;
+                        if (over_percentage_questions.indexOf(question_id) != -1) {
+                            var total_docs = 0;
+                            if (question_id == "q128") {
+                                total_docs = 51;
+                            } else {
+                                total_docs = 101;
+                            }
+                            pcnt = (value / total_docs) * 100;
+                        } else {
+                            pcnt = (value / dataSum) * 100;
+                        }
                         formatter = name.length > 30 ? name.substring(0, 30) + '...: ' + Highcharts.numberFormat(pcnt) + '%' : name + ': ' + Highcharts.numberFormat(pcnt) + '%';
                     }
                     return formatter;
@@ -130,7 +142,18 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
             var percentage = this.point.percentage.toString();
             formatter = name + ': <b>' + Highcharts.numberFormat(percentage) + "%</b>";
         } else {
-            var pcnt = (value / dataSum) * 100;
+            var pcnt;
+            if (over_percentage_questions.indexOf(question_id) != -1) {
+                var total_docs = 0;
+                if (question_id == "q128") {
+                    total_docs = 51;
+                } else {
+                    total_docs = 101;
+                }
+                pcnt = (value / total_docs) * 100;
+            } else {
+                pcnt = (value / dataSum) * 100;
+            }
             formatter = name + ': <b>' + Highcharts.numberFormat(pcnt) + '%</b>';
         }
         return formatter;
@@ -206,6 +229,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
     return chart;
 });
 
+// grabs the question title by question ID and adds title to the chart title.
 function getChartTitle(question_id, chart_title) {
     var cso_questions = ["76_1", "76_2", '136_1'];
     if (cso_questions.indexOf(question_id) == -1) {
@@ -231,6 +255,7 @@ function getChartTitle(question_id, chart_title) {
     }
 }
 
+// displays multiple series static chart.
 function drawMultipleSeriesChart(chart_container, chart_type, title, categories, chart_plot_options, series) {
     $('#' + chart_container).highcharts({
         chart: {
@@ -268,6 +293,7 @@ function drawMultipleSeriesChart(chart_container, chart_type, title, categories,
     $(".highcharts-yaxis").remove();
 }
 
+// build the json series data for chart.
 function getSerieJson(data, item, type) {
     var name = data[item][type];
     var count = data[item]['count'];
@@ -277,6 +303,7 @@ function getSerieJson(data, item, type) {
     };
 }
 
+// sort json results.
 function sortResults(json_array, prop, asc) {
     return json_array.sort(function (a, b) {
         if (asc) {

@@ -2480,5 +2480,32 @@ var static_data = {
                 "Pomaže razvoj civilnog društva": "6.7"
             }
         }
+    },
+    "q50": {
+        "question": {
+            "en": translation_data['50']["en"],
+            "sq": translation_data['50']["sq"],
+            "sr": translation_data['50']["sr"]
+        },
+        "answer": {
+            "en": {
+                "Yes, the subject of civil education promotes this civil engagement sufficiently": "38.0",
+                "No, the subject of civil education does not promote this civil engagement sufficiently": "30.0",
+                "Civil education is not part of the official curricula": "3.0",
+                "Do Not Know": "29.0"
+            },
+            "sq": {
+                "Po, lënda e edukatës qytetare e promovon mjaftueshëm angazhimin qytetar": "38.0",
+                "Jo, lënda e edukatës qytetare nuk e promovon mjaftueshëm angazhimin qytetar": "30.0",
+                "Edukata qytetare nuk është pjesë e kurrikulës zyrtare": "3.0",
+                "Nuk e di": "29.0"
+            },
+            "sr": {
+                "Da, predmet Građansko vaspitanje dovoljno promoviše angažovanje građana": "38.0",
+                "Ne, predmet Građansko vaspitanje  ne promoviše dovoljno angažovanje građana": "30.0",
+                "Građansko obrazovanje nije deo zvaničnog nastavnog plana i programa": "3.0",
+                "Ne znam": "29.0"
+            }
+        }
     }
 };

@@ -31,7 +31,7 @@ var translation_data = {
     },
     "CSO": {
         "en": "CSO Survey",
-        "sq": "Pyetësori me OSHC",
+        "sq": "Anketa me OSHC",
         "sr": "OCD Anketa"
     },
     "CSO-Network": {
@@ -41,7 +41,7 @@ var translation_data = {
     },
     "Development-Partners": {
         "en": "Development Partners Survey",
-        "sq": "Pyetësori me partnerët zhvillimorë",
+        "sq": "Anketa me donatorë",
         "sr": "Razvoj Partnerna Anketa"
     },
     "UNDP": {
@@ -52,7 +52,7 @@ var translation_data = {
     "External": {
         "sr": "Eksterni Akteri Anketa",
         "en": "External Stakeholders Survey",
-        "sq": "Pyetësori me hisedarë të jashtëm"
+        "sq": "Anketa me hisedarë të jashtëm"
     },
     "0": {
         "sr": "Podele prema",
@@ -140,8 +140,13 @@ var translation_data = {
         "en": "What are 3 main skills and 3 main shortcomings of your staff?"
     },
     "48": {
-        "sr": "Da li ste angažovali volontere u vašoj organizaciji u toku 2015.godine ?",
+        "sr": "Da li ste angažovali volontere u vašoj organizaciji u toku 2015.godine?",
         "sq": "A keni angazhuar vullnetarë gjatë vitit 2015 në organizatën tuaj?",
+        "en": "Does the subject of civil education promote this engagement?"
+    },
+    "50": {
+        "sr": "Da li predmet Građansko vaspitanje promoviše angažovanje  građana?",
+        "sq": "A e promovon lënda e edukatës qytetare angazhimin qytetar?",
         "en": "Does the subject of civil education promote this engagement?"
     },
     "51": {

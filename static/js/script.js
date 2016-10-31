@@ -12,6 +12,9 @@ var static_compare_buttons = {
     "4": translation_data["External"][window.language]
 };
 
+// questions which total is more than 100%;
+var over_percentage_questions = ["q77", "q22", "q7", "q128"];
+
 // questions which have another questions from another surveys that can be compared.
 var comparison_questions = {
     "q35": ["313", "229"],
@@ -21,7 +24,7 @@ var comparison_questions = {
 };
 
 // questions with static data.
-var static_questions = ["q34", "q35", "q80", "q117", "q119", "q217", "q222", "q226", "q228", "q407"];
+var static_questions = ["q34", "q35", "q50", "q80", "q117", "q119", "q217", "q222", "q226", "q228", "q407"];
 
 // structure of topics and the questions within the topics with their dis-aggregate by questions
 var main_indicators = {
@@ -39,7 +42,7 @@ var main_indicators = {
         "q35": []
     },
     "4": {
-        "q48": ["q9", "q2", "q7", "q11", "q15", "q75"],
+        "q50": [],
         "5N1": ["Gender", "Age", "Ethnicity"],
         "5N3": ["Gender", "Age", "Ethnicity" ,"Membership"]
     },
@@ -57,7 +60,6 @@ var main_indicators = {
         "q76_2": ["q9", "q2", "q7", "q11", "q15", "q75"],
         "q77": ["q9", "q2", "q7", "q11", "q15", "q36", "q37", "q75"],
         "q80": [],
-        "q81": ["q9", "q2", "q7", "q11", "q15", "q75"],
         "q82": ["q9", "q2", "q7", "q11", "q15", "q75"],
         "q84": ["q9", "q2", "q7", "q11", "q15", "q75"],
         "q88": ["q9", "q2", "q7", "q11", "q15", "q75"],
@@ -202,6 +204,12 @@ function displayChart(){
             populateDisaggregateSelectBox(main_indicator, active_topic, true);
             displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""), translation_data["Gender"][window.language]);
         } else {
+            if (over_percentage_questions.indexOf(main_indicator) != -1){
+                $("#tab3").click();
+                $("#tab1").prop("disabled", true);
+                chart_type = "column-chart";
+                chart_type_container = "column-chart-container";
+            }
             populateDisaggregateSelectBox(main_indicator, active_topic);
             var disaggregate_by = $("#disaggregate-select").val();
             var post_data = getPostData(main_indicator, "");
@@ -249,7 +257,11 @@ function initChartRadioButtonsClick(){
                 var disaggregate_by_lang = $("#disaggregate-select option:selected" ).text();
                 displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""), disaggregate_by_lang);
             } else {
-                $("#tab1").prop("disabled", false);
+                if (over_percentage_questions.indexOf(main_indicator) != -1){
+                    $("#tab1").prop("disabled", true);
+                } else {
+                    $("#tab1").prop("disabled", false);
+                }
                 var post_data = getPostData(main_indicator, "");
                 if (disaggregate_by != "0") {
                     post_data["q2_id"] = disaggregate_by;
@@ -441,6 +453,7 @@ var displayStaticChart = parameterfy(function(chart_container, data, chart_type,
     }
 });
 
+// grabs the first indicator from json object.
 function getFirstIndicator(jsonObj){
     var firstProp;
     for(var key in jsonObj) {
@@ -452,6 +465,7 @@ function getFirstIndicator(jsonObj){
     return firstProp
 }
 
+// on topic select function.
 function initTopicSelection(){
     $(".topic-ul li a").click(function(){
         var topic = $(this).parent().val();
@@ -476,6 +490,7 @@ function initTopicSelection(){
     })
 }
 
+// displays the div on the left for choosing the topic and the arrow animation for displaying and hiding the div..
 function initTopicToggleButton(){
     var left_margin = "255px";
     var left_margin_0 = "0px";
