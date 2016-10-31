@@ -37,6 +37,12 @@ body {
     color: #fff !important;
 }
 
+
+.navbar-inverse ul li a:hover {
+    color: #fff !important;
+    background-color: #0f608c !important;
+}
+
 .sub-header-container {
     /*height: 130px;*/
     overflow: hidden;
