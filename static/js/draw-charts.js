@@ -126,7 +126,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
                         } else {
                             pcnt = (value / dataSum) * 100;
                         }
-                        formatter = name.length > 30 ? name.substring(0, 30) + '...: ' + Highcharts.numberFormat(pcnt) + '%' : name + ': ' + Highcharts.numberFormat(pcnt) + '%';
+                        formatter = Highcharts.numberFormat(pcnt) + '%';
                     }
                     return formatter;
                 }
