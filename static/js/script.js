@@ -416,7 +416,7 @@ function buildMultipleSeriesChartData(categories, title, data, series, chart_con
         borderWidth: 0,
         dataLabels: {
             enabled: true,
-            format: '{series.name}: <b>{y:,.1f}%</b>'
+            format: '{y:,.1f}%'
         }
     };
 
