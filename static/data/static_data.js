@@ -447,12 +447,12 @@ var static_data = {
                 "Somewhat difficult and can be met only by a very limited number of CSOs": "12.5"
             },
             "sq": {
-                "Easy and can be met by the majority of CSOs": "25.0",
-                "Easy but can be met only by some CSOs": "25.0",
-                "Easy but can be met only by a very limited number of CSOs": "0.0",
-                "Somewhat difficult but can be met by the majority of CSOs": "31.3",
-                "Somewhat difficult and can be met only by some CSOs": "6.3",
-                "Somewhat difficult and can be met only by a very limited number of CSOs": "12.5"
+                "Të lehta dhe mund të përmbushen nga shumica e organizatave": "25.0",
+                "Të lehta, por mund të përmbushen vetëm nga disa organizata": "25.0",
+                "Të lehta dhe mund të përmbushen vetëm nga një numër shumë i kufizuar i organizatave": "0.0",
+                "Mesatarisht të vështira, por mund të përmbushen nga shumica e organizatave": "31.3",
+                "Mesatarisht të vështira dhe mund të përmbushën vetëm nga disa organizata": "6.3",
+                "Mesatarisht të vështira dhe mund të përmbushën vetëm nga një numër shumë i kufizuar i organizatave": "12.5"
             },
             "sr": {
                 "Lake i većina OCD-a ih mogu ispuniti": "25.0",
@@ -537,7 +537,7 @@ var static_data = {
                 }
             },
             "sq": {
-                "Previous experience of the CSO in the program area": {
+                "Përvoja e mëparshme e OJQsë në fushën programatike": {
                     "1": "12.5",
                     "2": "25.0",
                     "3": "6.3",
@@ -546,7 +546,7 @@ var static_data = {
                     "6": "12.5",
                     "7": "6.3"
                 },
-                "Demonstrated previous experience of the CSOs in general": {
+                "Ka demonstruar përvojë të mëparshme me OJQ në përgjithësi": {
                     "1": "0.0",
                     "2": "31.3",
                     "3": "25.0",
@@ -555,7 +555,7 @@ var static_data = {
                     "6": "12.5",
                     "7": "18.8"
                 },
-                "Positive experience of the CSOs with our organization": {
+                "Përvoja pozitive e OJQsë me organizatën tonë": {
                     "1": "25.0",
                     "2": "6.3",
                     "3": "12.5",
@@ -564,7 +564,7 @@ var static_data = {
                     "6": "18.8",
                     "7": "18.8"
                 },
-                "Professional capacities dedicated to the project/program": {
+                "Kapacitetet profesionale të angazhuara në projekt/program": {
                     "1": "6.3",
                     "2": "6.3",
                     "3": "6.3",
@@ -573,7 +573,7 @@ var static_data = {
                     "6": "18.8",
                     "7": "12.5"
                 },
-                "Quality of the proposed project/program": {
+                "Cilësia e projektit/programit të propozuar": {
                     "1": "37.5",
                     "2": "0.0",
                     "3": "18.8",
@@ -582,7 +582,7 @@ var static_data = {
                     "6": "6.3",
                     "7": "6.3"
                 },
-                "Quality of the financial proposal, including cost-effectiveness of the proposed project/program": {
+                "Cilësia e propozimit financiar, përfshirë kosto-efektivitetin e projektit/programit të propozuar": {
                     "1": "0.0",
                     "2": "25.0",
                     "3": "18.8",
@@ -591,7 +591,7 @@ var static_data = {
                     "6": "25.0",
                     "7": "0.0"
                 },
-                "Urgency/relevance of the proposed project/program": {
+                "Urgjenca/rëndësia e projektit/programit të propozuar": {
                     "1": "18.8",
                     "2": "6.3",
                     "3": "12.5",
