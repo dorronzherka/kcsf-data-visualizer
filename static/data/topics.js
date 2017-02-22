@@ -40,7 +40,7 @@ var topics = {
         "sr": "Komunikacija sa Javnim Institucijama"
     },
     "9": {
-        "en": "Participation in decision-making",
+        "en": "Participation in decision making",
         "sq": "Pjesëmarrja në vendim marrje",
         "sr": "Sloboda civilnog društva"
     },
