@@ -91,7 +91,6 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
             drilldown_series[item]['data'].sort(Comparator);
         }
     }
-
     // sort data to display to the chart.
     sortResults(series_data, "y", false);
     // modified the back button text on drill down.
@@ -110,6 +109,10 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
                     var name = this.point.name;
                     var value = this.point.y;
                     var formatter;
+                    var totalSum = 0;
+                    $.each(this.series.yData ,function() {
+                        totalSum += this;
+                    });
                     if (chart_type == "pie") {
                         var percentage = this.point.percentage.toString();
                         formatter = name.length > 30 ? name.substring(0, 30) + '...: ' + Highcharts.numberFormat(percentage) + '%' : name + ': ' + Highcharts.numberFormat(percentage) + "%";
@@ -124,7 +127,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
                             }
                             pcnt = (value / total_docs) * 100;
                         } else {
-                            pcnt = (value / dataSum) * 100;
+                            pcnt = (value / totalSum) * 100;
                         }
                         formatter = Highcharts.numberFormat(pcnt) + '%';
                     }
@@ -138,6 +141,10 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
         var name = this.point.name;
         var value = this.point.y;
         var formatter;
+        var totalSum = 0;
+        $.each(this.series.yData ,function() {
+            totalSum += this;
+        });
         if (chart_type == "pie") {
             var percentage = this.point.percentage.toString();
             formatter = name + ': <b>' + Highcharts.numberFormat(percentage) + "%</b>";
@@ -152,7 +159,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
                 }
                 pcnt = (value / total_docs) * 100;
             } else {
-                pcnt = (value / dataSum) * 100;
+                pcnt = (value / totalSum) * 100;
             }
             formatter = name + ': <b>' + Highcharts.numberFormat(pcnt) + '%</b>';
         }
