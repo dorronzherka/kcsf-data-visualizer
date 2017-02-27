@@ -215,7 +215,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
             formatter: tooltip_formatter
         },
         series: [{
-            name: 'Series',
+            showInLegend: false,
             colorByPoint: true,
             data: series_data
         }],
