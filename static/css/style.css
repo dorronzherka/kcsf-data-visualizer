@@ -9,7 +9,7 @@ body {
 
 @font-face {
     font-family: "Exo";
-    src: url("{{ site.basepath }}/static/font/Exo-Regular.otf");
+    src: url("../font/Exo-Regular.otf");
 }
 
 .navbar-inverse {

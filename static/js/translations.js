@@ -75,9 +75,9 @@ var translation_data = {
         "en": "Level of governance of CSO work "
     },
     "11": {
-        "sr": "U kojo se godini je osnovana vaša organizacija?",
-        "sq": "Në cilin vit është themeluar organizata juaj?",
-        "en": "In which year was your organization established?"
+        "sr": "Godina osnivanj",
+        "sq": "Viti i themelimit",
+        "en": "Year of establishment"
     },
     "14": {
         "sr": "Koji je oblik registracije vaše organizacije?",
@@ -85,9 +85,9 @@ var translation_data = {
         "en": "Which is the form of registration of your organization?"
     },
     "15": {
-        "sr": "Da li vaša organizacija ima status javnog korisnika?",
-        "sq": "A ka organizata juaj Status për Përfitim Publik?",
-        "en": "Does your organization have a Public Beneficiary Status?"
+        "sr": "Statusa javnog korisnika",
+        "sq": "Statusi per Perfitim Publik",
+        "en": "Public Beneficiary Status"
     },
     "18": {
         "sr": "Koji je najviši upravni organ u vašoj organizaciji?",
