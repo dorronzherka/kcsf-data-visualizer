@@ -117,22 +117,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
                         var percentage = this.point.percentage.toString();
                         formatter = name.length > 30 ? name.substring(0, 30) + '...: ' + Highcharts.numberFormat(percentage) + '%' : name + ': ' + Highcharts.numberFormat(percentage) + "%";
                     } else {
-                        var pcnt;
-                        if (over_percentage_questions.indexOf(question_id) != -1) {
-                            var total_docs = 0;
-                            if (question_id == "q128") {
-                                total_docs = 51;
-                            }
-                            else if (question_id == "q77") {
-                                total_docs = totalSum;
-                            }
-                            else {
-                                total_docs = 101;
-                            }
-                            pcnt = (value / total_docs) * 100;
-                        } else {
-                            pcnt = (value / totalSum) * 100;
-                        }
+                        var pcnt = (value / totalSum) * 100;
                         formatter = Highcharts.numberFormat(pcnt) + '%';
                     }
                     return formatter;
@@ -152,23 +137,9 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
         if (chart_type == "pie") {
             var percentage = this.point.percentage.toString();
             formatter = name + ': <b>' + Highcharts.numberFormat(percentage) + "%</b>";
-        } else {
-            var pcnt;
-            if (over_percentage_questions.indexOf(question_id) != -1) {
-                var total_docs = 0;
-                if (question_id == "q128") {
-                    total_docs = 51;
-                }
-                else if (question_id == "q77") {
-                    total_docs = totalSum;
-                } 
-                else {
-                    total_docs = 101;
-                }
-                pcnt = (value / total_docs) * 100;
-            } else {
-                pcnt = (value / totalSum) * 100;
-            }
+        } else 
+        {
+            var pcnt = (value / totalSum) * 100;
             formatter = name + ': <b>' + Highcharts.numberFormat(pcnt) + '%</b>';
         }
         return formatter;
