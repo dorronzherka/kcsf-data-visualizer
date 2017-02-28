@@ -158,7 +158,11 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
                 var total_docs = 0;
                 if (question_id == "q128") {
                     total_docs = 51;
-                } else {
+                }
+                else if (question_id == "q77") {
+                    total_docs = totalSum;
+                } 
+                else {
                     total_docs = 101;
                 }
                 pcnt = (value / total_docs) * 100;
