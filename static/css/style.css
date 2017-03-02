@@ -16,7 +16,9 @@ body {
     background-image: linear-gradient(to bottom, #157BB6 0, #269de5 100%) !important;
     border-color: #157BB6 !important;
 }
-
+#tourbus-leg-0-5{
+    margin-top: 40px;
+}
 .active a {
     background-image: linear-gradient(to bottom, #0f608c 0, #0f608c 100%) !important;
 }
@@ -35,6 +37,23 @@ body {
 
 .navbar-inverse ul li a {
     color: #fff !important;
+}
+.intro-tour-highlight {
+  background: white;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: inset 0 0 2px rgba( 0, 0, 0, 0.2 );
+  z-index: 9998 !important;
+}
+.intro-tour-overlay {
+  display: none;
+  background: #666;
+  opacity: 0.5;
+  z-index: 9997;
+  min-height: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
 }
 
 

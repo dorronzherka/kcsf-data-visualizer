@@ -1,0 +1,123 @@
+<ol class='tourbus-legs' id='tourbus-demo-1'>
+  <!-- INTRO -->
+  <li data-el='#topics-tut-highlight' data-highlight='true'  data-orientation='right' >
+    <h3>
+        {% if page.language == "albanian" %}
+            Selekto temen te cilen doni ta analizoni.
+        {% elsif page.language == "serbian" %}
+            not available
+        {% else %}
+            Select a topic you wish to analyze.
+        {% endif %}
+    </h3>
+    <div class='buttons'>
+      <a href='javascript:void(0);' style='float: right;' class='button remove-bottom tourbus-next'>Tell me more <span>&raquo;</span></a>
+      <a href='javascript:void(0);' class='button remove-bottom tourbus-stop'><span>&times;</span> Not interested...</a>
+    </div>
+  </li>
+
+  <li data-el='#main-indicator-select' data-highlight='true' data-width='420' data-orientation='bottom' data-align='center'>
+    <h4 class='remove-bottom'>
+        {% if page.language == "albanian" %}
+            Specifiko indikatorin per te cilin jeni i interesuar.
+        {% elsif page.language == "serbian" %}
+            not available
+        {% else %}
+            Specify the indicator you are interested in.
+        {% endif %}
+    </h4>
+    <a class='button remove-bottom tourbus-next' style='margin-top: 2px; float: right;' href='javascript:void(0);'>next <span>&raquo;</span></a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+  </li>
+
+  <li data-el='.table-inputs' data-highlight='true' data-width='320' data-orientation='bottom' data-margin='10' data-align='top'>
+    <h4 class='remove-bottom'>
+        {% if page.language == "albanian" %}
+            not available
+        {% elsif page.language == "serbian" %}
+            not available
+        {% else %}
+            Visualize the data with one of four available charts: a piechart, horizontal or vertical barcharts, or a pointchart.
+        {% endif %}
+    </h4>
+    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-next button remove-bottom'>next <span>&raquo;</span></a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+  </li>
+
+  <li data-el='#disaggregate-select' data-highlight='true' data-width='420' data-orientation='bottom' data-align='center'>
+    <h4>
+        {% if page.language == "albanian" %}
+            not available
+        {% elsif page.language == "serbian" %}
+            not available
+        {% else %}
+            Dig deeper in how the data is distributed by applying disaggregation.
+        {% endif %}
+    </h4>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+    <a href='javascript:void(0);' style='float: right;' class='tourbus-next button remove-bottom'>next <span>&raquo;</span></a>
+  </li>
+
+  <li data-el='.download-nav' data-highlight='true' data-width='250' data-orientation='bottom' data-align='top'>
+    <h4>
+        {% if page.language == "albanian" %}
+            not available
+        {% elsif page.language == "serbian" %}
+            not available
+        {% else %}
+            Download the report, datasets, and questionnaire.
+        {% endif %}
+    </h4>
+    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-next button remove-bottom'>I get it...</a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+  </li>
+
+  <li data-el='.highcharts-button-box' data-highlight='true' data-width='250' data-orientation='left' data-align='bottom'>
+    <h4>
+        {% if page.language == "albanian" %}
+            not available
+        {% elsif page.language == "serbian" %}
+            not available
+        {% else %}
+            Download chart in different formats.
+        {% endif %}
+    </h4>
+    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-next button remove-bottom'>I get it...</a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+  </li>
+
+  <!-- End -->
+  <li data-orientation='centered' data-width='300' data-highlight='true'>
+    <div>
+        <h2>
+            {% if page.language == "albanian" %}
+                not available
+            {% elsif page.language == "serbian" %}
+                not available
+            {% else %}
+                Thanks!
+            {% endif %}
+
+        </h2>
+        <p class='remove-bottom'>
+            {% if page.language == "albanian" %}
+                not available
+            {% elsif page.language == "serbian" %}
+                Ky tutorial perfundoi.
+            {% else %}
+                This tutorial is over.
+            {% endif %}
+        </p>
+      <a href='javascript:void(0);' style='display: block;' class='button half-bottom tourbus-next'>
+          {% if page.language == "albanian" %}
+              not available
+          {% elsif page.language == "serbian" %}
+              Mire u pafshim
+          {% else %}
+              goodbye
+          {% endif %}
+      </a>
+    </div>
+  </li>
+</ol>
+<div class='intro-tour-overlay'></div>

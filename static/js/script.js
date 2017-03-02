@@ -110,7 +110,6 @@ function addTopicList(){
         if (topic == "1"){
             list_item = "<li class='active' value='" + topic + "'><a>" + topic_name + "</a></li>";
         } else {
-
             list_item = "<li value='" + topic + "'><a>" + topic_name + "</a></li>";
         }
         $(".topic-ul").append(list_item);
