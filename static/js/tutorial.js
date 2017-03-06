@@ -20,12 +20,39 @@ $(document).ready( function() {
             leg.rawData.autoProgress
           );
         }
-
         // highlight where required
         if( leg.rawData.highlight ) {
           leg.$target.addClass('intro-tour-highlight');
           $('.intro-tour-overlay').show();
         }
+        console.log(leg.index);
+        if (leg.index == 0) {
+            if ($('#show').hasClass('show')) {
+                $('#show').click();
+            }
+        }
+        if (leg.index != 0) {
+            if ($('#show').hasClass('hide')) {
+                $('#show').click();
+            }
+        }
+        if (leg.index == 2) {
+            $('.download-nav').attr('style', 'background-image:linear-gradient(to bottom, #157BB6 0, #269de5 100%) !important');
+        }
+        if (leg.index == 5) {
+            if ($('#show').hasClass('hide')) {
+                $('#show').click();
+            }
+            $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:9999;');
+        }
+        if(leg.index != 5) {
+            $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:0;');
+        }
+        // if (leg.index == 5) {
+        //     if ($('#show').hasClass('hide')) {
+        //         $('#show').click();
+        //     }
+        // }
 
         // fade/slide in first leg
         if( leg.index == 0 ) {
@@ -38,36 +65,56 @@ $(document).ready( function() {
       },
       onLegEnd: function( leg ) {
         // remove highlight when leaving this leg
-        if (leg.index == 3) {
-            $('.download-nav').attr('style', 'background-image:linear-gradient(to bottom, #157BB6 0, #269de5 100%) !important');
-        }
-        if (leg.index == 4) {
-            $('#show').click();
-            $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:9999;');
-        }
-        if(leg.index != 4) {
-            $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:0;');
-        }if (leg.index == 5) {
-            $('#show').click();
-        }
+        // console.log(leg.index);
+        // if (leg.index == 1) {
+        //     if ($('#show').hasClass('show')) {
+        //         $('#show').click();
+        //     }
+        // }
+        // if (leg.index != 1) {
+        //     if ($('#show').hasClass('hide')) {
+        //         $('#show').click();
+        //     }
+        // }
+        // if (leg.index == 3) {
+        //     $('.download-nav').attr('style', 'background-image:linear-gradient(to bottom, #157BB6 0, #269de5 100%) !important');
+        // }
+        // if (leg.index == 4) {
+        //     if ($('#show').hasClass('hide')) {
+        //         $('#show').click();
+        //     }
+        //     $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:9999;');
+        // }
+        // if(leg.index != 4) {
+        //     $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:0;');
+        // }
+        // if (leg.index == 5) {
+        //     if ($('#show').hasClass('hide')) {
+        //         $('#show').click();
+        //     }
+        // }
         if( leg.rawData.highlight ) {
           leg.$target.removeClass('intro-tour-highlight');
           $('.intro-tour-overlay').hide();
         }
       },
-    //   onDepart: function() {
-    //     info.html("Intro tour started!");
-    //   },
-    //   onStop: function() {
-    //     info.html("Intro tour is inactive...");
-    //   }
+      onDepart: function() {
+        info.html("Intro tour started!");
+      },
+      onStop: function() {
+        info.html("Intro tour is inactive...");
+      }
     } );
 
     $(document).on( 'click', '.help', function() {
-        if ($('#show').hasClass('show')) {
-            $('#show').click();
+        if (document.documentElement.clientWidth < 700) {
+            window.location.href = "404"
+        }else {
+            if ($('#show').hasClass('show')) {
+                $('#show').click();
+            }
+            $('#tourbus-demo-1').trigger('depart.tourbus');
         }
-        $('#tourbus-demo-1').trigger('depart.tourbus');
     });
 
   });
