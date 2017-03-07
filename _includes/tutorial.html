@@ -1,3 +1,234 @@
+<div id="tutorial-slideshow-modal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body modal-body-slideshow" align="center">
+                <div class="container-fluid container-slideshow">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="tutorial-slideshow" class="owl-carousel">
+                                <div class="item">
+                                    <div class="container-fluid container-item">
+                                        <div class="row row-text">
+                                            <div class="col-md-12">
+                                                <p class="h5">
+                                                    {% if page.language == "albanian" %}
+                                                        Zgjedhni temën të cilën dëshironi t’a analizoni
+                                                    {% elsif page.language == "serbian" %}
+                                                        Izaberite temu koju želite da analizirate.
+                                                    {% else %}
+                                                        Select a topic you wish to analyze.
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row slideshow-item-image">
+                                            <div class="col-md-12">
+                                                {% if page.language == "albanian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-1.png" alt="pickTopic">
+                                                {% elsif page.language == "serbian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-1.png" alt="pickTopic">
+                                                {% else %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-1.png" alt="pickTopic">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row row-btn">
+                                            <div class="col-md-12">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-1">
+                                                    NEXT
+                                                </button>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="container-fluid container-item">
+                                        <div class="row row-text">
+                                            <div class="col-md-12">
+                                                <p class="h5">
+                                                    {% if page.language == "albanian" %}
+                                                        Përcaktoni indikatorin që ju intereson.
+                                                    {% elsif page.language == "serbian" %}
+                                                        Navedite indikator za koji ste zainteresovani.
+                                                    {% else %}
+                                                        Specify the indicator you are interested in.
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row slideshow-item-image">
+                                            <div class="col-md-12">
+                                                {% if page.language == "albanian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-2.png" alt="pickTopic">
+                                                {% elsif page.language == "serbian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-2.png" alt="pickTopic">
+                                                {% else %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-2.png" alt="pickTopic">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row row-btn">
+                                            <div class="col-md-12">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-2">
+                                                    NEXT
+                                                </button>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="container-fluid container-item">
+                                        <div class="row row-text">
+                                            <div class="col-md-12">
+                                                <p class="h5">
+                                                    {% if page.language == "albanian" %}
+                                                        Prezantoni të dhënat në njërën nga katër format e grafikoneve në dispozicion
+                                                    {% elsif page.language == "serbian" %}
+                                                        Vizualizirajte podatke sa jednim od četiri dostupna grafikona.
+                                                    {% else %}
+                                                        Visualize the data with one of four available charts: a piechart, horizontal or vertical barcharts, or a pointchart.
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row slideshow-item-image">
+                                            <div class="col-md-12">
+                                                {% if page.language == "albanian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-3.png" alt="pickTopic">
+                                                {% elsif page.language == "serbian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-3.png" alt="pickTopic">
+                                                {% else %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-3.png" alt="pickTopic">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row row-btn">
+                                            <div class="col-md-12">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-3">
+                                                    NEXT
+                                                </button>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row row-text">
+                                        <div class="container-fluid container-item">
+                                            <div class="col-md-12">
+                                                <p class="h5">
+                                                    {% if page.language == "albanian" %}
+                                                        Thellohuni në të dhënat, duke i krahasuar indikatorët në mes vete
+                                                    {% elsif page.language == "serbian" %}
+                                                        Istražite više kako se podaci distribuiraju primenom disagregacije indikatora.
+                                                    {% else %}
+                                                        Dig deeper in how the data is distributed by applying disaggregation.
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row slideshow-item-image">
+                                            <div class="col-md-12">
+                                                {% if page.language == "albanian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-4.png" alt="pickTopic">
+                                                {% elsif page.language == "serbian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-4.png" alt="pickTopic">
+                                                {% else %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-4.png" alt="pickTopic">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row row-btn">
+                                            <div class="col-md-12">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-4">
+                                                    NEXT
+                                                </button>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="container-fluid container-item">
+                                            <div class="col-md-12">
+                                                <p class="h5">
+                                                    {% if page.language == "albanian" %}
+                                                        Shkarkoni raportin, bazën e të dhënave si dhe pyetësorin.
+                                                    {% elsif page.language == "serbian" %}
+                                                        Preuzmite izveštaj, podatake i upitnik.
+                                                    {% else %}
+                                                        Download the report, datasets, and questionnaire.
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row slideshow-item-image">
+                                            <div class="col-md-12">
+                                                {% if page.language == "albanian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-5.png" alt="pickTopic">
+                                                {% elsif page.language == "serbian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-5.png" alt="pickTopic">
+                                                {% else %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-5.png" alt="pickTopic">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row row-btn">
+                                            <div class="col-md-12">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-5">
+                                                    NEXT
+                                                </button>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="container-fluid container-item">
+                                            <div class="col-md-12">
+                                                <p class="h5">
+                                                    {% if page.language == "albanian" %}
+                                                        Shkarkoni tabelat në formate të ndryshme.
+                                                    {% elsif page.language == "serbian" %}
+                                                        Preuzmite grafikone u različitim formatima.
+                                                    {% else %}
+                                                        Download chart in different formats.
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row slideshow-item-image">
+                                            <div class="col-md-12">
+                                                {% if page.language == "albanian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-6.png" alt="pickTopic">
+                                                {% elsif page.language == "serbian" %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-6.png" alt="pickTopic">
+                                                {% else %}
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-6.png" alt="pickTopic">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="row row-btn">
+                                            <div class="col-md-12">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-done-tutorial" id="btn-done-tutorial">
+                                                    Finish
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <ol class='tourbus-legs' id='tourbus-demo-1'>
   <!-- INTRO -->
   <li data-el='#topics-tut-highlight' data-highlight='true'  data-orientation='right' >

@@ -1,4 +1,29 @@
 $(document).ready( function() {
+    function openTutorial () {
+        $("#tutorial-slideshow").owlCarousel({
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+        });
+
+        //get carousel instance data and store it in variable owl
+        var owlCarousel = $("#tutorial-slideshow").data('owlCarousel');
+        $('#tutorial-slideshow-modal').modal('show');
+
+        $( ".btn-next-slide" ).click(function() {
+            owlCarousel.next();
+        });
+
+        $( ".btn-done-tutorial" ).click(function() {
+            $('#tutorial-slideshow-modal').modal('hide');
+        });
+
+        // Prevent background body from being scrolled
+        $('body').css('overflow','hidden');
+        $('body').css('width','100%');
+    }
+
 
   $('img').imagesLoaded( function() {
     var info = $('#tour-info');
@@ -107,8 +132,8 @@ $(document).ready( function() {
     } );
 
     $(document).on( 'click', '.help', function() {
-        if (document.documentElement.clientWidth < 700) {
-            window.location.href = "404"
+        if (document.documentElement.clientWidth < 769) {
+            openTutorial();
         }else {
             if ($('#show').hasClass('show')) {
                 $('#show').click();
