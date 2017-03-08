@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    function openTutorial () {
+    function openTutorial (e) {
         $("#tutorial-slideshow").owlCarousel({
             navigation: false,
             pagination: false,
@@ -13,54 +13,40 @@ $(document).ready( function() {
         $('#tutorial-slideshow-modal').modal('show');
 
         $( "#btn-next-1" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 1);
         });
         $( "#btn-next-2" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 2);
         });
         $( "#btn-next-3" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 3);
         });
         $( "#btn-next-4" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 4);
         });
         $( "#btn-next-5" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 5);
         });
         $( "#btn-back-0" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 0);
         });
         $( "#btn-back-1" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 1);
         });
         $( "#btn-back-2" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 2);
         });
         $( "#btn-back-3" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 3);
         });
         $( "#btn-back-4" ).click(function(e) {
-            e.preventDefault();
             carousel.trigger('owl.goTo', 4);
         });
 
         $( "#close-tutorial" ).click(function(e) {
-            e.preventDefault();
             $('#tutorial-slideshow-modal').modal('hide');
             carousel.trigger('owl.goTo', 0);
         });
-        // Prevent background body from being scrolled
-        $('body').css('overflow','hidden');
-        $('body').css('width','100%');
     }
 
 
