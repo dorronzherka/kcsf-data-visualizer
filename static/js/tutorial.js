@@ -53,10 +53,10 @@ $(document).ready( function() {
             carousel.trigger('owl.goTo', 4);
         });
 
-        $( ".btn-done-tutorial" ).click(function(e) {
+        $( "#close-tutorial" ).click(function(e) {
             e.preventDefault();
-            carousel.trigger('owl.goTo', 0);
             $('#tutorial-slideshow-modal').modal('hide');
+            carousel.trigger('owl.goTo', 0);
         });
         // Prevent background body from being scrolled
         $('body').css('overflow','hidden');
