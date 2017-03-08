@@ -1,3 +1,45 @@
+{% if page.language == "albanian" %}
+    <script type="text/javascript">
+    $(function() {
+            $("#tutorial-slideshow").owlCarousel({
+                navigation: true, // Show next and prev buttons
+                navigationText:
+                ["mbrapa","vazhdo"],
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true,
+            });
+        });
+    </script>
+{% elsif page.language == "serbian" %}
+<script type="text/javascript">
+    $(function() {
+        $("#tutorial-slideshow").owlCarousel({
+            navigation: true, // Show next and prev buttons
+            navigationText:
+            ["nazad","sledeći"],
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+        });
+    });
+</script>
+{% else %}
+<script type="text/javascript">
+    $(function() {
+        $("#tutorial-slideshow").owlCarousel({
+            navigation: true, // Show next and prev buttons
+            navigationText:
+            ["back","next"],
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+        });
+    });
+</script>
+{% endif %}
+
+
 <div id="tutorial-slideshow-modal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
         <!-- Modal content-->
@@ -20,6 +62,7 @@
                                                         Select a topic you wish to analyze.
                                                     {% endif %}
                                                 </p>
+                                                <br>
                                             </div>
                                         </div>
                                         <div class="row slideshow-item-image">
@@ -33,13 +76,19 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <!-- <div class="row row-btn">
+                                        <div class="row row-btn">
                                             <div class="col-md-12">
-                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-1">
-                                                    NEXT
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-done-tutorial" id="btn-done-tutorial">
+                                                    {% if page.language == "albanian" %}
+                                                        përfundo
+                                                    {% elsif page.language == "serbian" %}
+                                                        završiti
+                                                    {% else %}
+                                                        finish
+                                                    {% endif %}
                                                 </button>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -55,6 +104,7 @@
                                                         Specify the indicator you are interested in.
                                                     {% endif %}
                                                 </p>
+                                                <br>
                                             </div>
                                         </div>
                                         <div class="row slideshow-item-image">
@@ -64,17 +114,10 @@
                                                 {% elsif page.language == "serbian" %}
                                                     <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-2.png" alt="pickTopic">
                                                 {% else %}
-                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-2.png" alt="pickTopic">
+                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tun-en-21.png" alt="pickTopic">
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <!-- <div class="row row-btn">
-                                            <div class="col-md-12">
-                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-2">
-                                                    NEXT
-                                                </button>
-                                            </div>
-                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="item">
@@ -125,6 +168,7 @@
                                                         Dig deeper in how the data is distributed by applying disaggregation.
                                                     {% endif %}
                                                 </p>
+                                                <br>
                                             </div>
                                         </div>
                                         <div class="row slideshow-item-image">
@@ -160,6 +204,7 @@
                                                         Download the report, datasets, and questionnaire.
                                                     {% endif %}
                                                 </p>
+                                                <br>
                                             </div>
                                         </div>
                                         <div class="row slideshow-item-image">
@@ -195,6 +240,7 @@
                                                         Download chart in different formats.
                                                     {% endif %}
                                                 </p>
+                                                <br>
                                             </div>
                                         </div>
                                         <div class="row slideshow-item-image">
@@ -211,7 +257,13 @@
                                         <div class="row row-btn">
                                             <div class="col-md-12">
                                                 <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-done-tutorial" id="btn-done-tutorial">
-                                                    Finish
+                                                    {% if page.language == "albanian" %}
+                                                        përfundo
+                                                    {% elsif page.language == "serbian" %}
+                                                        završiti
+                                                    {% else %}
+                                                        finish
+                                                    {% endif %}
                                                 </button>
                                             </div>
                                         </div>
@@ -242,8 +294,23 @@
         {% endif %}
     </h3>
     <div class='buttons'>
-      <a href='javascript:void(0);' style='float: right;' class='button remove-bottom tourbus-next'>Tell me more <span>&raquo;</span></a>
-      <a href='javascript:void(0);' class='button remove-bottom tourbus-stop'><span>&times;</span> Not interested...</a>
+      <a href='javascript:void(0);' style='float: right;' class='button remove-bottom tourbus-next'>
+          {% if page.language == "albanian" %}
+              vazhdo <span>&raquo;</span></a>
+          {% elsif page.language == "serbian" %}
+              sledeći <span>&raquo;</span></a>
+          {% else %}
+              next <span>&raquo;</span></a>
+          {% endif %}
+      <a href='javascript:void(0);' class='button remove-bottom tourbus-stop'>
+          {% if page.language == "albanian" %}
+              përfundo
+          {% elsif page.language == "serbian" %}
+              završiti
+          {% else %}
+              finish
+          {% endif %}
+      </a>
     </div>
   </li>
 
@@ -257,8 +324,24 @@
             Specify the indicator you are interested in.
         {% endif %}
     </h4>
-    <a class='button remove-bottom tourbus-next' style='margin-top: 2px; float: right;' href='javascript:void(0);'>next <span>&raquo;</span></a>
-    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+    <a class='button remove-bottom tourbus-next' style='margin-top: 2px; float: right;' href='javascript:void(0);'>
+        {% if page.language == "albanian" %}
+            vazhdo <span>&raquo;</span></a>
+        {% elsif page.language == "serbian" %}
+            sledeći <span>&raquo;</span></a>
+        {% else %}
+            next <span>&raquo;</span></a>
+        {% endif %}
+    </a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'>
+        {% if page.language == "albanian" %}
+            <span>&laquo;</span> mbrapa
+        {% elsif page.language == "serbian" %}
+            <span>&laquo;</span> nazad
+        {% else %}
+            <span>&laquo;</span> back
+        {% endif %}
+    </a>
   </li>
 
   <li data-el='.table-inputs' data-highlight='true' data-width='320' data-orientation='bottom' data-margin='10' data-align='top'>
@@ -271,8 +354,24 @@
             Visualize the data with one of four available charts: a piechart, horizontal or vertical barcharts, or a pointchart.
         {% endif %}
     </h4>
-    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-next button remove-bottom'>next <span>&raquo;</span></a>
-    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-next button remove-bottom'>
+        {% if page.language == "albanian" %}
+            vazhdo <span>&raquo;</span></a>
+        {% elsif page.language == "serbian" %}
+            sledeći <span>&raquo;</span></a>
+        {% else %}
+            next <span>&raquo;</span></a>
+        {% endif %}
+    </a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'>
+        {% if page.language == "albanian" %}
+            <span>&laquo;</span> mbrapa
+        {% elsif page.language == "serbian" %}
+            <span>&laquo;</span> nazad
+        {% else %}
+            <span>&laquo;</span> back
+        {% endif %}
+    </a>
   </li>
 
   <li data-el='#disaggregate-select' data-highlight='true' data-width='420' data-orientation='bottom' data-align='center'>
@@ -285,8 +384,24 @@
             Dig deeper in how the data is distributed by applying disaggregation.
         {% endif %}
     </h4>
-    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
-    <a href='javascript:void(0);' style='float: right;' class='tourbus-next button remove-bottom'>next <span>&raquo;</span></a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'>
+        {% if page.language == "albanian" %}
+            <span>&laquo;</span> mbrapa
+        {% elsif page.language == "serbian" %}
+            <span>&laquo;</span> nazad
+        {% else %}
+            <span>&laquo;</span> back
+        {% endif %}
+    </a>
+    <a href='javascript:void(0);' style='float: right;' class='tourbus-next button remove-bottom'>
+        {% if page.language == "albanian" %}
+            vazhdo <span>&raquo;</span></a>
+        {% elsif page.language == "serbian" %}
+            sledeći <span>&raquo;</span></a>
+        {% else %}
+            next <span>&raquo;</span></a>
+        {% endif %}
+    </a>
   </li>
 
   <li data-el='.download-nav' data-highlight='true' data-width='250' data-orientation='bottom' data-align='top'>
@@ -299,8 +414,24 @@
             Download the report, datasets, and questionnaire.
         {% endif %}
     </h4>
-    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-next button remove-bottom'>next</a>
-    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-next button remove-bottom'>
+        {% if page.language == "albanian" %}
+            vazhdo <span>&raquo;</span></a>
+        {% elsif page.language == "serbian" %}
+            sledeći <span>&raquo;</span></a>
+        {% else %}
+            next <span>&raquo;</span></a>
+        {% endif %}
+    </a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'>
+        {% if page.language == "albanian" %}
+            <span>&laquo;</span> mbrapa
+        {% elsif page.language == "serbian" %}
+            <span>&laquo;</span> nazad
+        {% else %}
+            <span>&laquo;</span> back
+        {% endif %}
+    </a>
   </li>
 
   <li data-el='.highcharts-button-box' data-highlight='true' data-width='250' data-orientation='left' data-align='bottom'>
@@ -313,8 +444,25 @@
             Download chart in different formats.
         {% endif %}
     </h4>
-    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-stop button remove-bottom'>finish</a>
-    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'><span>&laquo;</span>go back.</a>
+    <a style='margin-top: 2px; float: right;' href='javascript:void(0);' class='tourbus-stop button remove-bottom'>
+        {% if page.language == "albanian" %}
+            përfundo
+        {% elsif page.language == "serbian" %}
+            završiti
+        {% else %}
+            finish
+        {% endif %}
+
+    </a>
+    <a href='javascript:void(0);' class='tourbus-prev button remove-bottom' onclick='$(this).hide();'>
+        {% if page.language == "albanian" %}
+            <span>&laquo;</span> mbrapa
+        {% elsif page.language == "serbian" %}
+            <span>&laquo;</span> nazad
+        {% else %}
+            <span>&laquo;</span> back
+        {% endif %}
+    </a>
   </li>
 
   <!-- End -->

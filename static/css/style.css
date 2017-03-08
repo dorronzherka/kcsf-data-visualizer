@@ -81,7 +81,10 @@ body {
 .hide {
     display: block !important;
 }
-
+.h5{
+    font-weight: 700;
+    font-family: Exo, corbel, sans-serif;
+}
 .show {
     display: block !important;
 }

@@ -2,6 +2,8 @@ $(document).ready( function() {
     function openTutorial () {
         $("#tutorial-slideshow").owlCarousel({
             navigation: true, // Show next and prev buttons
+            navigationText:
+            ["back","next"],
             slideSpeed: 300,
             paginationSpeed: 400,
             singleItem: true,
