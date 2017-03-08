@@ -1,26 +1,63 @@
 $(document).ready( function() {
     function openTutorial () {
         $("#tutorial-slideshow").owlCarousel({
-            navigation: true, // Show next and prev buttons
-            navigationText:
-            ["back","next"],
+            navigation: false,
+            pagination: false,
             slideSpeed: 300,
             paginationSpeed: 400,
             singleItem: true,
         });
-
         //get carousel instance data and store it in variable owl
         var owlCarousel = $("#tutorial-slideshow").data('owlCarousel');
+        var carousel = $(".owl-carousel");
         $('#tutorial-slideshow-modal').modal('show');
 
-        $( ".btn-next-slide" ).click(function() {
-            owlCarousel.next();
+        $( "#btn-next-1" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 1);
+        });
+        $( "#btn-next-2" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 2);
+        });
+        $( "#btn-next-3" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 3);
+        });
+        $( "#btn-next-4" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 4);
+        });
+        $( "#btn-next-5" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 5);
+        });
+        $( "#btn-back-0" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 0);
+        });
+        $( "#btn-back-1" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 1);
+        });
+        $( "#btn-back-2" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 2);
+        });
+        $( "#btn-back-3" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 3);
+        });
+        $( "#btn-back-4" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 4);
         });
 
-        $( ".btn-done-tutorial" ).click(function() {
+        $( ".btn-done-tutorial" ).click(function(e) {
+            e.preventDefault();
+            carousel.trigger('owl.goTo', 0);
             $('#tutorial-slideshow-modal').modal('hide');
         });
-
         // Prevent background body from being scrolled
         $('body').css('overflow','hidden');
         $('body').css('width','100%');
@@ -91,35 +128,6 @@ $(document).ready( function() {
         }
       },
       onLegEnd: function( leg ) {
-        // remove highlight when leaving this leg
-        // console.log(leg.index);
-        // if (leg.index == 1) {
-        //     if ($('#show').hasClass('show')) {
-        //         $('#show').click();
-        //     }
-        // }
-        // if (leg.index != 1) {
-        //     if ($('#show').hasClass('hide')) {
-        //         $('#show').click();
-        //     }
-        // }
-        // if (leg.index == 3) {
-        //     $('.download-nav').attr('style', 'background-image:linear-gradient(to bottom, #157BB6 0, #269de5 100%) !important');
-        // }
-        // if (leg.index == 4) {
-        //     if ($('#show').hasClass('hide')) {
-        //         $('#show').click();
-        //     }
-        //     $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:9999;');
-        // }
-        // if(leg.index != 4) {
-        //     $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 1720px;height: 450px;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:0;');
-        // }
-        // if (leg.index == 5) {
-        //     if ($('#show').hasClass('hide')) {
-        //         $('#show').click();
-        //     }
-        // }
         if( leg.rawData.highlight ) {
           leg.$target.removeClass('intro-tour-highlight');
           $('.intro-tour-overlay').hide();

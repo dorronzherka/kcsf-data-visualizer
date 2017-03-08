@@ -1,44 +1,35 @@
-{% if page.language == "albanian" %}
-    <script type="text/javascript">
-    $(function() {
-            $("#tutorial-slideshow").owlCarousel({
-                navigation: true, // Show next and prev buttons
-                navigationText:
-                ["mbrapa","vazhdo"],
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                singleItem: true,
-            });
-        });
-    </script>
-{% elsif page.language == "serbian" %}
-<script type="text/javascript">
-    $(function() {
-        $("#tutorial-slideshow").owlCarousel({
-            navigation: true, // Show next and prev buttons
-            navigationText:
-            ["nazad","sledeći"],
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-        });
-    });
-</script>
-{% else %}
-<script type="text/javascript">
-    $(function() {
-        $("#tutorial-slideshow").owlCarousel({
-            navigation: true, // Show next and prev buttons
-            navigationText:
-            ["back","next"],
-            slideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-        });
-    });
-</script>
-{% endif %}
+<style media="screen">
 
+
+    .container-fluid.container-slideshow,
+    .container-slideshow .col-md-12{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .btn-tutorial{
+        max-width: 320px;
+    }
+    .slideshow-item-image{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        #background-color: #FAFAFA;
+    }
+
+    .slideshow-step-img{
+        width: 400px;
+    }
+    .modal-body-slideshow{
+        background-color: #F4F4F4;
+    }
+
+    .padd-15-sides{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .row-btn{
+        padding-top: 15px;
+    }
+</style>
 
 <div id="tutorial-slideshow-modal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
@@ -46,6 +37,7 @@
         <div class="modal-content">
             <div class="modal-body modal-body-slideshow" align="center">
                 <div class="container-fluid container-slideshow">
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                     <div class="row">
                         <div class="col-md-12">
                             <div id="tutorial-slideshow" class="owl-carousel">
@@ -77,14 +69,16 @@
                                             </div>
                                         </div>
                                         <div class="row row-btn">
-                                            <div class="col-md-12">
-                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-done-tutorial" id="btn-done-tutorial">
+                                            <div class="col-xs-6">
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-1">
                                                     {% if page.language == "albanian" %}
-                                                        përfundo
+                                                        vazhdo <span>&raquo;</span></a>
                                                     {% elsif page.language == "serbian" %}
-                                                        završiti
+                                                        sledeći <span>&raquo;</span></a>
                                                     {% else %}
-                                                        finish
+                                                        next <span>&raquo;</span></a>
                                                     {% endif %}
                                                 </button>
                                             </div>
@@ -118,6 +112,30 @@
                                                 {% endif %}
                                             </div>
                                         </div>
+                                        <div class="row row-btn">
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-prev-slide" id="btn-back-0">
+                                                    {% if page.language == "albanian" %}
+                                                        <span>&laquo;</span> mbrapa
+                                                    {% elsif page.language == "serbian" %}
+                                                        <span>&laquo;</span> nazad
+                                                    {% else %}
+                                                        <span>&laquo;</span> back
+                                                    {% endif %}
+                                                </button>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-2">
+                                                    {% if page.language == "albanian" %}
+                                                        vazhdo <span>&raquo;</span></a>
+                                                    {% elsif page.language == "serbian" %}
+                                                        sledeći <span>&raquo;</span></a>
+                                                    {% else %}
+                                                        next <span>&raquo;</span></a>
+                                                    {% endif %}
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -146,18 +164,35 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <!-- <div class="row row-btn">
-                                            <div class="col-md-12">
-                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-3">
-                                                    NEXT
+                                        <div class="row row-btn">
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-prev-slide" id="btn-back-1">
+                                                    {% if page.language == "albanian" %}
+                                                        <span>&laquo;</span> mbrapa
+                                                    {% elsif page.language == "serbian" %}
+                                                        <span>&laquo;</span> nazad
+                                                    {% else %}
+                                                        <span>&laquo;</span> back
+                                                    {% endif %}
                                                 </button>
                                             </div>
-                                        </div> -->
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-3">
+                                                    {% if page.language == "albanian" %}
+                                                        vazhdo <span>&raquo;</span></a>
+                                                    {% elsif page.language == "serbian" %}
+                                                        sledeći <span>&raquo;</span></a>
+                                                    {% else %}
+                                                        next <span>&raquo;</span></a>
+                                                    {% endif %}
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <div class="row row-text">
-                                        <div class="container-fluid container-item">
+                                    <div class="container-fluid container-item">
+                                        <div class="row row-text">
                                             <div class="col-md-12">
                                                 <p class="h5">
                                                     {% if page.language == "albanian" %}
@@ -174,26 +209,43 @@
                                         <div class="row slideshow-item-image">
                                             <div class="col-md-12">
                                                 {% if page.language == "albanian" %}
-                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-4.png" alt="pickTopic">
+                                                <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sq-4.png" alt="pickTopic">
                                                 {% elsif page.language == "serbian" %}
-                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-4.png" alt="pickTopic">
+                                                <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-sr-4.png" alt="pickTopic">
                                                 {% else %}
-                                                    <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-4.png" alt="pickTopic">
+                                                <img class="slideshow-step-img img-responsive" src="../static/images/tutorial/tut-en-4.png" alt="pickTopic">
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <!-- <div class="row row-btn">
-                                            <div class="col-md-12">
-                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-4">
-                                                    NEXT
+                                        <div class="row row-btn">
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-prev-slide" id="btn-back-2">
+                                                    {% if page.language == "albanian" %}
+                                                        <span>&laquo;</span> mbrapa
+                                                    {% elsif page.language == "serbian" %}
+                                                        <span>&laquo;</span> nazad
+                                                    {% else %}
+                                                        <span>&laquo;</span> back
+                                                    {% endif %}
                                                 </button>
                                             </div>
-                                        </div> -->
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-4">
+                                                    {% if page.language == "albanian" %}
+                                                        vazhdo <span>&raquo;</span></a>
+                                                    {% elsif page.language == "serbian" %}
+                                                        sledeći <span>&raquo;</span></a>
+                                                    {% else %}
+                                                        next <span>&raquo;</span></a>
+                                                    {% endif %}
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <div class="row">
-                                        <div class="container-fluid container-item">
+                                    <div class="container-fluid container-item">
+                                        <div class="row row-text">
                                             <div class="col-md-12">
                                                 <p class="h5">
                                                     {% if page.language == "albanian" %}
@@ -218,18 +270,35 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <!-- <div class="row row-btn">
-                                            <div class="col-md-12">
-                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-tutorial-step-5">
-                                                    NEXT
+                                        <div class="row row-btn">
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-prev-slide" id="btn-back-3">
+                                                    {% if page.language == "albanian" %}
+                                                        <span>&laquo;</span> mbrapa
+                                                    {% elsif page.language == "serbian" %}
+                                                        <span>&laquo;</span> nazad
+                                                    {% else %}
+                                                        <span>&laquo;</span> back
+                                                    {% endif %}
                                                 </button>
                                             </div>
-                                        </div> -->
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-next-slide" id="btn-next-5">
+                                                    {% if page.language == "albanian" %}
+                                                        vazhdo <span>&raquo;</span></a>
+                                                    {% elsif page.language == "serbian" %}
+                                                        sledeći <span>&raquo;</span></a>
+                                                    {% else %}
+                                                        next <span>&raquo;</span></a>
+                                                    {% endif %}
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <div class="row">
-                                        <div class="container-fluid container-item">
+                                    <div class="container-fluid container-item">
+                                        <div class="row row-text">
                                             <div class="col-md-12">
                                                 <p class="h5">
                                                     {% if page.language == "albanian" %}
@@ -254,8 +323,19 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <div class="row row-btn">
-                                            <div class="col-md-12">
+                                        <div class="row row-btn owl-buttons">
+                                            <div class="col-xs-6">
+                                                <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-prev-slide" id="btn-back-4">
+                                                    {% if page.language == "albanian" %}
+                                                        <span>&laquo;</span> mbrapa
+                                                    {% elsif page.language == "serbian" %}
+                                                        <span>&laquo;</span> nazad
+                                                    {% else %}
+                                                        <span>&laquo;</span> back
+                                                    {% endif %}
+                                                </button>
+                                            </div>
+                                            <div class="col-xs-6">
                                                 <button class="btn-secondary--alt--md--fullwidth btn-tutorial btn-done-tutorial" id="btn-done-tutorial">
                                                     {% if page.language == "albanian" %}
                                                         përfundo
@@ -277,9 +357,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 <ol class='tourbus-legs' id='tourbus-demo-1'>
   <!-- INTRO -->
@@ -465,38 +542,5 @@
     </a>
   </li>
 
-  <!-- End -->
-  <!-- <li data-orientation='centered' data-width='300' data-highlight='true'>
-    <div>
-        <h2>
-            {% if page.language == "albanian" %}
-                not available
-            {% elsif page.language == "serbian" %}
-                not available
-            {% else %}
-                Thanks!
-            {% endif %}
-
-        </h2>
-        <p class='remove-bottom'>
-            {% if page.language == "albanian" %}
-                not available
-            {% elsif page.language == "serbian" %}
-                Ky tutorial perfundoi.
-            {% else %}
-                This tutorial is over.
-            {% endif %}
-        </p>
-      <a href='javascript:void(0);' style='display: block;' class='button half-bottom tourbus-next'>
-          {% if page.language == "albanian" %}
-              not available
-          {% elsif page.language == "serbian" %}
-              Mire u pafshim
-          {% else %}
-              goodbye
-          {% endif %}
-      </a>
-    </div>
-  </li> -->
 </ol>
 <div class='intro-tour-overlay'></div>

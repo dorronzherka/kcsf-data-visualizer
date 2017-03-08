@@ -115,7 +115,7 @@ body {
 }
 
 
-.btn-done-tutorial{
+.btn-done-tutorial, .btn-next-slide, .btn-prev-slide{
     font-weight: 400;
     text-transform: uppercase;
     font-family: AmnestyTradeGothicW04BdCnNo-20, TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, 'Franklin Gothic Medium', sans-serif;
@@ -139,6 +139,8 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
+    border: 0px !important;
+    border-radius: 5px !important;
 }
 
 
