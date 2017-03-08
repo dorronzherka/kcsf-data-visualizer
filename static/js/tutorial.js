@@ -47,6 +47,10 @@ $(document).ready( function() {
             $('#tutorial-slideshow-modal').modal('hide');
             carousel.trigger('owl.goTo', 0);
         });
+        $( "#btn-done-tutorial" ).click(function(e) {
+            $('#tutorial-slideshow-modal').modal('hide');
+            carousel.trigger('owl.goTo', 0);
+        });
     }
 
 
