@@ -19,6 +19,11 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if page.language == "albanian" %}
+                    <li>
+                        <a href="javascript:void(0);" class="help">
+                            Si te Perdoret
+                        </a>
+                    </li>
                     <li class="active"><a href="../sq/index.html">Shqip</a></li>
                     <li><a href="../en/index.html">English</a></li>
                     <li><a href="../sr/index.html">Srpski</a></li>
@@ -40,12 +45,12 @@
                            Shkarkoni të dhënat
                         </a>
                     </li>
+                {% elsif page.language == "serbian" %}
                     <li>
                         <a href="javascript:void(0);" class="help">
-                            Ndihmë
+                            Kako Koristiti
                         </a>
                     </li>
-                {% elsif page.language == "serbian" %}
                     <li><a href="../sq/index.html">Shqip</a></li>
                     <li><a href="../en/index.html">English</a></li>
                     <li class="active"><a href="../sr/index.html">Srpski</a></li>
@@ -67,12 +72,12 @@
                            Preuzmite podatke
                         </a>
                     </li>
+                {% else %}
                     <li>
                         <a href="javascript:void(0);" class="help">
-                            Pomoći
+                            How to Use
                         </a>
                     </li>
-                {% else %}
                     <li><a href="../sq/index.html">Shqip</a></li>
                     <li class="active"><a href="../en/index.html">English</a></li>
                     <li><a href="../sr/index.html">Srpski</a></li>
@@ -92,11 +97,6 @@
                         <a href="../static/download/datasets/The_Kosovar_Civil_Society_Index_October_2016.sav"
                            download="The_Kosovar_Civil_Society_Index_October_2016.sav" class="download-nav">
                            Download Data Set
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="help">
-                            Help
                         </a>
                     </li>
                 {% endif %}
