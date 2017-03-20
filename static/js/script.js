@@ -1,6 +1,3 @@
----
----
-
 var url = {{ site.requesturl }} +"comparison";
 $.support.cors = true;
 var language = window.language;
@@ -43,8 +40,8 @@ var main_indicators = {
     },
     "4": {
         "q50": [],
-        "5N1": ["Gender", "Age", "Ethnicity"],
-        "5N3": ["Gender", "Age", "Ethnicity" ,"Membership"]
+        "5N1": ["0", "Gender", "Age", "Ethnicity"],
+        "5N3": ["0", "Gender", "Age", "Ethnicity" ,"Membership"]
     },
     "5": {
         "q51": ["q9", "q2", "q7", "q11", "q15", "q75"],
@@ -96,9 +93,9 @@ var main_indicators = {
     "12": {
         "q138": ["q9", "q2", "q7", "q11", "q15", "q75"],
         "q407": [],
-        "5A7_5": ["Gender", "Age", "Ethnicity" ,"Membership"],
-        "5N4": ["Gender", "Age", "Ethnicity" ,"Membership"],
-        "5C15": ["Gender", "Age", "Ethnicity" ,"Membership"]
+        "5A7_5": ["0","Gender", "Age", "Ethnicity" ,"Membership"],
+        "5N4": ["0","Gender", "Age", "Ethnicity" ,"Membership"],
+        "5C15": ["0","Gender", "Age", "Ethnicity" ,"Membership"]
     }
 };
 
@@ -201,7 +198,7 @@ function displayChart(){
         if (main_indicator.charAt(0) == "5"){
             $("#tab3").click();
             populateDisaggregateSelectBox(main_indicator, active_topic, true);
-            displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""), translation_data["Gender"][window.language]);
+            displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""), translation_data["0"][window.language]);
         } else {
             if (over_percentage_questions.indexOf(main_indicator) != -1){
                 $("#tab3").click();
@@ -387,9 +384,12 @@ function getJsonObjectDepth(parent) {
 function buildMultipleSeriesChartData(categories, title, data, series, chart_container, chart_type, static_q_diss_type){
     var answers = data["answer"][window.language];
     if (static_q_diss_type) {
-        answers = data["answer"][window.language][static_q_diss_type];
+        if(data["answer"][window.language][static_q_diss_type]){
+            answers = data["answer"][window.language][static_q_diss_type];
+        }else{
+            answers = data["answer"][window.language]["0"];
+        }
     }
-
     for (var category in answers) {
         categories.push(category);
         for (var sub_category in answers[category]) {
@@ -407,6 +407,7 @@ function buildMultipleSeriesChartData(categories, title, data, series, chart_con
             } else {
                 series[index]["data"].push(Number(answers[category][sub_category]))
             }
+
         }
     }
 

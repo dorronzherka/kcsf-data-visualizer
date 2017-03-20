@@ -697,6 +697,26 @@ var static_data = {
         },
         "answer": {
             "en": {
+                "0": {
+                    "Fully agree": {
+                        "Percentage": "19.6"
+                    },
+                    "Mainly agree": {
+                        "Percentage": "37.7"
+                    },
+                    "Not so": {
+                        "Percentage": "18.8"
+                    },
+                    "Not at all": {
+                        "Percentage": "4.3"
+                    },
+                    "Don't know": {
+                        "Percentage": "18.2"
+                    },
+                    "No answer": {
+                        "Percentage": "1.6"
+                    }
+                },
                 "Gender": {
                     "Fully agree": {
                         "Men": "22.5",
@@ -833,6 +853,26 @@ var static_data = {
                 }
             },
             "sq": {
+                "0": {
+                    "Pajtohem plotësisht": {
+                        "Përqindja": "19.6"
+                    },
+                    "Pajtohem kryesisht": {
+                       "Përqindja": "37.7"
+                    },
+                    "Jo edhe aq": {
+                        "Përqindja": "18.8"
+                    },
+                    "Jo aspak": {
+                        "Përqindja": "4.3"
+                    },
+                    "Nuk e di": {
+                        "Përqindja": "18.2"
+                    },
+                    "Pa përgjigje": {
+                        "Përqindja": "1.6"
+                    }
+                },
                 "Gjinia": {
                     "Pajtohem plotësisht": {
                         "Burra": "22.5",
@@ -969,6 +1009,26 @@ var static_data = {
                 }
             },
             "sr": {
+                "0": {
+                    "Potpuno se slažem": {
+                        "Procenat":"19.6"
+                    },
+                    "Uglavnom se slažem": {
+                        "Procenat":"37.7"
+                    },
+                    "Baš se i ne slažem ": {
+                        "Procenat":"18.8"
+                    },
+                    "Nimalo": {
+                        "Procenat": "4.3"
+                    },
+                    "Ne znam ": {
+                        "Procenat":"18.2"
+                    },
+                    "Nema odgovora": {
+                        "Procenat": "1.6"
+                    }
+                },
                 "Pol": {
                     "Potpuno se slažem": {
                         "Muškarci": "22.5",
@@ -1106,7 +1166,6 @@ var static_data = {
             }
         }
     },
-
     "5C15": {
         "question": {
             "en": translation_data['5C15']["en"],
@@ -1115,6 +1174,26 @@ var static_data = {
         },
         "answer": {
             "en": {
+                "0": {
+                    "It is not present at all": {
+                        "Percentage": "5.7"    
+                    },
+                    "Present in a small scale": {
+                        "Percentage": "17.4"
+                    },
+                    "Present in a medium scale": {
+                        "Percentage": "22.0"
+                    },
+                    "Present in a large scale": {
+                        "Percentage": "18.0"
+                    },
+                    "Don't know": {
+                        "Percentage": "35.1"
+                    },
+                    "No answer": {
+                        "Percentage": "1.9"
+                    }
+                },
                 "Gender": {
                     "It is not present at all": {
                         "Men": "7.3",
@@ -1251,6 +1330,26 @@ var static_data = {
                 }
             },
             "sq": {
+                "0": {
+                    "Nuk është i pranishëm aspak": {
+                        "Përqindja": "5.7" 
+                    },
+                    "I pranishëm në një shkallë të vogël": {
+                        "Përqindja": "17.4"
+                    },
+                    "I pranishëm në një shkallë mesatare": {
+                        "Përqindja": "22.0"
+                    },
+                    "Prezent në një shkallë të lartë": {
+                        "Përqindja": "18.0"
+                    },
+                    "Nuk e di": {
+                       "Përqindja": "35.1"
+                    },
+                    "Pa përgjigje": {
+                        "Përqindja":  "1.9"
+                    }
+                },
                 "Gjinia": {
                     "Nuk është i pranishëm aspak": {
                         "Burra": "7.3",
@@ -1387,6 +1486,26 @@ var static_data = {
                 }
             },
             "sr": {
+                "0": {
+                    "Nije nimalo prisutna": {
+                        "Procenat": "5.7" 
+                    },
+                    "Prisutna u maloj meri": {
+                        "Procenat": "17.4"
+                    },
+                    "Prisutna u srednjoj meri": {
+                        "Procenat": "22.0"
+                    },
+                    "Prisutna u velikoj meri": {
+                        "Procenat": "18.0"
+                    },
+                    "Ne znam": {
+                        "Procenat": "35.1"
+                    },
+                    "Nema odgovora": {
+                        "Procenat":  "1.9"
+                    }
+                },
                 "Pol": {
                     "Nije nimalo prisutna": {
                         "Muškarci": "7.3",
@@ -1524,7 +1643,6 @@ var static_data = {
             }
         }
     },
-
     "5N1": {
         "question": {
             "en": translation_data['5N1']["en"],
@@ -1533,6 +1651,20 @@ var static_data = {
         },
         "answer": {
             "en": {
+                "0": {
+                    "I am a member of one or more civil society organization": {
+                        "Percentage": "13.12"
+                    },
+                    "I do voluntary work for one or more civil society organization": {
+                        "Percentage": "17.19"
+                    },
+                    "I am a member of a political party": {
+                        "Percentage": "45.7"
+                    },
+                    "I do voluntary work for a political party": {
+                        "Percentage": "23.98"
+                    }
+                },
                 "Gender": {
                     "I am a member of one or more civil society organization": {
                         "Men": "4.0",
@@ -1609,6 +1741,20 @@ var static_data = {
                 }
             },
             "sq": {
+                "0": {
+                    "Jam anëtarë i një apo më shumë organizatave të shoqërisë civile": {
+                        "Përqindja": "13.12"
+                    },
+                    "Bëjë punë vullnetare për një ose më shumë organizata të shoqërisë civile": {
+                         "Përqindja": "17.19"
+                    },
+                    "Jam anëtarë i një partie politike": {
+                        "Përqindja": "45.7"
+                    },
+                    "Bëjë punë vullnetare për një parti politike": {
+                        "Përqindja": "23.98"
+                    }
+                },
                 "Gjinia": {
                     "Jam anëtarë i një apo më shumë organizatave të shoqërisë civile": {
                         "Burra": "4.0",
@@ -1685,6 +1831,20 @@ var static_data = {
                 }
             },
             "sr": {
+                "0": {
+                    "Ja sam član jedne ili više organizacija civilnog društva ": {
+                        "Procenat": "13.12"
+                    },
+                    "Radim volunterski za jednu ili više organizacija civilnog društva": {
+                        "Procenat": "17.19"
+                    },
+                    "Ja sam član političke partije": {
+                        "Procenat": "45.7"
+                    },
+                    "Radim volunterski za političku partiju ": {
+                        "Procenat": "23.98"
+                    }
+                },
                 "Pol": {
                     "Ja sam član jedne ili više organizacija civilnog društva ": {
                         "Muškarci": "4.0",
@@ -1762,7 +1922,6 @@ var static_data = {
             }
         }
     },
-
     "5N3": {
         "question": {
             "en": translation_data['5N3']["en"],
@@ -1771,6 +1930,17 @@ var static_data = {
         },
         "answer": {
             "en": {
+                "0": {
+                    "Benefited from a service offered from civil society": {
+                        "Percentage": "3.4"
+                    },
+                    "Participated in a civil society activity": {
+                        "Percentage": "4.8"
+                    },
+                    "Supported a cause (petition, protest) raised by civil society": {
+                        "Percentage": "21.4"
+                    }
+                },
                 "Gender": {
                     "Benefited from a service offered from civil society": {
                         "Men": "3.4",
@@ -1844,6 +2014,17 @@ var static_data = {
                 }
             },
             "sq": {
+                "0": {
+                    "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
+                        "Përqindja": "3.4"
+                    },
+                    "Marrë pjesë në një aktivitet të shoqërisë civile": {
+                        "Përqindja": "4.8"
+                    },
+                    "Mbështetur një kauzë (peticion, protest) ngritur nga shoqëria civile": {
+                        "Përqindja": "21.4"
+                    }
+                },
                 "Gjinia": {
                     "Përfituar nga një shërbim i ofruar nga shoqëria civile": {
                         "Burra": "3.4",
@@ -1917,6 +2098,17 @@ var static_data = {
                 }
             },
             "sr": {
+                "0": {
+                    "Bili korisnik usluge pružene od civilnog društva": {
+                        "Procenat": "3.4"
+                    },
+                    "Učestvovali u aktivnosti civilnog društva": {
+                        "Procenat": "4.8"
+                    },
+                    "Podržali cilj (peticiju, protest) započet od civilnog društva": {
+                        "Procenat": "21.4"
+                    }
+                },
                 "Pol": {
                     "Bili korisnik usluge pružene od civilnog društva": {
                         "Muškarci": "3.4",
@@ -1991,7 +2183,6 @@ var static_data = {
             }
         }
     },
-
     "5N4": {
         "question": {
             "en": translation_data['5N4']["en"],
@@ -2000,6 +2191,14 @@ var static_data = {
         },
         "answer": {
             "en": {
+                "0": {
+                    "Most people can be trusted, or that": {
+                        "Percentage": "12.6"
+                    },
+                    "You need to be very careful when dealing with people": {
+                        "Percentage": "87.4"
+                    }
+                },
                 "Gender": {
                     "Most people can be trusted, or that": {
                         "Men": "10.2",
@@ -2052,6 +2251,14 @@ var static_data = {
                 }
             },
             "sq": {
+                "0": {
+                    "Shumica e njerëzve mund të besohen": {
+                        "Perqindja": "12.6"
+                    },
+                    "Duhet të jeni shumë i kujdesshëm kur keni të bëni me njerëzit": {
+                        "Perqindja": "87.4"
+                    }
+                },
                 "Gjinia": {
                     "Shumica e njerëzve mund të besohen": {
                         "Burra": "10.2",
@@ -2104,6 +2311,14 @@ var static_data = {
                 }
             },
             "sr": {
+                "0": {
+                    "Većini ljudi se može verovati, ili da": {
+                        "Procenat": "12.6"
+                    },
+                    "Trebate biti veoma oprezni kada radite sa ljudima": {
+                        "Procenat": "87.4"
+                    }
+                },
                 "Pol": {
                     "Većini ljudi se može verovati, ili da": {
                         "Muškarci ": "10.2",
