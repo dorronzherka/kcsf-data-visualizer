@@ -38,7 +38,7 @@ var drawChart = parameterfy(function (container, chart_type, data, double_questi
     var drilldown_series = [];
     var duplicates = [];
     var dataSum = 0;
-
+    
     // building the dataset for the chart.
     for (var item in data) {
         var serie = {};
