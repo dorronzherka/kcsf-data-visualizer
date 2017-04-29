@@ -178,12 +178,13 @@ function getPostData(main_indicator, disaggregate_by) {
 // displays chart based on the attributes given.
 function displayChart(){
     var active_topic = $(".topic-ul").find(".active").val();
+    var active_topic_text = $(".topic-ul").find(".active a").text();
+    console.log(active_topic_text);
+    $('.selected_topic').html(active_topic_text);
     var main_indicator = $("#main-indicator-select").val();
     var chart_type = $('input[name=tabs]:checked').val();
     var chart_type_container = chart_type + "-container";
-
     addButtonsToCompareCharts(chart_type_container, chart_type, main_indicator);
-
     if (static_questions.indexOf(main_indicator) != -1) {
         $("#tab3").click();
         $("#tab1").prop("disabled", true);
@@ -192,16 +193,26 @@ function displayChart(){
                 $("#main-indicator-select").parent().parent().css("margin-top", "30px");
             }, 350);
         }
-        $("#disaggregate-select").parent().parent().hide(350);
-        displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""));
+            $("#disaggregate-select").parent().parent().hide(350);
+            
+            displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""));
+
     } else {
-        $("#tab1").prop("disabled", false);
+        if (main_indicator=="5N1" || main_indicator=="5N3" || main_indicator=="5A7_5" || main_indicator=="5N4" || main_indicator=="5C15"){
+             $("#tab1").prop("disabled", false);
+             disaggregate_by=0;
+             drawStaticChart(main_indicator,disaggregate_by,chart_type_container,chart_type);
+        }else{
+             $("#tab1").prop("disabled", false);
+        }
+       
         $("#main-indicator-select").parent().parent().css("margin-top", "0px");
         $("#disaggregate-select").parent().parent().show(350);
         if (main_indicator.charAt(0) == "5"){
             $("#tab3").click();
             populateDisaggregateSelectBox(main_indicator, active_topic, true);
-            displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""), translation_data["0"][window.language]);
+                 drawStaticChart(main_indicator,disaggregate_by,chart_type_container,chart_type);
+            //displayStaticChart("column-chart-container", static_data[main_indicator], "column-chart", main_indicator.replace("q", ""), translation_data["0"][window.language]);
         } else {
             if (over_percentage_questions.indexOf(main_indicator) != -1){
                 $("#tab3").click();
@@ -248,13 +259,31 @@ function initChartRadioButtonsClick(){
             "float": "none"
         });
         if (static_questions.indexOf(main_indicator) != -1) {
-            $("#tab1").prop("disabled", true);
-            displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""));
+            var disaggregate_by_lang = $("#disaggregate-select option:selected" ).text();
+            if (main_indicator=="5N1" || main_indicator=="5N3" || main_indicator=="5A7_5" || main_indicator=="5N4" || main_indicator=="5C15"){
+                $("#tab1").prop("disabled", false);
+                    drawStaticChart(main_indicator,disaggregate_by,chart_type_container,checked_rb);
+            }else{
+                $("#tab1").prop("disabled", true);
+                    displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""),disaggregate_by_lang);  
+            }
+
         } else {
             if (main_indicator.charAt(0) == "5"){
+            if (main_indicator=="5N1" || main_indicator=="5N3" || main_indicator=="5A7_5" || main_indicator=="5N4" || main_indicator=="5C15"){
+                 $("#tab1").prop("disabled", false);
+               if (disaggregate_by!="0"){
+                    drawStaticChart(main_indicator,disaggregate_by,chart_type_container,checked_rb);
+                }else{
+                    disaggregate_by=0;
+                   drawStaticChart(main_indicator,disaggregate_by,chart_type_container,checked_rb,"y");
+                    //displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""),disaggregate_by); 
+                }
+               
+            }else{
                 $("#tab1").prop("disabled", true);
-                var disaggregate_by_lang = $("#disaggregate-select option:selected" ).text();
-                displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""), disaggregate_by_lang);
+                    displayStaticChart(chart_type_container, static_data[main_indicator], checked_rb, main_indicator.replace("q", ""),disaggregate_by);  
+            }
             } else {
                 if (over_percentage_questions.indexOf(main_indicator) != -1){
                     $("#tab1").prop("disabled", true);
@@ -323,7 +352,11 @@ function disaggregateSelectBoxChange(){
         var main_indicator = $("#main-indicator-select").val();
         if (main_indicator.charAt(0) == "5"){
             var disaggregate_by_lang = $("#disaggregate-select option:selected" ).text();
-            displayStaticChart(chart_type_container, static_data[main_indicator], chart_type, main_indicator.replace("q", ""), disaggregate_by_lang);
+            if (main_indicator=="5N1" || main_indicator=="5N3" || main_indicator=="5A7_5" || main_indicator=="5N4" || main_indicator=="5C15"){
+                         drawStaticChart(main_indicator,disaggregate_by,chart_type_container,chart_type);
+            }else{
+                displayStaticChart(chart_type_container, static_data[main_indicator], chart_type, main_indicator.replace("q", ""), disaggregate_by_lang);  
+                }
         } else {
             var post_data = getPostData(main_indicator, disaggregate_by);
             if (disaggregate_by != "0") {
@@ -448,10 +481,12 @@ var displayStaticChart = parameterfy(function(chart_container, data, chart_type,
         for (var category in data['answer'][window.language]) {
             var simple_serie = {
                 "type1": category,
-                "count": Number(data['answer'][window.language][category])
+                "count": Number(data['answer'][window.language][category]),
+
             };
             series.push(simple_serie);
         }
+
         drawChart(chart_container, chart_type, series, {static_question:static_question});
     }
 });
