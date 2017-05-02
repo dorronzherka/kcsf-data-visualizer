@@ -251,7 +251,7 @@ body {
   background: linear-gradient(#3498db, #0f608c) !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 440px) {
     .select {
         width: 100% !important;
     }
