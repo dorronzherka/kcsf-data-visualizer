@@ -3,11 +3,13 @@ KCSF Visualizer
 
 
 The import of data and database stuff are done via API:
+
 https://github.com/opendatakosovo/kcsf-api
 
 The frontend and visualization of data are done using GitHub Pages.
 
 What is GitHub Pages?
+
 GitHub Pages is designed to host project pages directly from a GitHub repository.
 
 
@@ -18,7 +20,9 @@ Steps to run locally:
 
 
 What should have in mind?
+
 Every branch should be merged with gh-pages branch in order to see the updates on:
+
 opendatakosovo.github.io/kcsf-data-visualizer/sq/index.html
 
 
