@@ -13,8 +13,9 @@ GitHub Pages is designed to host project pages directly from a GitHub repository
 
 
 # Steps to run locally:
-1. Clone the repositary
+1. Clone the repository
 2. From terminal enter in the directory where the project is cloned.
+3. sudo gem install jekyll (if its not installed)
 3. Command to run the app: "jekyll serve"
 
 
