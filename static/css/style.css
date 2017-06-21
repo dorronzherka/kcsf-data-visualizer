@@ -161,7 +161,7 @@ body {
     overflow: hidden;
     width: 250px;
     margin-top: 15px;
-    z-index: 2;
+    z-index: 99999;
     position: absolute;
     background: #3498db;
     color: #000;

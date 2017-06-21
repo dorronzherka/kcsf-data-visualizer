@@ -79,7 +79,6 @@ $(document).ready( function() {
           leg.$target.addClass('intro-tour-highlight');
           $('.intro-tour-overlay').show();
         }
-        console.log(leg.index);
         if (leg.index == 0) {
             if ($('#show').hasClass('show')) {
                 $('#show').click();
@@ -102,11 +101,6 @@ $(document).ready( function() {
         if(leg.index != 5) {
             $('.highcharts-container').attr('style', 'position: relative;overflow: hidden;width: 100%;height: 100%;text-align: left;line-height: normal;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-family: Exo;z-index:0;');
         }
-        // if (leg.index == 5) {
-        //     if ($('#show').hasClass('hide')) {
-        //         $('#show').click();
-        //     }
-        // }
 
         // fade/slide in first leg
         if( leg.index == 0 ) {
