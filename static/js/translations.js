@@ -350,7 +350,7 @@ var translation_data = {
         "sr": "Ako da, koje OCD-e pozivate na konsultacije o programskim fondovima?"
     },
     "217": {
-        "sq": "Size of CSOs benefiting funds",
+        "sq": "Madhësia e organizatave përfituese të fondeve",
         "en": "Type of CSOs that are beneficiaries of donor funds",
         "sr": "Vrsta OCD koje su korisnici donatorskih sredstava"
     },
