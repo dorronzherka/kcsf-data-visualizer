@@ -25,7 +25,6 @@ Every branch should be merged with gh-pages branch in order to see the updates o
 
 opendatakosovo.github.io/kcsf-data-visualizer/sq/index.html
 
-
 # Some clarifications with data
 
 Some of the data are imported to database and some of them are saved in database.
