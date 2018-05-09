@@ -10,7 +10,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            
+
             <ul class="nav navbar-nav navbar-right">
                 {% if page.language == "albanian" %}
                     <li>
@@ -37,6 +37,11 @@
                         <a href="../static/download/datasets/Indeksi_Kosovar_i_Shoqerise_Civile_Tetor_2016.sav"
                            download="Indeksi_Kosovar_i_Shoqerise_Civile_Tetor_2016.sav" class="download-nav">
                            Shkarkoni të dhënat
+                        </a>
+                    </li>
+                    <li>
+                        <a class="auth-link" href="/login/">
+                           Kyçu
                         </a>
                     </li>
                 {% elsif page.language == "serbian" %}
@@ -66,6 +71,11 @@
                            Preuzmite podatke
                         </a>
                     </li>
+                    <li>
+                        <a class="auth-link" href="/login/">
+                           prijava
+                        </a>
+                    </li>
                 {% else %}
                     <li>
                         <a href="javascript:void(0);" class="help">
@@ -91,6 +101,11 @@
                         <a href="../static/download/datasets/The_Kosovar_Civil_Society_Index_October_2016.sav"
                            download="The_Kosovar_Civil_Society_Index_October_2016.sav" class="download-nav">
                            Download Data Set
+                        </a>
+                    </li>
+                    <li>
+                        <a class="auth-link" href="/login/">
+                           Login
                         </a>
                     </li>
                 {% endif %}

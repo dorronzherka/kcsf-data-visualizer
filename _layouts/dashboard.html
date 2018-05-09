@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% include new_header.html %}
+
+<script>
+   if (localStorage.getItem('token') == null) {
+      window.location.href = "/login";
+   }
+   $(document).on('click', '#logout', e => {
+      console.log("clicked");
+      localStorage.removeItem('token');
+      window.location.href = "/login";
+   });
+</script>
+
+<body class="container">
+   <h2>Dashboard</h2>
+   <button class="btn btn-primary" id="logout">Logout</button>
+</body>
+
+</html>

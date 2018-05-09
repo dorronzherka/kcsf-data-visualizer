@@ -30,4 +30,22 @@
     <link href="../static/owl-carousel/owl.theme.css" rel="stylesheet">
     <script src="../static/owl-carousel/owl.carousel.min.js"></script>
 
+    <script>
+       $(document).ready(() => {
+          // If user is logged in
+          if(localStorage.getItem('token') != null) {
+             var language = window.language;
+             var dashboardText;
+             if(language == 'en') {
+                dashboardText = 'Dashboard';
+             } else if (language == 'sq') {
+                dashboardText = 'Paneli Administrues';
+             } else {
+                dashboardText = 'Tabla';
+             }
+             $('.auth-link').html(dashboardText).attr('href', '/dashboard')
+          }
+      });
+    </script>
+
 </head>
