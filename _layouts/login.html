@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+{% include new_header.html %}
+
+<script>
+   if(localStorage.getItem('token') != null) {
+      window.location.href = "/dashboard";
+   }
+</script>
+
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+
+					<div class="brand">
+						<img src="../static/images/kcsf-logo.png">
+					</div>
+
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Kyçja</h4>
+							<form id="login">
+								<div class="form-group">
+									<label for="email">Email Adresa</label>
+									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+								</div>
+
+								<div class="form-group">
+									<label for="password">Fjalëkalimi
+										<a href="#" class="float-right">
+											Keni harruar fjalëkalimin!?
+										</a>
+									</label>
+									<input id="password" type="password" class="form-control" name="password" required>
+								</div>
+
+								<div class="form-group no-margin">
+									<button type="submit" class="btn btn-primary btn-block">
+										Kyçu
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						Kosovar Civil Society Foundation
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
